@@ -6,15 +6,22 @@ Datum laatste update: 19-5-2023
 ## Live Demo
 Een online demo van deze app is te vinden op: [FOUNDFAVE App Online](https://foundfave.online)
 
-## Installatiehandleiding
+## Inhoudsopgave
+1. Voor de examinator 
+1. Environment variables
 1. Inleiding
-2. Screenshot
-3. Benodigdheden
-4. De applicatie draaien
-5. Overige commando’s
+1. Benodigdheden
+1. Installatie
+1. De applicatie draaien
+1. Overige commando's
+1. Contact
 
 
-## Voor De Examinator
+
+
+
+
+## Voor de examinator
 Bijgesloten in de root een .env.dist bestand met daarin de namen van de variabelen.
 
 Marvel API key: 
@@ -34,10 +41,10 @@ React H8.6:
 
 
 
+## Inleiding
 
 
-
-
+## Benodigdheden
 
 
 ## Installatie
@@ -54,14 +61,7 @@ git clone git@github.com:Aphelion-im/FOUNDFAVE-frontend-eindopdracht-react.git
 npm install
 ```
 
-Een ViteJS React project live server opstarten
-```bash
-npm run dev
-```
-De live server zal nu opstarten op adres:
-http://localhost:5173 
 
-CTRL + C om de live server te stoppen.
 
 
 
@@ -87,6 +87,21 @@ Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
 
 
+## De applicatie draaien
+
+Een ViteJS React project live server opstarten
+```bash
+npm run dev
+```
+De live server zal nu opstarten op adres:
+http://localhost:5173 
+
+CTRL + C om de live server te stoppen.
+
+
+
+
+## Overige commando's
 
 
 
@@ -96,17 +111,7 @@ Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
 
 
-
-
-Schrijf de handleiding alsof het voor een newbie is.
-
-* WCAG, contrast
-
-Dark theme support. Waarom? Hier uitgelegd:
-* [Dark theme & gesture navigation (Google I/O'19)](https://youtu.be/OCHEjeLC_UY?t=152)
-
-
-
-Mocht je nog vragen of opmerkingen hebben, stuur dan gerust een mail naar: andre.de.groot@novi-education.nl
+## Contact
+Mocht je nog vragen of opmerkingen hebben, stuur dan gerust een mail naar: andre.de.groot@novi-education.nl of stuur een bericht via Teams.
 
 André de Groot
