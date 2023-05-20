@@ -1,38 +1,33 @@
-Datum laatste update: 20-5-2023
+Datum laatste update: 21-5-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
 # FOUNDFAVE App - Eindopdracht Frontend NOVI Hogeschool
 
-## Inhoudsopgave
-1. [Screenshot van de FOUNDFAVE app](#screenshot-van-de-foundfave-app)
-1. [Live demo](#live-demo)
-1. [Aan de examinator](#aan-de-examinator)
-1. [Environment variables](#environment-variables)
-1. [Inleiding](#inleiding)
-1. [Benodigdheden](#benodigdheden)
-1. [Installatie](#installatie)
-1. [De applicatie draaien](#de-applicatie-draaien)
-1. [Overige commando's](#overige-commandos)
-1. [Contact](#contact)
+## Inleiding
+Met trots presenteer ik mijn React app voor de frontend eindopdracht, genaamd FOUNDFAVE App. Voor de opleiding Fullstack Development bootcamp werd mij gevraagd een React app te bouwen.
 
-## Screenshot van de FOUNDFAVE app
+Slogan: Found your fave with FOUNDFAVE!
+
+## Inhoud
+* [De FOUNDFAVE App screenshot](#de-foundfave-app-screenshot)
+* [Live demo](#live-demo-foundfave-app) 
+* [Aan de examinator](#aan-de-examinator)
+* [Environment variables](#environment-variables)
+* [Benodigdheden](#benodigdheden)
+* [Applicatie installeren en starten](#applicatie-installeren-en-starten) 
+* [De applicatie draaien](#de-applicatie-draaien)
+* [Overige commando's](#overige-commandos)
+* [Contact](#contact)
+
+## De FOUNDFAVE App screenshot
 ![FOUNDFAVE React App ](./src/screenshots/screenshot-app.jpg)
 
-## Live demo
+## Live demo FOUNDFAVE App
 Een live demo van deze app is te vinden op: <a target="_blank" href="https://foundfave.online">FOUNDFAVE App Demo</a>
-
-
-
-
-
-
-
 
 ## Aan de examinator
 Beste examinator,
-
-Met trots presenteer ik mijn React app voor de frontend eindopdracht.
 
 __Opmerkingen__
 
@@ -66,6 +61,10 @@ Zit je steeds met het handen in je haar als je jouw favoriete Marvel karakters s
 
 FOUNDFAVE is dé online app om Marvel karakters op te zoeken en te bewaren. 
 
+> Een inleiding met korte beschrijving van de functionaliteit van de applicatie en screenshot van de belangrijkste pagina van de applicatie.
+
+> Lijst van benodigdheden om de applicatie te kunnen runnen (zoals runtime environments, een API key of gegevens van een externe backend). Let op: je vraagt de nakijkende docent nooit zelf een API key aan te maken. Jij levert zelf jouw API key aan in de handleiding;
+
 
 ## Benodigdheden
 Welke software heb je nodig om deze app te draaien?
@@ -80,14 +79,23 @@ De volgende software en tools:
   * [WebStorm](https://www.jetbrains.com/webstorm/) of een andere equivalente editor, zoals Sublime Text, Brackets, etc.
 
 
-## Installatie
+## Applicatie installeren en starten
+> Een stappenplan met daarin installatie instructies.
+
 Deze app maakt gebruikt van [ViteJS](https://vitejs.dev) in plaats van [Create-React-App](https://create-react-app.dev). Ik heb hier bewust voor gekozen omdat Vite prettiger en sneller werkt en is lichter qua bestandsgrootte. 
 
 NodeJS installeren. [NodeJS](https://nodejs.org/en)
 
-__Het Github FOUNDFAVE app project clonen__
+### Het Github FOUNDFAVE app project clonen
+
+Clonen met SSH:
 ```bash
 git clone git@github.com:Aphelion-im/FOUNDFAVE-frontend-eindopdracht-react.git
+```
+
+Clonen met Https:
+```bash
+git clone https://github.com/Aphelion-im/FOUNDFAVE-frontend-eindopdracht-react.git
 ```
 __NPM Dependecies installeren__
 ```bash
@@ -129,10 +137,13 @@ http://localhost:5173
 CTRL + C om de live server te stoppen.
 
 
+## Inloggen
+> Met welke gegevens er ingelogd kan worden indien er al accounts beschikbaar zijn.
+
 
 
 ## Overige commando's
-
+> Welke andere npm commando’s er nog beschikbaar zijn in deze applicatie en waar deze voor dienen.
 
 
 
@@ -156,10 +167,7 @@ André de Groot
 
 
 ## Environment Variabeles
-Environment variables zijn variabelen die we declareren in een .env bestand. Omdat we dit bestand nooit mee pushen naar GitHub (en dus altijd even handmatig moeten toevoegen aan de .gitignore!) blijven onze tokens geheim. Waarschijnlijk denk je nu: maar als we met anderen samenwerken aan een project, hebben zij de geheime token toch ook nodig? En dat klopt ook. Daarom maak je ook altijd een .env.dist (of .env.example) file aan die je wél meepusht naar GitHub. Daarin zet je de namen van de variabelen, maar zonder waardes. Het is dan voor de volgende developer duidelijk welke tokens ze nodig hebben om het project te laten werken. In de README.md benoem je altijd hoe men aan deze waardes kan komen (even een collega of baas vragen) - of in ons geval: dat ze zelf een API key aan moeten maken bij OpenWeather.
+> Environment variables zijn variabelen die we declareren in een .env bestand. Omdat we dit bestand nooit mee pushen naar GitHub (en dus altijd even handmatig moeten toevoegen aan de .gitignore!) blijven onze tokens geheim. Waarschijnlijk denk je nu: maar als we met anderen samenwerken aan een project, hebben zij de geheime token toch ook nodig? En dat klopt ook. Daarom maak je ook altijd een .env.dist (of .env.example) file aan die je wél meepusht naar GitHub. Daarin zet je de namen van de variabelen, maar zonder waardes. Het is dan voor de volgende developer duidelijk welke tokens ze nodig hebben om het project te laten werken. In de README.md benoem je altijd hoe men aan deze waardes kan komen (even een collega of baas vragen) - of in ons geval: dat ze zelf een API key aan moeten maken bij OpenWeather.
 
-__Let op__: voor jouw eindproject deel je altijd jouw eigen API keys in de installatiehandleiding, zodat de examinator niet zelf een key hoeft aan te maken.
+> __Let op__: voor jouw eindproject deel je altijd jouw eigen API keys in de installatiehandleiding, zodat de examinator niet zelf een key hoeft aan te maken.
 
-Voorbeeld vaneen installatiehandleiding:
-* https://github.com/hogeschoolnovi/frontend-react-private-blog
-* https://github.com/hogeschoolnovi/frontend-react-pokemon
