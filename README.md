@@ -11,24 +11,24 @@ Zit je steeds met het handen in het haar als je jouw favoriete Marvel karakters 
 
 Daarom is de slogan: Found your fave with FOUNDFAVE!
 
-Installeer de app en ga lekker aan de slag. 
-
 ## Inhoud
-* [De FOUNDFAVE App screenshot](#de-foundfave-app-screenshot)
+* [Hoe ziet de FOUNDFAVE App er uit?](#hoe-ziet-de-foundfave-app-er-uit)
 * [Live demo](#live-demo-foundfave-app) 
 * [Aan de examinator](#aan-de-examinator)
-* [Environment variables](#environment-variables)
+* [Environment variables (.env)](#environment-variables)
 * [Benodigdheden](#benodigdheden)
 * [Applicatie installeren en starten](#applicatie-installeren-en-starten) 
 * [De applicatie draaien](#de-applicatie-draaien)
 * [Overige commando's](#overige-commandos)
 * [Contact](#contact)
 
-## De FOUNDFAVE App screenshot
+## Hoe ziet de FOUNDFAVE App er uit?
 ![FOUNDFAVE React App ](./src/screenshots/screenshot-app.jpg)
 
 ## Live demo FOUNDFAVE App
-Een live demo van deze app is te vinden op: <a target="_blank" href="https://foundfave.online">FOUNDFAVE App Demo</a>
+Een live demo van deze app is te vinden op: 
+
+<a target="_blank" href="https://foundfave.online">FOUNDFAVE App Live Demo</a>
 
 ## Aan de examinator
 Beste examinator,
@@ -65,17 +65,16 @@ React H8.6:
 
 
 
-## Inleiding
-Zit je steeds met het handen in je haar als je jouw favoriete Marvel karakters steeds in een Word document moet copy-pasten om ze te bewaren? Treur niet langer! Met deze app kun je jouw Marvel karakters online bewaren in deze handige app. 
 
-FOUNDFAVE is dé online app om Marvel karakters op te zoeken en te bewaren. 
 
-> Een inleiding met korte beschrijving van de functionaliteit van de applicatie en screenshot van de belangrijkste pagina van de applicatie.
 
-> Lijst van benodigdheden om de applicatie te kunnen runnen (zoals runtime environments, een API key of gegevens van een externe backend). Let op: je vraagt de nakijkende docent nooit zelf een API key aan te maken. Jij levert zelf jouw API key aan in de handleiding;
+
+
 
 
 ## Benodigdheden
+> Lijst van benodigdheden om de applicatie te kunnen runnen (zoals runtime environments, een API key of gegevens van een externe backend). Let op: je vraagt de nakijkende docent nooit zelf een API key aan te maken. Jij levert zelf jouw API key aan in de handleiding;
+
 Welke software heb je nodig om deze app te draaien?
 
 De volgende software en tools:
