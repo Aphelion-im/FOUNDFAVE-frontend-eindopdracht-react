@@ -2,12 +2,16 @@ Datum laatste update: 21-5-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
-# FOUNDFAVE App - Eindopdracht Frontend NOVI Hogeschool
+# FOUNDFAVE App - Eindopdracht Front-end NOVI Hogeschool
 
 ## Inleiding
-Met trots presenteer ik mijn React app voor de frontend eindopdracht, genaamd FOUNDFAVE App. Voor de opleiding Fullstack Development bootcamp werd mij gevraagd een React app te bouwen.
+Zit je steeds met het handen in het haar als je jouw favoriete Marvel karakters steeds in een document moet copy-pasten om ze te bewaren? Treur niet langer! Met deze handige app kun je snel jouw Marvel karakters opzoeken en online bewaren.
 
-Slogan: Found your fave with FOUNDFAVE!
+**FOUNDFAVE** is dé online app om Marvel karakters op te zoeken en te bewaren.
+
+Daarom is de slogan: Found your fave with FOUNDFAVE!
+
+Installeer de app en ga lekker aan de slag. 
 
 ## Inhoud
 * [De FOUNDFAVE App screenshot](#de-foundfave-app-screenshot)
@@ -39,8 +43,13 @@ __Marvel API public key__:
 `4780bcc0dddcf771e505b68197ce5f56`
 
 De environment variabelen op de volgende manier instellen: 
-* VITE_APP_BASE_URL=
-* VITE_APP_PUBLIC_KEY=
+
+| Variabele | Waarde |
+|-----------|--------|
+|VITE_APP_BASE_URL| 123 |
+|VITE_APP_PUBLIC_KEY| 123 |
+
+
 
 Daarna een .env bestand aanmaken, deze in de root plaatsen en daarna bovenstaande variabelen in het bestand plaatsen.
 
