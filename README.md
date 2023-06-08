@@ -12,7 +12,7 @@ Zit je steeds met je handen in het haar als je jouw favoriete Marvel karakters i
 
 **FOUNDFAVE** is dé online app om Marvel karakters op te zoeken en te bewaren.
 
-Daarom is de slogan: *"Found your fave with FOUNDFAVE!"*
+Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 
 ## Inhoud
 
@@ -20,9 +20,10 @@ Daarom is de slogan: *"Found your fave with FOUNDFAVE!"*
 - [Live demo](#live-demo-foundfave-app)
 - [Aan de examinator](#aan-de-examinator)
 - [Benodigdheden](#benodigdheden)
-- [Applicatie installeren en starten](#applicatie-installeren-en-starten)
+- [De applicatie installeren](#applicatie-installeren)
 - [De applicatie draaien](#de-applicatie-draaien)
 - [Overige commando's](#overige-commandos)
+- [Inloggen](#inloggen)
 - [Contact](#contact)
 
 ## Hoe ziet de FOUNDFAVE App er uit?
@@ -33,7 +34,7 @@ Daarom is de slogan: *"Found your fave with FOUNDFAVE!"*
 
 Een live demo van deze app is te vinden op:
 
-<a target="_blank" href="https://foundfave.online">FOUNDFAVE App Live Demo</a>
+<a target="_blank" href="https://foundfave.online">Live Demo FOUNDFAVE Online App</a>
 
 ---
 
@@ -43,25 +44,31 @@ Beste examinator,
 
 Bijgesloten in de root van dit project een .env.dist bestand met daarin de namen van de environment variabelen.
 
-__Stappenplan:__
-* Een .env bestand aanmaken en in de root plaatsen.
-* De volgende variabelen in het .env bestand plaatsen en de bijhorende waarden. Neem de waarden over in onderstaande tabel:
+**Stappenplan:**
 
-| Variabele           | Waarde |
-| ------------------- | ------ |
-| VITE_APP_BASE_URL   | abc    |
+- Een .env bestand aanmaken en deze in de root van het project plaatsen.
+- De volgende variabelen en bijhorende waarden in het .env bestand plaatsen. 
+
+Neem de waarden over van onderstaande tabel:
+
+| Variabele           | Waarde                           |
+| ------------------- | -------------------------------- |
+| VITE_APP_BASE_URL   | abc                              |
 | VITE_APP_PUBLIC_KEY | 4780bcc0dddcf771e505b68197ce5f56 |
 
-__Voorbeeld .env bestand__:
+**.env bestand inhoud**:
+
 ```javascript
-VITE_APP_BASE_URL='https://ditiseenapi.com'
-VITE_APP_PUBLIC_KEY='1234567890abcdefgh'
+VITE_APP_BASE_URL = '';
+VITE_APP_PUBLIC_KEY = '4780bcc0dddcf771e505b68197ce5f56';
 ```
 
-### Netlify Opmerking
-De environment variables zijn in de live demo geïntegreerd met de hosting van Netlify en zijn de API keys/environment variabelen niet zichtbaar voor het publiek.
+__Netlify Opmerking__
+
+De environment variables zijn in de live demo geïntegreerd met de hosting van Netlify en zijn de API keys en environment variabelen afgeschermd voor het publiek.
 
 ## Benodigdheden
+
 Welke software heb je nodig om deze app te draaien?
 
 De volgende software en tools:
@@ -74,13 +81,20 @@ De volgende software en tools:
   - [Visual Studio Code](https://code.visualstudio.com)
   - [WebStorm](https://www.jetbrains.com/webstorm/) of een andere equivalente editor, zoals Sublime Text, Brackets, etc.
 
-## Applicatie installeren en starten
+## Applicatie installeren
 
-> Een stappenplan met daarin installatie instructies.
+Deze app maakt gebruikt van [React ViteJS](https://vitejs.dev).
 
-Deze app maakt gebruikt van [ViteJS](https://vitejs.dev).
+Zorg er eerst voor dat je NodeJS hebt geïnstalleerd op je computer:
 
-NodeJS installeren. [NodeJS](https://nodejs.org/en)
+NodeJS LTS versie installeren. [NodeJS](https://nodejs.org/en)
+
+Om te controleren of je Node hebt geïnstalleerd typ dan in je terminal het volgende commando:
+
+```bash
+node -v
+```
+Als de terminal een antwoord geeft: v18.x.y, dan is Node correct geïnstalleerd.
 
 ### Het Github FOUNDFAVE app project clonen
 
@@ -96,44 +110,68 @@ Clonen met Https:
 git clone https://github.com/Aphelion-im/FOUNDFAVE-frontend-eindopdracht-react.git
 ```
 
-__NPM Dependecies installeren__
+**NPM Dependecies installeren**
 
 Als je het project gecloned hebt naar jouw locale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
-
 
 ```bash
 npm install
 ```
 
 ## De applicatie opstarten
-Wanneer dit klaar is, kun je de applicatie starten met behulp van:
+
+De volgende commando's zijn beschikbaar binnen ViteJS en zullen hierna kort besproken worden:
+* `npm run dev`
+* `npm run build`
+* `npm run preview` 
+
+Wanneer de dependencies zijn geïnstalleerd, kun je de applicatie starten met behulp van: (__Let op!__: Dus niet met `npm start` zoals met Create React App)
+
+Typ het volgende commando in de terminal om de live server op te starten:
+
 ```bash
 npm run dev
 ```
 
-* In de terminal komt nu een webadres te staan waar de app komt te draaien. In het geval van ViteJS is dat: http://localhost:5173. Klik op deze link om de app in de browser te openen.
+- In de terminal komt nu een webadres te staan waar de live server komt te draaien. In het geval van ViteJS is dat: http://localhost:5173. Klik op deze link om de app in de browser te openen.
 
-* Om de live server te stoppen druk je op de volgende toetsencombinatie: `CTRL + C`.
-
-## Inloggen
-
-De volgende gegevens om in te loggen zijn beschikbaar om de app te testen:
-* Gebruikersnaam: Andre
-* Wachtwoord: 123
+- Om de live server te stoppen druk je op de volgende toetsencombinatie: `CTRL + C`.
 
 ## Overige commando's
 
-> Welke andere npm commando’s er nog beschikbaar zijn in deze applicatie en waar deze voor dienen.
+### npm run build 
+Als je de React app wilt hosten op een server en handmatig wilt deployen op bijvoorbeeld Netlify, kun je een build maken. 
+
+Dit zal een `dist` (distributie) folder creëren. Deze specifieke folder kun je dan uploaden naar de server. 
+
+Om een distributie folder te maken kun je het volgende commando typen in de terminal:
 
 ```bash
 npm run build
 ```
 
+### npm run preview
+
+
+http://localhost:4173/
+
 ```bash
 npm run preview
 ```
-Eject e.d.:
-https://github.com/elwyn-de-neve/react-les-3-final/
+
+
+## Inloggen
+
+Als de ViteJS React app draait zijn de volgende gegevens beschikbaar om in te loggen en daarna de app te testen:
+
+- Gebruikersnaam: Andre
+- Wachtwoord: 123
+
+Op foundfave.online kun je inloggen met een test account:
+* [Sign in to your account on FOUNDFAVE Online](https://foundfave.online/sign-in-register)
+
+Je kunt ook een account aanmaken op de website om het een en ander te testen:
+* [Register an account on FOUNDFAVE Online](https://foundfave.online/sign-in-register)
 
 ## Contact
 
@@ -142,7 +180,3 @@ Mocht je nog vragen of opmerkingen hebben, stuur dan gerust een mail naar: andre
 Met vriendelijke groet,
 
 André de Groot
-
-
-
-
