@@ -1,4 +1,4 @@
-Datum laatste update: 26-5-2023
+Datum laatste update: 9-6-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
@@ -21,7 +21,7 @@ Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 - [Aan de examinator](#aan-de-examinator)
 - [Benodigdheden](#benodigdheden)
 - [De applicatie installeren](#applicatie-installeren)
-- [De applicatie draaien](#de-applicatie-draaien)
+- [De applicatie opstarten](#de-applicatie-opstarten)
 - [Overige commando's](#overige-commandos)
 - [Inloggen](#inloggen)
 - [Contact](#contact)
@@ -46,8 +46,8 @@ Bijgesloten in de root van dit project een .env.dist bestand met daarin de namen
 
 **Stappenplan:**
 
-- Een .env bestand aanmaken en deze in de root van het project plaatsen.
-- De volgende variabelen en bijhorende waarden in het .env bestand plaatsen. 
+1. Een .env bestand aanmaken en deze in de root van het project plaatsen.
+2. De volgende variabelen en bijhorende waarden in het .env bestand plaatsen. 
 
 Neem de waarden over van onderstaande tabel:
 
@@ -77,7 +77,7 @@ De volgende software en tools:
 - Een terminal, zoals:
   - [HyperJS](https://hyper.is)
   - [Git Bash](https://git-scm.com/downloads)
-- Code editors/IDE's, zoals:
+- Code editors/IDEs, zoals:
   - [Visual Studio Code](https://code.visualstudio.com)
   - [WebStorm](https://www.jetbrains.com/webstorm/) of een andere equivalente editor, zoals Sublime Text, Brackets, etc.
 
@@ -85,18 +85,19 @@ De volgende software en tools:
 
 Deze app maakt gebruikt van [React ViteJS](https://vitejs.dev).
 
-Zorg er eerst voor dat je NodeJS hebt geïnstalleerd op je computer:
+Zorg er eerst voor dat je NodeJS hebt geïnstalleerd op je computer.
 
-NodeJS LTS versie installeren. [NodeJS](https://nodejs.org/en)
+NodeJS LTS (Long Term Support) versie installeren. [NodeJS](https://nodejs.org/en)
 
-Om te controleren of je Node hebt geïnstalleerd typ dan in je terminal het volgende commando:
+Om te controleren of je NodeJS hebt geïnstalleerd typ dan het volgende commando in de terminal:
 
 ```bash
 node -v
 ```
-Als de terminal een antwoord geeft: v18.x.y, dan is Node correct geïnstalleerd.
+Als de terminal een antwoord geeft, bijvoorbeeld: `v18.x.y`, dan is Node correct geïnstalleerd.
 
 ### Het Github FOUNDFAVE app project clonen
+Dit project kun je downloaden naar je computer met de volgende commando's. Kies SSH of de Https methode.
 
 Clonen met SSH:
 
@@ -110,9 +111,9 @@ Clonen met Https:
 git clone https://github.com/Aphelion-im/FOUNDFAVE-frontend-eindopdracht-react.git
 ```
 
-**NPM Dependecies installeren**
+**NPM Dependencies installeren**
 
-Als je het project gecloned hebt naar jouw locale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
+Als je het project gecloned hebt naar jouw lokale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
 
 ```bash
 npm install
@@ -127,7 +128,7 @@ De volgende commando's zijn beschikbaar binnen ViteJS en zullen hierna kort besp
 
 Wanneer de dependencies zijn geïnstalleerd, kun je de applicatie starten met behulp van: (__Let op!__: Dus niet met `npm start` zoals met Create React App)
 
-Typ het volgende commando in de terminal om de live server op te starten:
+Typ het volgende commando in de terminal om de ViteJS live server op te starten:
 
 ```bash
 npm run dev
@@ -142,7 +143,7 @@ npm run dev
 ### npm run build 
 Als je de React app wilt hosten op een server en handmatig wilt deployen op bijvoorbeeld Netlify, kun je een build maken. 
 
-Dit zal een `dist` (distributie) folder creëren. Deze specifieke folder kun je dan uploaden naar de server. 
+Dit zal een `dist` (distributie) folder creëren in de root: ./dist. Deze specifieke folder kun je dan uploaden naar de server. 
 
 Om een distributie folder te maken kun je het volgende commando typen in de terminal:
 
@@ -151,14 +152,13 @@ npm run build
 ```
 
 ### npm run preview
-
+Dit commando start een lokale ViteJS live server op die de inhoud van ./dist serveert op het volgende adres en poortnummer:
 
 http://localhost:4173/
 
 ```bash
 npm run preview
 ```
-
 
 ## Inloggen
 
