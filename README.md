@@ -53,19 +53,19 @@ Neem de waarden over van onderstaande tabel:
 
 | Variabele           | Waarde                           |
 | ------------------- | -------------------------------- |
-| VITE_APP_BASE_URL   | abc                              |
+| VITE_APP_BASE_URL   | http://gateway.marvel.com/v1/    |
 | VITE_APP_PUBLIC_KEY | 4780bcc0dddcf771e505b68197ce5f56 |
 
 **.env bestand inhoud**:
 
 ```javascript
-VITE_APP_BASE_URL = '';
-VITE_APP_PUBLIC_KEY = '4780bcc0dddcf771e505b68197ce5f56';
+VITE_APP_BASE_URL='http://gateway.marvel.com/v1/'
+VITE_APP_PUBLIC_KEY='4780bcc0dddcf771e505b68197ce5f56'
 ```
 
 __Netlify Opmerking__
 
-De environment variables zijn in de live demo geïntegreerd met de hosting van Netlify en zijn de API keys en environment variabelen afgeschermd voor het publiek.
+De environment variables zijn in de live demo geïntegreerd met de hosting van Netlify en zijn de API keys en environment variabelen afgeschermd van het publiek.
 
 ## Benodigdheden
 
@@ -85,19 +85,21 @@ De volgende software en tools:
 
 Deze app maakt gebruikt van [React ViteJS](https://vitejs.dev).
 
-Zorg er eerst voor dat je NodeJS hebt geïnstalleerd op je computer.
+Zorg er eerst voor dat je [NodeJS](https://nodejs.org/en) hebt geïnstalleerd op je computer.
 
-NodeJS LTS (Long Term Support) versie installeren. [NodeJS](https://nodejs.org/en)
+De NodeJS LTS (Long Term Support) versie installeren.
 
 Om te controleren of je NodeJS hebt geïnstalleerd typ dan het volgende commando in de terminal:
 
 ```bash
 node -v
 ```
-Als de terminal een antwoord geeft, bijvoorbeeld: `v18.x.y`, dan is Node correct geïnstalleerd.
+Als de terminal een antwoord geeft, bijvoorbeeld: `v18.x.y`, dan is NodeJS correct geïnstalleerd.
 
 ### Het Github FOUNDFAVE app project clonen
-Dit project kun je downloaden naar je computer met de volgende commando's. Kies SSH of de Https methode.
+Dit project kun je downloaden naar je computer met de volgende commando's. 
+
+Kies SSH of de Https methode.
 
 Clonen met SSH:
 
@@ -134,9 +136,9 @@ Typ het volgende commando in de terminal om de ViteJS live server op te starten:
 npm run dev
 ```
 
-- In de terminal komt nu een webadres te staan waar de live server komt te draaien. In het geval van ViteJS is dat: http://localhost:5173. Klik op deze link om de app in de browser te openen.
+In de terminal komt nu een webadres te staan waar de live server komt te draaien. In het geval van ViteJS is dat: http://localhost:5173. Klik op deze link om de app in de browser te openen.
 
-- Om de live server te stoppen druk je op de volgende toetsencombinatie: `CTRL + C`.
+Om de live server te stoppen druk je op de volgende toetsencombinatie: `CTRL + C`.
 
 ## Overige commando's
 
