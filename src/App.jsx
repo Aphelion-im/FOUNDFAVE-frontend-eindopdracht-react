@@ -1,9 +1,11 @@
 import './App.css';
 
+import HeaderMenu from './components/navigation/HeaderMenu';
+
 export default function App() {
   return (
     <>
-      <h1>Hier komt FOUNDFAVE APP</h1>
+      <HeaderMenu />
     </>
   );
 }
