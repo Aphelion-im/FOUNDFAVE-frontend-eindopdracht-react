@@ -99,3 +99,9 @@ button:hover {
   margin-inline: 20px;
   justify-content: center;
 }
+
+.box-shadow {
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
