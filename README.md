@@ -28,7 +28,7 @@ Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 
 ## Hoe ziet de FOUNDFAVE App er uit?
 
-![FOUNDFAVE React App ](./src/screenshots/screenshot-app.jpg)
+![FOUNDFAVE React App ](./src/assets/screenshots/screenshot-app.jpg)
 
 ## Live demo FOUNDFAVE App
 
