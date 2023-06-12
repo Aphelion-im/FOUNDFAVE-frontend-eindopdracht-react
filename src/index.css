@@ -47,6 +47,9 @@ https://www.youtube.com/shorts/97rnXn7Ks3Y ( React Destroys Your CSS Layout | Fu
 html {
   scroll-behavior: smooth;
   min-height: 100vh;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -107,7 +110,7 @@ button:hover {
 }
 
 .box-shadow {
-  box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }

@@ -1,12 +1,9 @@
 nav {
   background-color: #262626;
   color: #fff;
-  -webkit-user-select: none; 
-  -ms-user-select: none;
-  user-select: none; 
 }
 
-.menu-top {
+nav .menu-top {
   flex: 0 1 1280px;
   display: flex;
   flex-direction: row;
@@ -15,7 +12,7 @@ nav {
   margin-inline: 20px;
 }
 
-.logo-header {
+nav .logo-header {
   width: 175px;
   height: 100%;
   position: relative;
@@ -24,7 +21,7 @@ nav {
   cursor: pointer;
 }
 
-.loginlogout {
+nav .loginlogout {
   width: 10%;
   height: 100%;
   border-left: 1px solid #333333;
@@ -37,17 +34,17 @@ nav {
   margin-left: auto;
 }
 
-.loginlogout a {
+nav .loginlogout a {
   text-decoration: none;
   color: #fff;
   position: relative;
 }
 
-.loginlogout a:hover {
+nav .loginlogout a:hover {
   color: #666;
 }
 
-.loginlogout a:active::after {
+nav .loginlogout a:active::after {
   content: '';
   width: 100%;
   height: 2px;
@@ -57,7 +54,7 @@ nav {
   left: 0;
 }
 
-.favorites {
+nav .favorites {
   width: 10%;
   height: 100%;
   border-left: 1px solid #333333;
@@ -67,17 +64,17 @@ nav {
   font-size: 1.5rem;
 }
 
-.favorites .fa-reg-heart-icon:hover {
+nav .favorites .fa-reg-heart-icon:hover {
   color: #666;
   cursor: pointer;
 }
 
-.favorites .fa-reg-heart-icon:active {
+nav .favorites .fa-reg-heart-icon:active {
   color: #eb1e25;
   cursor: pointer;
 }
 
-.darklight {
+nav .darklight {
   width: 10%;
   height: 100%;
   border-left: 1px solid #333333;
@@ -87,7 +84,7 @@ nav {
   justify-content: center;
 }
 
-.menu-bottom {
+nav .menu-bottom {
   height: 50px;
   border-top: 1px solid #333333;
   display: flex;
@@ -96,7 +93,7 @@ nav {
   align-items: center;
 }
 
-.menu-bottom ul {
+nav .menu-bottom ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -106,18 +103,18 @@ nav {
   font-weight: 700;
 }
 
-.menu-bottom a {
+nav .menu-bottom a {
   text-decoration: none;
   color: #fff;
   position: relative;
 }
 
-.menu-bottom a:hover {
+nav .menu-bottom a:hover {
   color: #666;
   cursor: pointer;
 }
 
-.menu-bottom a:active::after {
+nav .menu-bottom a:active::after {
   content: '';
   width: 100%;
   height: 2px;
