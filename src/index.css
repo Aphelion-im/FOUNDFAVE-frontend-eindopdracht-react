@@ -24,6 +24,7 @@ https://www.youtube.com/shorts/97rnXn7Ks3Y ( React Destroys Your CSS Layout | Fu
 /* Global styles */
 :root {
   --body-background-clr: whitesmoke;
+  --marvel-red-clr: #EB1E25;
 }
 
 /* Dark theme */
@@ -41,7 +42,7 @@ https://www.youtube.com/shorts/97rnXn7Ks3Y ( React Destroys Your CSS Layout | Fu
 
 ::selection {
   color: #fff;
-  background-color: red;
+  background-color: var(--marvel-red-clr);
 }
 
 html {

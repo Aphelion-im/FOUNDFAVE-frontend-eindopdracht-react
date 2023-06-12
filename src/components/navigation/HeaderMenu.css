@@ -48,7 +48,7 @@ nav .loginlogout a:active::after {
   content: '';
   width: 100%;
   height: 2px;
-  background-color: #eb1e25;
+  background-color: var(--marvel-red-clr);
   position: absolute;
   bottom: -115%;
   left: 0;
@@ -118,7 +118,7 @@ nav .menu-bottom a:active::after {
   content: '';
   width: 100%;
   height: 2px;
-  background-color: #eb1e25;
+  background-color: var(--marvel-red-clr);
   position: absolute;
   bottom: -100%;
   left: 0;
