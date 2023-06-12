@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* 
 https://www.youtube.com/shorts/97rnXn7Ks3Y ( React Destroys Your CSS Layout | Full Screen React Components)
  */
@@ -21,7 +23,12 @@ https://www.youtube.com/shorts/97rnXn7Ks3Y ( React Destroys Your CSS Layout | Fu
 
 /* Global styles */
 :root {
-  --first-clr: red;
+  --body-background-clr: whitesmoke;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --body-background-clr: #262626;
 }
 
 *,
@@ -44,7 +51,8 @@ html {
 
 body {
   font-size: 16px;
-  background-color: whitesmoke;
+  background-color: var(--body-background-clr);
+  font-family: 'Roboto', sans-serif;
 }
 
 #root {
@@ -87,7 +95,6 @@ button:hover {
   display: flex;
   flex-direction: row; /* Row = width */
   justify-content: center;
-  background-color: #bbb;
 }
 
 .inner-container {
@@ -95,7 +102,6 @@ button:hover {
   display: flex;
   flex-direction: column; /* Column = height */
   align-items: center;
-  background-color: whitesmoke;
   margin-inline: 20px;
   justify-content: center;
 }

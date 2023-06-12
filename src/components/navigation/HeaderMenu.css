@@ -1,0 +1,128 @@
+nav {
+  background-color: #262626;
+  color: #fff;
+  -webkit-user-select: none; 
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+.menu-top {
+  flex: 0 1 1280px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 20px;
+}
+
+.logo-header {
+  width: 175px;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.loginlogout {
+  width: 10%;
+  height: 100%;
+  border-left: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.loginlogout a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.loginlogout a:hover {
+  color: #666;
+}
+
+.loginlogout a:active::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #eb1e25;
+  position: absolute;
+  bottom: -115%;
+  left: 0;
+}
+
+.favorites {
+  width: 10%;
+  height: 100%;
+  border-left: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.favorites .fa-reg-heart-icon:hover {
+  color: #666;
+  cursor: pointer;
+}
+
+.favorites .fa-reg-heart-icon:active {
+  color: #eb1e25;
+  cursor: pointer;
+}
+
+.darklight {
+  width: 10%;
+  height: 100%;
+  border-left: 1px solid #333333;
+  border-right: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-bottom {
+  height: 50px;
+  border-top: 1px solid #333333;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-bottom ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.menu-bottom a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.menu-bottom a:hover {
+  color: #666;
+  cursor: pointer;
+}
+
+.menu-bottom a:active::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #eb1e25;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+}
