@@ -16,6 +16,7 @@ footer .inner-container {
 footer .logo-footer {
   width: 75px;
   height: 90%;
+  object-fit: cover;
   cursor: pointer;
 }
 
