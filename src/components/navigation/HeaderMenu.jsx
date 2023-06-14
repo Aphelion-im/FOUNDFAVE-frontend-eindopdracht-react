@@ -1,10 +1,13 @@
-import './HeaderMenu.css';
+import { useState } from 'react';
 import DarkLightMode from '../../components/darklightmode/DarkLightMode';
 import { ReactComponent as LogoHeader } from '../../assets/logo/logo-header.svg';
 import { FaHeart } from 'react-icons/fa';
 import { FaRegHeart } from 'react-icons/fa';
+import './HeaderMenu.css';
 
 export default function HeaderMenu() {
+  const [isAuth, setIsAuth] = useState(false);
+
   return (
     <>
       <nav>
@@ -12,7 +15,11 @@ export default function HeaderMenu() {
           <div className="menu-top">
             <LogoHeader className="logo-header" />
             <div className="loginlogout">
-              <a href="#">Sign In</a>
+              {isAuth ? (
+                <button type="button" title="Click button to sign out">Sign Out</button>
+              ) : (
+                <a href="#">Sign In</a>
+              )}
             </div>
             <div className="favorites">
               <FaRegHeart className="fa-reg-heart-icon" />

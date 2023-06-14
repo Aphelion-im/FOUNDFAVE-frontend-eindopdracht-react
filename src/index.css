@@ -24,7 +24,9 @@ https://www.youtube.com/shorts/97rnXn7Ks3Y ( React Destroys Your CSS Layout | Fu
 /* Global styles */
 :root {
   --body-background-clr: whitesmoke;
-  --marvel-red-clr: #EB1E25;
+  --marvel-red-clr: #eb1e25;
+  --base-dark-clr: #121212;
+  --l-10-dark-clr: #1A1A1A;
 }
 
 /* Dark theme */
@@ -49,6 +51,7 @@ html {
   scroll-behavior: smooth;
   min-height: 100vh;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }

@@ -1,4 +1,4 @@
-Datum laatste update: 13-6-2023
+Datum laatste update: 14-6-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
@@ -113,7 +113,7 @@ Clonen met Https:
 git clone https://github.com/Aphelion-im/FOUNDFAVE-frontend-eindopdracht-react.git
 ```
 
-**NPM Dependencies installeren**
+**NPM dependencies installeren**
 
 Als je het project gecloned hebt naar jouw lokale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
 
