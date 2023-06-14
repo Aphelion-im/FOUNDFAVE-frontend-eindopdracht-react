@@ -64,14 +64,18 @@ nav .favorites {
   font-size: 1.5rem;
 }
 
+nav .favorites .fa-reg-heart-icon {
+  transition: all 100ms ease-in;
+  cursor: pointer;
+}
+
 nav .favorites .fa-reg-heart-icon:hover {
   color: #666;
-  cursor: pointer;
 }
 
 nav .favorites .fa-reg-heart-icon:active {
   color: #eb1e25;
-  cursor: pointer;
+  transform: translateY(1px);
 }
 
 nav .darklight {
@@ -125,7 +129,7 @@ nav .menu-bottom a:active::after {
 }
 
 nav button {
-  color: #1A1A1A;
+  color: #1a1a1a;
   padding: 4px 8px;
   cursor: pointer;
   background-color: #666;
@@ -137,4 +141,9 @@ nav button {
 
 nav button:hover {
   color: #fff;
+}
+
+nav button:active {
+  color: var(--marvel-red-clr);
+  transform: translateY(1px);
 }
