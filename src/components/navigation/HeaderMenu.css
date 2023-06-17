@@ -1,3 +1,5 @@
+/* Mobile first */
+
 nav {
   background-color: #262626;
   color: #fff;
@@ -10,19 +12,20 @@ nav .menu-top {
   align-items: center;
   justify-content: center;
   margin-inline: 20px;
+  height: 50px;
 }
 
 nav .logo-header {
-  width: 175px;
-  height: 100%;
+  width: 170.84px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  display: none;
 }
 
 nav .loginlogout {
-  width: 10%;
+  flex: 1 1 10%;
   height: 100%;
   border-left: 1px solid #333333;
   display: flex;
@@ -55,7 +58,7 @@ nav .loginlogout a:active::after {
 }
 
 nav .favorites {
-  width: 10%;
+  flex: 1 1 10%;
   height: 100%;
   border-left: 1px solid #333333;
   display: flex;
@@ -79,7 +82,7 @@ nav .favorites .fa-reg-heart-icon:active {
 }
 
 nav .darklight {
-  width: 10%;
+  flex: 1 1 10%;
   height: 100%;
   border-left: 1px solid #333333;
   border-right: 1px solid #333333;
@@ -147,3 +150,32 @@ nav button:active {
   color: var(--marvel-red-clr);
   transform: translateY(1px);
 }
+
+/* MEDIA QUERIES */
+/* Mobilefirst! */
+@media screen and (min-width: 768px) {
+  nav .logo-header {
+    display: block;
+  }
+
+  nav .loginlogout {
+    flex: 0 1 10%;
+  }
+
+  nav .favorites {
+    flex: 0 1 10%;
+  }
+
+  nav .darklight {
+    flex: 0 1 10%;
+  }
+
+
+  
+}
+
+/* @media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
+} */

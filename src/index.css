@@ -118,3 +118,16 @@ button:hover {
   -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
+
+
+/* MEDIA QUERIES */
+/* Mobilefirst! */
+/* @media screen and (min-width: 768px) {
+} */
+
+/* @media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
+} */

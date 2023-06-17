@@ -18,6 +18,7 @@ footer .logo-footer {
   height: auto;
   object-fit: cover;
   cursor: pointer;
+  display: none;
 }
 
 footer .data-provided {
@@ -26,12 +27,8 @@ footer .data-provided {
   align-items: center;
 }
 
-footer .data-provided > span {
-  margin-left: 16px;
-}
-
 footer .copyright {
-  display: block;
+  display: none;
 }
 
 footer .social-media {
@@ -62,3 +59,25 @@ footer .icon:active {
   color: var(--marvel-red-clr);
   transform: translateY(1px);
 }
+
+/* MEDIA QUERIES */
+/* Mobilefirst! */
+@media screen and (min-width: 768px) {
+  footer .copyright {
+    display: block;
+  }
+
+  footer .logo-footer {
+    display: block;
+  }
+
+  footer .data-provided > span {
+    margin-left: 16px;
+  }
+}
+
+/* @media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
+} */
