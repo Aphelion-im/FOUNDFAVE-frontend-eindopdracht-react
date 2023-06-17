@@ -16,9 +16,11 @@ export default function HeaderMenu() {
             <LogoHeader className="logo-header" />
             <div className="loginlogout">
               {isAuth ? (
-                <button type="button" title="Click button to sign out">Sign Out</button>
+                <button type="button" title="Click button to sign out">
+                  Sign Out
+                </button>
               ) : (
-                <a href="#">Sign In</a>
+                <a href="#" data-title="Sign in or register a new account">Sign In</a>
               )}
             </div>
             <div className="favorites">
