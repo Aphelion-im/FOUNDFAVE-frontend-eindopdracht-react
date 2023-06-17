@@ -22,11 +22,25 @@ https://www.youtube.com/shorts/97rnXn7Ks3Y ( React Destroys Your CSS Layout | Fu
 ////////////////////////*/
 
 /* Global styles */
+/* Light theme */
 :root {
   --body-background-clr: whitesmoke;
   --marvel-red-clr: #eb1e25;
+  --marvel-complement-clr: #1EEB54;
+  --marvel-complement-2-clr: #009E2A;
   --base-dark-clr: #121212;
-  --l-10-dark-clr: #1A1A1A;
+  --l-10-dark-clr: #1a1a1a;
+  --l-15-dark-clr: #262626;
+  --l-20-dark-clr: #333;
+  --l-30-dark-clr: #4d4d4d;
+  --l-40-dark-clr: #666;
+  --l-50-dark-clr: #808080;
+  --l-60-dark-clr: #999;
+  --l-70-dark-clr: #b2b2b2;
+  --l-80-dark-clr: #ccc;
+  --l-85-dark-clr: #d9d9d9;
+  --l-90-dark-clr: #e6e6e6;
+  --l-100-white: #fff;
 }
 
 /* Dark theme */
@@ -151,9 +165,9 @@ button:hover {
 }
 
 [data-title]::before {
-  content: " ";
+  content: ' ';
   position: absolute;
-  bottom: -13px; 
+  bottom: -13px;
   left: 50%;
   margin-left: -15px;
   border-width: 15px;
