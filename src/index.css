@@ -134,21 +134,21 @@ button:hover {
 }
 
 /* Data-title custom attribute for custom tooltip */
-[data-title] {
+[data-info] {
   position: relative;
 }
 
-[data-title]:hover::after,
-[data-title]:hover::before {
+[data-info]:hover::after,
+[data-info]:hover::before {
   opacity: 1;
   transition: all 250ms ease-in;
   visibility: visible;
 }
 
-[data-title]::after {
+[data-info]::after {
   border: 3px solid #666666;
   color: #fff;
-  content: attr(data-title);
+  content: attr(data-info);
   position: absolute;
   bottom: -1.6em;
   left: 50%;
@@ -165,7 +165,7 @@ button:hover {
   text-transform: none;
 }
 
-[data-title]::before {
+[data-info]::before {
   content: ' ';
   position: absolute;
   bottom: -13px;

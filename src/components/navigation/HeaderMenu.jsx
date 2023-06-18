@@ -20,7 +20,7 @@ export default function HeaderMenu() {
                   Sign Out
                 </button>
               ) : (
-                <a href="#" data-title="Sign in or register a new account">Sign In</a>
+                <a href="#" data-info="Sign in or register a new account">Sign In</a>
               )}
             </div>
             <div className="favorites">
