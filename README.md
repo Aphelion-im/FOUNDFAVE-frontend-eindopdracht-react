@@ -1,4 +1,4 @@
-Datum laatste update: 18-6-2023
+Datum laatste update: 19-6-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
@@ -23,7 +23,6 @@ Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 - [De applicatie installeren](#applicatie-installeren)
 - [De applicatie opstarten](#de-applicatie-opstarten)
 - [Overige commando's](#overige-commandos)
-- [Inloggen](#inloggen)
 - [Contact](#contact)
 
 ## Hoe ziet de FOUNDFAVE App er uit?
@@ -162,22 +161,11 @@ http://localhost:4173/
 npm run preview
 ```
 
-## Inloggen
-
-Als de ViteJS React app draait zijn de volgende gegevens beschikbaar om in te loggen en daarna de app te testen:
-
-- Gebruikersnaam: Andre
-- Wachtwoord: 123
-
-Op foundfave.online kun je inloggen met een test account:
-* [Sign in to your account on FOUNDFAVE Online](https://foundfave.online/sign-in-register)
-
-Je kunt ook een account aanmaken op de website om het een en ander te testen:
-* [Register an account on FOUNDFAVE Online](https://foundfave.online/sign-in-register)
-
 ## Contact
 
-Mocht je nog vragen of opmerkingen hebben, stuur dan gerust een mail naar: andre.de.groot@novi-education.nl of stuur me een bericht via Teams.
+Mocht je nog vragen of opmerkingen hebben, stuur dan gerust een e-mail naar: andre.de.groot@novi-education.nl of stuur me een bericht via Teams.
+
+Een bericht sturen via het contactformulier op https://foundfave.online mag natuurlijk ook😉
 
 Met vriendelijke groet,
 
