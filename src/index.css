@@ -21,6 +21,7 @@
 /* Light theme */
 :root {
   --body-background-clr: whitesmoke;
+  --main-bg-clr: #1a1a1a;
   --marvel-red-clr: #eb1e25;
   --marvel-complement-clr: #1eeb54;
   --marvel-complement-2-clr: #009e2a;
@@ -42,6 +43,7 @@
 /* Dark theme */
 [data-theme='dark'] {
   --body-background-clr: #262626;
+  --main-bg-clr: #fff;
 }
 
 *,
@@ -78,11 +80,12 @@ body {
   flex-direction: column;
   text-align: center;
   min-height: 100vh;
-  min-width: 100vw;
 }
 
 main {
   flex-grow: 1;
+  color: var(--main-bg-clr);
+  font-size: 1rem;
 }
 
 button,
@@ -90,6 +93,10 @@ input,
 textarea,
 select {
   font-family: inherit;
+}
+
+img {
+  width: 100%;
 }
 
 /* Remove the typical button styling on Mac
@@ -125,9 +132,13 @@ button:hover {
 }
 
 .box-shadow {
-  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+.article-padding {
+  padding-block: 2rem;
 }
 
 /* Data-title custom attribute for custom tooltip */
@@ -174,6 +185,21 @@ button:hover {
   opacity: 0;
   z-index: 99999;
   visibility: hidden;
+}
+
+/* General hyperlinks styling */
+.hyperlink {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.hyperlink:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hyperlink:hover {
+  color: #666;
 }
 
 /* MEDIA QUERIES */

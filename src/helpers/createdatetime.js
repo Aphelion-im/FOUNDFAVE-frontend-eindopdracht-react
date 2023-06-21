@@ -1,5 +1,3 @@
-'use strict';
-
 function createDateAndTime() {
   const date = new Date();
   const currentDay = date.getDate();
