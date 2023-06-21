@@ -1,0 +1,11 @@
+.notfoundimg {
+  width: 350px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.fa-reg-arrow-alt-circle-right-icon {
+  vertical-align: middle;
+  font-size: 1.5rem;
+  margin-left: 2px;
+}

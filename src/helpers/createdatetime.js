@@ -1,6 +1,6 @@
 'use strict';
 
-export default function createDateAndTime() {
+function createDateAndTime() {
   const date = new Date();
   const currentDay = date.getDate();
   const currentMonth = date.getMonth(); // Zero index based array
@@ -11,3 +11,11 @@ export default function createDateAndTime() {
   const currentTime = `${hours}:${minutes}`;
   return currentDate + ' ' + currentTime;
 }
+
+function showCurrentYear() {
+  const date = new Date();
+  const currentYear = date.getFullYear();
+  return currentYear;
+}
+
+export { showCurrentYear, createDateAndTime };

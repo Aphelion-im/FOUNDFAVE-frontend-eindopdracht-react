@@ -40,19 +40,28 @@ footer .social-media {
   width: fit-content;
 }
 
-footer .social-media p {
-  width: 100%;
-  text-align: right;
-}
-
 footer .icon {
   font-size: 1.5rem;
+}
+
+footer .social-media a {
+  color: #fff;
   transition: all 100ms ease-in;
+}
+
+footer .social-media a:link,
+footer .social-media a:visited {
+  color: #fff;
 }
 
 footer .icon:hover {
   color: #666;
   cursor: pointer;
+}
+
+footer .social-media p {
+  width: 100%;
+  text-align: right;
 }
 
 footer .icon:active {
