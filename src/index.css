@@ -44,7 +44,7 @@
 
 /* Dark theme */
 [data-theme='dark'] {
-  --body-background-clr: #262626;
+  --body-background-clr: #121212;
   --main-bg-clr: #fff;
   --input-text-clr: #fff;
   --input-bg-clr: #1a1a1a;
