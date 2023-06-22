@@ -16,6 +16,13 @@
 </head>
 
 <body>
+  <!-- So Netlify can detect a form -->
+  <!-- Form name (name="contactForm") on index.html and hidden input on Contact.jsx must be identical -->
+  <form name='contactForm' netlify netlify-honeypot="bot-field" hidden action='/'>
+    <input type='text' name='name' />
+    <input type='email' name='email' />
+    <textarea name='message-content'></textarea>
+  </form>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
