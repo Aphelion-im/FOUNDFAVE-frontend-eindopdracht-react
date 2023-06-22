@@ -59,6 +59,7 @@ export default function Contact() {
           id="contact-form"
           method="POST"
           onSubmit={handleSubmit(handleFormSubmit)}
+          action="/contact"
         >
           <input type="hidden" name="form-name" value="contactForm" />
           {/* Name component */}
@@ -66,12 +67,12 @@ export default function Contact() {
             inputType="text"
             inputName="name"
             inputId="name-field"
-            placeholder="Vul je naam in"
+            placeholder="Fill in your name"
             validationRules={{
-              required: 'Naam is verplicht',
+              required: 'Name is required',
               minLength: {
                 value: 2,
-                message: 'Naam moet minstens 2 karakters bevatten',
+                message: 'Name has to contain eat least 2 characters',
               },
             }}
             register={register}
@@ -117,8 +118,8 @@ export default function Contact() {
 
           <button
             type="submit"
-            title="Send Form button"
-            className={isValid ? 'valid box-shadow' : 'notvalid'}
+            title="Send Form"
+            className={isValid ? 'valid box-shadow' : 'notvalid box-shadow'}
             disabled={!isValid}
           >
             {isValid ? 'Send Form' : <FaBan />}

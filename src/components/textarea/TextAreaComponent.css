@@ -1,9 +1,9 @@
 .textarea-component {
   resize: none;
   outline: none;
-  color: #fff;
+  background-color: var(--input-bg-clr);
+  color: var(--input-text-clr);
   width: 100%;
-  background-color: #1A1A1A;
   border: 4px solid #262626;
   padding: 8px;
 }

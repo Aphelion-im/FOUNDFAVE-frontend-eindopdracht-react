@@ -26,8 +26,8 @@
   border: 4px solid #262626;
   border-radius: 25px;
   background-color: var(--input-bg-clr);
-  width: 100%;
   color: var(--input-text-clr);
+  width: 100%;
 }
 
 .searchbar-icon-container .searchbar:focus {
