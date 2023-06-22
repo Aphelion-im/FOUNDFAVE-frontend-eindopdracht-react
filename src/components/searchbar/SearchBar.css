@@ -23,7 +23,7 @@
 
 .searchbar-icon-container .searchbar {
   padding: 1rem;
-  border: 6px solid #262626;
+  border: 4px solid #262626;
   border-radius: 25px;
   background-color: var(--input-bg-clr);
   width: 100%;

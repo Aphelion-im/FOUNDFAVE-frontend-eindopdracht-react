@@ -1,18 +1,24 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
 import { FaSearch } from 'react-icons/fa';
 import './SearchBar.css';
 
 export default function SearchBar({ slogan, brand, placeholder }) {
-  const [hasContent, setHasContent] = useState(false);
+  const [hasContent, setHasContent] = useState('');
+  const searchbar = useRef(null);
 
   function searchHandler() {
     console.log('Clicked Search button!');
   }
 
+  function checkHasContent(e) {
+    setHasContent(() => e.target.value);
+  }
+
   function closeQueryHandler(e) {
     e.stopPropagation();
-    console.log('Clicked close icon!');
+    setHasContent('');
+    searchbar.current.focus();
   }
 
   return (
@@ -26,7 +32,7 @@ export default function SearchBar({ slogan, brand, placeholder }) {
             onClick={searchHandler}
           >
             <FaSearch title={placeholder} className="fa-search icon" />
-            {hasContent && (
+            {(hasContent.length > 0) && (
               <span
                 className="close-icon"
                 onClick={closeQueryHandler}
@@ -43,6 +49,9 @@ export default function SearchBar({ slogan, brand, placeholder }) {
             id="searchbar"
             placeholder={placeholder}
             autoFocus
+            onChange={checkHasContent}
+            value={hasContent}
+            ref={searchbar}
           />
         </div>
         <p className="slogan">

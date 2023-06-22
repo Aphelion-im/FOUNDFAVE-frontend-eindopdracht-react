@@ -106,9 +106,6 @@ img {
 /* Remove the typical button styling on Mac
 For these buttons a background-color and color must be defined */
 button {
-  /* Remove background-color and color if required */
-  background-color: #bbb;
-  color: #222;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -136,9 +133,9 @@ button:hover {
 }
 
 .box-shadow {
-  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .article-padding {
