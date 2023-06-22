@@ -10,6 +10,7 @@ export default function InputComponent({
   validationRules,
   register,
   errors,
+  autoFocus
 }) {
   return (
     <>
@@ -20,6 +21,7 @@ export default function InputComponent({
         id={inputId}
         placeholder={placeholder}
         {...register(inputName, validationRules)}
+        autoFocus={autoFocus}
       />
       <div className="error-message">
         {errors[inputName] && (

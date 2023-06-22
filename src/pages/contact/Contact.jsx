@@ -59,7 +59,7 @@ export default function Contact() {
           id="contact-form"
           method="POST"
           onSubmit={handleSubmit(handleFormSubmit)}
-          action="/contact"
+          action="/"
         >
           <input type="hidden" name="form-name" value="contactForm" />
           {/* Name component */}
@@ -77,6 +77,7 @@ export default function Contact() {
             }}
             register={register}
             errors={errors}
+            autoFocus
           />
 
           {/* E-mail component*/}
