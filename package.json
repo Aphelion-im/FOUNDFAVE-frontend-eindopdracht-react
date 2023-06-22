@@ -14,7 +14,7 @@
     "react-hook-form": "^7.45.0",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.13.0",
-    "vite-plugin-svgr": "^2.2.2"
+    "vite-plugin-svgr": "^3.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
