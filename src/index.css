@@ -38,12 +38,16 @@
   --l-85-dark-clr: #d9d9d9;
   --l-90-dark-clr: #e6e6e6;
   --l-100-white: #fff;
+  --input-text-clr: #1a1a1a;
+  --input-bg-clr: #fff;
 }
 
 /* Dark theme */
 [data-theme='dark'] {
   --body-background-clr: #262626;
   --main-bg-clr: #fff;
+  --input-text-clr: #fff;
+  --input-bg-clr: #1a1a1a;
 }
 
 *,
@@ -203,7 +207,7 @@ button:hover {
 }
 
 /* MEDIA QUERIES */
-/* Mobilefirst! */
+/* Mobile first! */
 /* @media screen and (min-width: 768px) {
 } */
 
