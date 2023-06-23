@@ -159,6 +159,7 @@ export default function Contact() {
               city="Utrecht"
               telephone="030-3073200"
               email="contact@novi.nl"
+              className="box-shadow"
             />
           </article>
         </section>

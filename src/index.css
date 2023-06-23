@@ -39,6 +39,7 @@
   --l-100-white: #fff;
   --input-text-clr: #1a1a1a;
   --input-bg-clr: #fff;
+  --image-border: #262626;
 }
 
 /* Dark theme */
@@ -47,6 +48,7 @@
   --main-bg-clr: #fff;
   --input-text-clr: #fff;
   --input-bg-clr: #1a1a1a;
+  --image-border: #fff;
 }
 
 *,

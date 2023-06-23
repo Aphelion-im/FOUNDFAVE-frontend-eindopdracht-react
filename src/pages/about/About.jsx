@@ -1,4 +1,6 @@
 import Content from '../../components/content/Content';
+import ImageComponent from '../../components/image-component/ImageComponent';
+import illustration from '../../assets/illustrations/man-behind-computer.jpg';
 import './About.css';
 
 export default function About() {
@@ -25,12 +27,7 @@ export default function About() {
           </article>
 
           <article>
-            <img
-              className="illustration"
-              src="/src/assets/illustrations/man-behind-computer.jpg"
-              alt="Illustration"
-              title="Illustration"
-            />
+            <ImageComponent className="illustration" image={illustration} title="Illustration" />
           </article>
         </section>
       </Content>

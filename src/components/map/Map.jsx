@@ -1,6 +1,6 @@
 import './Map.css';
 
-export default function Product({
+export default function Map({
   image,
   company,
   title,
@@ -9,11 +9,12 @@ export default function Product({
   city,
   telephone,
   email,
+  className
 }) {
   return (
     <>
       <article className="map-component">
-        <img src={image} alt={title} title={title} />
+        <img className={className} src={image} alt={title} title={title} />
         <h2>{title}</h2>
         <ul>
           <li>Address: {address}</li>
