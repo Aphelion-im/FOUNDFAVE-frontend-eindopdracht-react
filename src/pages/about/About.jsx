@@ -27,7 +27,7 @@ export default function About() {
           <article>
             <img
               className="illustration"
-              src="src/assets/illustrations/illustration.jpg"
+              src="/src/assets/illustrations/man-behind-computer.jpg"
               alt="Illustration"
               title="Illustration"
             />
