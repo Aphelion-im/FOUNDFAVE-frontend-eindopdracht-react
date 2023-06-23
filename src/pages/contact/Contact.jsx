@@ -9,17 +9,8 @@ import './Contact.css';
 export default function Contact() {
   const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSuccess(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [success]);
-
   const {
+    setFocus,
     handleSubmit,
     reset,
     formState: { errors, isValid },
@@ -38,6 +29,22 @@ export default function Contact() {
     setSuccess(true);
     reset();
   }
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSuccess(false);
+    }, 3000);
+
+    setFocus('name');
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [success]);
+
+  useEffect(() => {
+    setFocus('name');
+  }, [setFocus]);
 
   return (
     <>
@@ -59,7 +66,7 @@ export default function Contact() {
           id="contact-form"
           method="POST"
           onSubmit={handleSubmit(handleFormSubmit)}
-          action="/"
+          action="/contact"
         >
           <input type="hidden" name="form-name" value="contactForm" />
           {/* Name component */}
@@ -77,7 +84,6 @@ export default function Contact() {
             }}
             register={register}
             errors={errors}
-            autoFocus
           />
 
           {/* E-mail component*/}

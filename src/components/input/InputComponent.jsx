@@ -10,8 +10,9 @@ export default function InputComponent({
   validationRules,
   register,
   errors,
-  autoFocus
+  autoFocus,
 }) {
+
   return (
     <>
       <label htmlFor={inputId}>{inputLabel}</label>

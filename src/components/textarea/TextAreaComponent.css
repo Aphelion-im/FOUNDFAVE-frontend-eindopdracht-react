@@ -10,4 +10,5 @@
 
 .textarea-component:focus {
   background-color: #333333;
+  color: #fff;
 }
