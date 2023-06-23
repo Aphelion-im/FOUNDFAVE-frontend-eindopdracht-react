@@ -5,14 +5,30 @@ import './SearchBar.css';
 
 export default function SearchBar({ slogan, brand, placeholder }) {
   const [hasContent, setHasContent] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const searchbar = useRef(null);
 
-  function searchHandler() {
-    console.log('Clicked Search button!');
+  function handleForm(e) {
+    e.preventDefault();
+
+    if (hasContent.length < 1) {
+      setIsSearching(false);
+      setIsLoading(false);
+      searchbar.current.focus();
+      return;
+    }
+    setIsSearching(true);
+    setIsLoading(true);
+    setHasContent('');
+    searchbar.current.focus();
   }
 
+  console.log('Is Searching: ', isSearching);
+  console.log('Is Loading: ', isLoading);
+
   function checkHasContent(e) {
-    setHasContent(() => e.target.value);
+    setHasContent(e.target.value);
   }
 
   function closeQueryHandler(e) {
@@ -24,24 +40,8 @@ export default function SearchBar({ slogan, brand, placeholder }) {
   return (
     <>
       <Logo className="logo" />
-      <form className="search-form">
+      <form className="search-form" onSubmit={handleForm}>
         <div className="searchbar-icon-container">
-          <div
-            className="inputfield-icon"
-            title="Search"
-            onClick={searchHandler}
-          >
-            <FaSearch title={placeholder} className="fa-search icon" />
-            {(hasContent.length > 0) && (
-              <span
-                className="close-icon"
-                onClick={closeQueryHandler}
-                title="Close query"
-              >
-                &#10006;
-              </span>
-            )}
-          </div>
           <input
             className="searchbar box-shadow"
             type="search"
@@ -53,6 +53,19 @@ export default function SearchBar({ slogan, brand, placeholder }) {
             value={hasContent}
             ref={searchbar}
           />
+
+          <button type="submit" className="inputfield-button" title="Search">
+            <FaSearch title={placeholder} className="fa-search icon" />
+            {hasContent.length > 0 && (
+              <span
+                className="close-icon"
+                onClick={closeQueryHandler}
+                title="Close query"
+              >
+                &#10006;
+              </span>
+            )}
+          </button>
         </div>
         <p className="slogan">
           {slogan} {brand}
