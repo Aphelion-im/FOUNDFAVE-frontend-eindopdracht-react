@@ -114,6 +114,16 @@ button:hover {
   filter: brightness(110%);
 }
 
+/* Typography */
+h1 {
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
 /* Reusables  */
 .outer-container {
   width: 100%;
@@ -132,9 +142,9 @@ button:hover {
 }
 
 .box-shadow {
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .article-padding {

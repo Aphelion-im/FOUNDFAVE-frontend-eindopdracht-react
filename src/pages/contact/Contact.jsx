@@ -7,6 +7,8 @@ import { FaBan } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaComment } from 'react-icons/fa';
+import Map from '../../components/map/Map';
+import map from '../../assets/maps/map-novi.jpg';
 import './Contact.css';
 
 export default function Contact() {
@@ -52,96 +54,113 @@ export default function Contact() {
   return (
     <>
       <Content title="Contact Form">
-        {success ? (
-          <p style={{ color: 'var(--marvel-complement-clr)' }}>
-            Thank you! Form sent successfully
-          </p>
-        ) : (
-          <p>
-            Please fill in the form below and we'll contact you as soon as
-            possible
-          </p>
-        )}
+        <section className="contact-section">
+          <article className="left-column">
+            {success ? (
+              <p style={{ color: 'var(--marvel-complement-clr)' }}>
+                Thank you! Form sent successfully
+              </p>
+            ) : (
+              <p>
+                Please fill in the form below and we'll contact you as soon as
+                possible
+              </p>
+            )}
 
-        <form
-          className="contact-form"
-          name="contact-form"
-          id="contact-form"
-          method="POST"
-          onSubmit={handleSubmit(handleFormSubmit)}
-          action="/contact"
-        >
-          <input type="hidden" name="form-name" value="contactForm" />
-          {/* Name component */}
-          <InputComponent
-            inputType="text"
-            inputName="name"
-            inputId="name-field"
-            placeholder="Fill in your name"
-            validationRules={{
-              required: 'Name is required',
-              minLength: {
-                value: 2,
-                message: 'Name has to contain eat least 2 characters',
-              },
-              maxLength: {
-                value: 30,
-                message: 'Name may contain a maximum of 30 characters',
-              },
-            }}
-            register={register}
-            errors={errors}
-            icon={<FaUser />}
-          />
+            <form
+              className="contact-form"
+              name="contact-form"
+              id="contact-form"
+              method="POST"
+              onSubmit={handleSubmit(handleFormSubmit)}
+              action="/contact"
+            >
+              <input type="hidden" name="form-name" value="contactForm" />
+              {/* Name component */}
+              <InputComponent
+                inputType="text"
+                inputName="name"
+                inputId="name-field"
+                placeholder="Fill in your name"
+                validationRules={{
+                  required: 'Name is required',
+                  minLength: {
+                    value: 2,
+                    message: 'Name must contain at least 2 characters',
+                  },
+                  maxLength: {
+                    value: 30,
+                    message: 'Name may contain a maximum of 30 characters',
+                  },
+                }}
+                register={register}
+                errors={errors}
+                icon={<FaUser />}
+              />
 
-          {/* E-mail component*/}
-          <InputComponent
-            inputType="text"
-            inputName="email"
-            inputId="email-field"
-            placeholder="Fill in your e-mail address"
-            validationRules={{
-              required: 'This field is required',
-              pattern: {
-                value: /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/gm,
-                message: 'Please, fill in a valid e-mail address',
-              },
-            }}
-            register={register}
-            errors={errors}
-            icon={<FaEnvelope />}
-          />
+              {/* E-mail component*/}
+              <InputComponent
+                inputType="text"
+                inputName="email"
+                inputId="email-field"
+                placeholder="Fill in your e-mail address"
+                validationRules={{
+                  required: 'This field is required',
+                  pattern: {
+                    value: /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/gm,
+                    message: 'Please, fill in a valid e-mail address',
+                  },
+                }}
+                register={register}
+                errors={errors}
+                icon={<FaEnvelope />}
+              />
 
-          {/* Bericht component*/}
-          <TextAreaComponent
-            inputName="message-content"
-            inputId="message-field"
-            placeholder="Leave a comment"
-            validationRules={{
-              required: 'This field is required',
-              minLength: {
-                value: 5,
-                message: 'The message must contain at least 5 characters',
-              },
-              maxLength: {
-                value: 100,
-                message: 'The message may contain a maximum of 100 characters',
-              },
-            }}
-            register={register}
-            errors={errors}
-            icon={<FaComment />}
-          />
+              {/* Bericht component*/}
+              <TextAreaComponent
+                inputName="message-content"
+                inputId="message-field"
+                placeholder="Leave a comment"
+                validationRules={{
+                  required: 'This field is required',
+                  minLength: {
+                    value: 5,
+                    message: 'The message must contain at least 5 characters',
+                  },
+                  maxLength: {
+                    value: 100,
+                    message:
+                      'The message may contain a maximum of 100 characters',
+                  },
+                }}
+                register={register}
+                errors={errors}
+                icon={<FaComment />}
+              />
 
-          <button
-            type="submit"
-            title="Send Form"
-            className={isValid ? 'valid box-shadow' : 'notvalid box-shadow'}
-            disabled={!isValid}
-          >
-            {isValid ? 'Send Form' : <FaBan />}
-          </button>
-        </form>
+              <button
+                type="submit"
+                title="Send Form"
+                className={isValid ? 'valid box-shadow' : 'notvalid box-shadow'}
+                disabled={!isValid}
+              >
+                {isValid ? 'Send Form' : <FaBan />}
+              </button>
+            </form>
+          </article>
+
+          <article className="right-column">
+            <Map
+              image={map}
+              title="NOVI Hogeschool"
+              address="Newtonlaan 247"
+              zipcode="3584 BH"
+              city="Utrecht"
+              telephone="030-3073200"
+              email="contact@novi.nl"
+            />
+          </article>
+        </section>
       </Content>
     </>
   );
