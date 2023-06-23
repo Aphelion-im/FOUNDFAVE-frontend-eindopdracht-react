@@ -4,6 +4,9 @@ import InputComponent from '../../components/input/InputComponent';
 import TextAreaComponent from '../../components/textarea/TextAreaComponent';
 import Content from '../../components/content/Content';
 import { FaBan } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
+import { FaComment } from 'react-icons/fa';
 import './Contact.css';
 
 export default function Contact() {
@@ -81,9 +84,14 @@ export default function Contact() {
                 value: 2,
                 message: 'Name has to contain eat least 2 characters',
               },
+              maxLength: {
+                value: 30,
+                message: 'Name may contain a maximum of 30 characters',
+              },
             }}
             register={register}
             errors={errors}
+            icon={<FaUser />}
           />
 
           {/* E-mail component*/}
@@ -101,6 +109,7 @@ export default function Contact() {
             }}
             register={register}
             errors={errors}
+            icon={<FaEnvelope />}
           />
 
           {/* Bericht component*/}
@@ -115,12 +124,13 @@ export default function Contact() {
                 message: 'The message must contain at least 5 characters',
               },
               maxLength: {
-                value: 300,
-                message: 'The message may contain a maximum of 300 characters',
+                value: 100,
+                message: 'The message may contain a maximum of 100 characters',
               },
             }}
             register={register}
             errors={errors}
+            icon={<FaComment />}
           />
 
           <button

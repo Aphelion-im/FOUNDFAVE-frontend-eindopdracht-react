@@ -13,6 +13,7 @@
   padding: 1rem 2rem;
   font-weight: 700;
   text-transform: uppercase;
+  width: 50%;
 }
 
 .contact-form .valid {

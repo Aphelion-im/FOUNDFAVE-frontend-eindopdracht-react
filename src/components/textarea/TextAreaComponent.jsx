@@ -9,16 +9,21 @@ export default function TextAreaComponent({
   validationRules,
   register,
   errors,
+  icon
 }) {
   return (
     <>
-      <label htmlFor={inputId}>{inputLabel}</label>
-      <textarea
-      className="textarea-component box-shadow"
-        id={inputId}
-        placeholder={placeholder}
-        {...register(inputName, validationRules)}
-      ></textarea>
+      <div className="textarea-component-container">
+        <label htmlFor={inputId}>{inputLabel}</label>
+        <span className="input-icon">{icon}</span>
+        <textarea
+          className="textarea-component box-shadow"
+          id={inputId}
+          placeholder={placeholder}
+          {...register(inputName, validationRules)}
+          icon={icon}
+        ></textarea>
+      </div>
       <div className="error-message">
         {errors[inputName] && (
           <p>

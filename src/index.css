@@ -104,8 +104,6 @@ img {
   width: 100%;
 }
 
-/* Remove the typical button styling on Mac
-For these buttons a background-color and color must be defined */
 button {
   appearance: none;
   -webkit-appearance: none;

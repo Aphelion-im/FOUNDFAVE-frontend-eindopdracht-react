@@ -1,14 +1,28 @@
-.textarea-component {
+.textarea-component-container {
+  position: relative;
+}
+
+.textarea-component-container .textarea-component {
   resize: none;
   outline: none;
   background-color: var(--input-bg-clr);
   color: var(--input-text-clr);
   width: 100%;
   border: 4px solid #262626;
-  padding: 8px;
+  padding: 23px 8px 8px 32px;
 }
 
-.textarea-component:focus {
+.textarea-component-container .textarea-component:focus {
   background-color: #333333;
   color: #fff;
 }
+
+.textarea-component-container .input-icon {
+  color: #666;
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+}
+
+

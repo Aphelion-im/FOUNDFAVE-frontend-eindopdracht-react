@@ -1,23 +1,27 @@
-.input-component {
+.input-component-container {
+  position: relative;
+}
+
+.input-component-container .input-component {
   background-color: var(--input-bg-clr);
   color: var(--input-text-clr);
   width: 100%;
   border: 4px solid #262626;
-  padding: 8px;
+  padding: 8px 8px 8px 32px;
   outline: none;
 }
 
-.input-component:focus {
+.input-component-container .input-component:focus {
   background-color: #333333;
   color: #fff;
 }
 
-.contact-form label {
+.input-component-container .contact-form label {
   text-align: left;
   font-weight: 700;
 }
 
-.input-component ~ .error-message {
+.input-component-container ~ .error-message {
   color: var(--marvel-red-clr);
   text-align: left;
   font-size: 0.8rem;
@@ -27,4 +31,12 @@
 .error-message .warning-icon {
   margin-right: 4px;
   vertical-align: middle;
+}
+
+.input-component-container .input-icon {
+  color: #666;
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-40%);
 }
