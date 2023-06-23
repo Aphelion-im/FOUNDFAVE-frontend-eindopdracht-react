@@ -116,11 +116,12 @@ button:hover {
 /* Typography */
 h1 {
   margin-bottom: 8px;
+  text-transform: capitalize;
 }
 
 h2 {
-  font-size: 1.1rem;
   margin-bottom: 8px;
+  font-size: 1.1rem;
 }
 
 /* Reusables  */

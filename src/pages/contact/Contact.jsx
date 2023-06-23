@@ -55,7 +55,8 @@ export default function Contact() {
     <>
       <Content title="Contact Form">
         <section className="contact-section">
-          <article className="left-column">
+          {/* Left column */}
+          <article>
             {success ? (
               <p style={{ color: 'var(--marvel-complement-clr)' }}>
                 Thank you! Form sent successfully
@@ -148,8 +149,8 @@ export default function Contact() {
               </button>
             </form>
           </article>
-
-          <article className="right-column">
+          {/* Right column */}
+          <article>
             <Map
               image={map}
               title="NOVI Hogeschool"
