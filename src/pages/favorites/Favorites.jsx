@@ -2,11 +2,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Content from '../../components/content/Content';
 import { FaInfoCircle } from 'react-icons/fa';
-
+import CharCard from '../../components/charcard/CharCard';
 import './Favorites.css';
 
 export default function Favorites() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   const navigate = useNavigate();
 
   function handleClick() {
@@ -19,10 +19,33 @@ export default function Favorites() {
         <section className="favorites-section">
           <article>
             {isAuth ? (
-              <p>Authenticated</p>
+              <>
+                <hr />
+                <p>You have 18 favorites</p>
+                <section className="favorites-container">
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                  <CharCard />
+                </section>
+              </>
             ) : (
               <>
-                <p>
+                <p className="informationbox">
                   <FaInfoCircle className="fa-info-circle-icon" />
                   Save all your favorite Marvel characters on this list. Look at
                   your list or edit it?{' '}

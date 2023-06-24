@@ -22,8 +22,8 @@
 :root {
   --body-background-clr: whitesmoke;
   --main-bg-clr: #1a1a1a;
-  --marvel-red-clr: #eb1e25;
-  --marvel-complement-clr: #1eeb54;
+  --marvel-red-clr: hsl(358, 84%, 52%);
+  --marvel-complement-clr: hsl(136, 84%, 52%);
   --base-dark-clr: #121212;
   --l-10-dark-clr: #1a1a1a;
   --l-15-dark-clr: #262626;

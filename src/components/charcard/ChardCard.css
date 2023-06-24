@@ -1,0 +1,56 @@
+.charcard {
+  flex: 1 1 175px;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+  cursor: pointer;
+  border: 4px solid #262626;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.fa-heart-icon {
+  position: absolute;
+  color: var(--marvel-red-clr);
+  right: 8px;
+  top: 8px;
+  font-size: 1.5rem;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.fa-heart-icon:hover {
+  color: var(--marvel-complement-clr);
+}
+
+.charcard .info-window {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+  padding: 4px;
+  transition: all 250ms ease-in;
+  font-size: 0.8rem;
+}
+
+.charcard .info-window:hover {
+  height: 100%;
+}
+
+.charcard .char-title {
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+  margin-block: 14px;
+}
+
+/* MEDIA QUERIES */
+/* Mobile first! */
+@media screen and (min-width: 768px) {
+  .charcard {
+    flex: 0 1 175px;
+  }
+}

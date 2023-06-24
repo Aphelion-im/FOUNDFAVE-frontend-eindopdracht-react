@@ -11,7 +11,15 @@
   flex: 1 1 50%;
 }
 
-.favorites-section article p {
+.favorites-section .favorites-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.favorites-section article .informationbox {
   color: var(--normal-text-clr);
   background-color: var(--input-bg-clr);
   border: 4px solid #262626;
@@ -44,6 +52,15 @@
 
 .favorites-section button:hover {
   filter: brightness(110%);
+}
+
+.favorites-section hr {
+  border: 1px solid #262626;
+  margin-block: 4px;
+}
+
+.favorites-section hr ~ p {
+  margin-block: 8px;
 }
 
 /* MEDIA QUERIES */
