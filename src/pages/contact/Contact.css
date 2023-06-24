@@ -24,6 +24,11 @@
   font-weight: 700;
   text-transform: uppercase;
   width: 50%;
+  border: none;
+}
+
+.contact-form button:hover {
+  filter: brightness(110%);
 }
 
 .contact-form .valid {
@@ -47,5 +52,4 @@
   .contact-section {
     flex-direction: row;
   }
-
 }

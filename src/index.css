@@ -38,8 +38,10 @@
   --l-90-dark-clr: #e6e6e6;
   --l-100-white: #fff;
   --input-text-clr: #1a1a1a;
+  --normal-text-clr: #1a1a1a;
   --input-bg-clr: #fff;
   --image-border: #262626;
+  --hyperlink: #1a1a1a;
 }
 
 /* Dark theme */
@@ -47,8 +49,10 @@
   --body-background-clr: #121212;
   --main-bg-clr: #fff;
   --input-text-clr: #fff;
+  --normal-text-clr: #fff;
   --input-bg-clr: #1a1a1a;
   --image-border: #fff;
+  --hyperlink: #fff;
 }
 
 *,
@@ -109,10 +113,6 @@ button {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-}
-
-button:hover {
-  filter: brightness(110%);
 }
 
 /* Typography */
@@ -201,12 +201,12 @@ h2 {
 
 /* General hyperlinks styling */
 .hyperlink {
-  color: #fff;
+  color: var(--hyperlink);
   text-decoration: underline;
 }
 
 .hyperlink:visited {
-  color: #fff;
+  color: var(--hyperlink);
   text-decoration: none;
 }
 

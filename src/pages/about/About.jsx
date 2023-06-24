@@ -10,24 +10,29 @@ export default function About() {
         <section className="about-section">
           <article>
             <p>
-              Zit je steeds met je handen in het haar als je jouw favoriete
-              Marvel karakters in een document moet copy-pasten om ze te
-              bewaren? Treur niet langer! Met deze handige app kun je snel jouw
-              Marvel karakters opzoeken en online bewaren.
+              Are you always frustrated when you have to copy-paste your
+              favorite Marvel characters into a document over and over again?
+              Don't grieve any longer! With this handy app you can quickly find
+              and save your Marvel characters online.
             </p>
             <p>
-              <strong>FOUNDFAVE</strong> is dé online app om Marvel karakters op
-              te zoeken en te bewaren. Daarom is de slogan:{' '}
+              <strong>FOUNDFAVE</strong> is the online app to find and save your
+              favorite Marvel characters. That's why this is our slogan:{' '}
               <i>Found your fave with FOUNDFAVE!"</i>.
             </p>
             <p>
-              FOUNDFAVE is een idee van André de Groot. In opdracht van NOVI
-              Hogeschool
+              FOUNDFAVE is an idea by André de Groot. On behalf of NOVI
+              University
             </p>
+            <p><strong>Current app version</strong>: v1.0.0</p>
           </article>
 
           <article>
-            <ImageComponent className="illustration" image={illustration} title="Illustration" />
+            <ImageComponent
+              className="illustration box-shadow"
+              image={illustration}
+              title="Illustration"
+            />
           </article>
         </section>
       </Content>

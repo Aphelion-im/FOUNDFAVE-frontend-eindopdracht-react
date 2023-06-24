@@ -53,18 +53,17 @@ export default function SearchBar({ slogan, brand, placeholder }) {
             value={hasContent}
             ref={searchbar}
           />
-
+          {hasContent.length > 0 && (
+            <span
+              className="close-icon"
+              onClick={closeQueryHandler}
+              title="Close query"
+            >
+              &#10006;
+            </span>
+          )}
           <button type="submit" className="inputfield-button" title="Search">
             <FaSearch title={placeholder} className="fa-search icon" />
-            {hasContent.length > 0 && (
-              <span
-                className="close-icon"
-                onClick={closeQueryHandler}
-                title="Close query"
-              >
-                &#10006;
-              </span>
-            )}
           </button>
         </div>
         <p className="slogan">

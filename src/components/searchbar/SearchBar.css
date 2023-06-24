@@ -51,6 +51,10 @@
   border: 4px solid #262626;
 }
 
+.searchbar-icon-container .inputfield-button:hover {
+  filter: brightness(110%);
+}
+
 .searchbar-icon-container .inputfield-button:active {
   background-color: var(--l-20-dark-clr);
 }
@@ -61,16 +65,13 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 110%;
+  right: 28%;
   transition: color 100ms ease-in;
+  cursor: pointer;
 }
 
 .searchbar-icon-container .close-icon:hover {
   color: #ffffff;
-}
-
-.searchbar-icon-container .close-icon:active {
-  color: var(--marvel-red-clr);
 }
 
 .searchbar-icon-container .fa-search {

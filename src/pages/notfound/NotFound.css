@@ -4,4 +4,35 @@
   margin-left: 2px;
 }
 
+.pagenotfound-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+  text-align: left;
+  line-height: 1.5;
+}
 
+.pagenotfound-section article {
+  flex: 1 1 50%;
+}
+
+.pagenotfound-section ul {
+  list-style-position: inside;
+  margin-bottom: 8px;
+}
+
+.pagenotfound-section .illustration {
+  width: 100%;
+  object-fit: cover;
+  border: 4px solid var(--image-border);
+  border-radius: 50%;
+}
+
+/* MEDIA QUERIES */
+/* Mobile first! */
+@media screen and (min-width: 768px) {
+  .pagenotfound-section {
+    flex-direction: row;
+  }
+}
