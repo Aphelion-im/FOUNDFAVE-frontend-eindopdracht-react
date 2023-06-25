@@ -1,17 +1,28 @@
-// FaHeart (Vol hart)
-// FaRegHeart (Open hart)
+import { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
+import { FaRegHeart } from 'react-icons/fa';
 import './CharCard.css';
 
-function handleClick() {
-  console.log('Clicked fave!');
-}
 
 export default function CharCard() {
+  const [isFavorite, setIsFavorite] = useState(false);
+
   return (
     <>
       <div className="charcard box-shadow">
-        <FaHeart className="fa-heart-icon" title="Click to remove this favorite" onClick={handleClick} />
+        {isFavorite ? (
+          <FaRegHeart
+            className="fa-heart-icon"
+            title="Click to remove this favorite"
+            onClick={() => setIsFavorite(!isFavorite)}
+          />
+        ) : (
+          <FaHeart
+            className="fa-heart-icon"
+            title="Click to add this favorite"
+            onClick={() => setIsFavorite(!isFavorite)}
+          />
+        )}
         <img src="https://picsum.photos/200/300" alt="Test alt" />
         <div className="info-window">
           <span className="char-title">Spider-Man</span>

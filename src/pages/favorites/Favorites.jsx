@@ -6,9 +6,13 @@ import CharCard from '../../components/charcard/CharCard';
 import ToolTip from '../../components/tooltip/ToolTip';
 import './Favorites.css';
 
+// TODO:
+// Maximaal aantal favorieten
+
 export default function Favorites() {
   const [isAuth, setIsAuth] = useState(true);
   const [favorites, setFavorites] = useState(18);
+  const [userName, setUserName] = useState('André');
   const navigate = useNavigate();
 
   function handleClick() {
@@ -23,7 +27,7 @@ export default function Favorites() {
             {isAuth ? (
               <>
                 <hr />
-                <p>You have {favorites} favorites</p>
+                <p>Welcome {userName}, you have {favorites} favorites</p>
                 <ToolTip info="Hint: Mouse-over the names to see more info" />
                 <section className="favorites-container">
                   <CharCard />
