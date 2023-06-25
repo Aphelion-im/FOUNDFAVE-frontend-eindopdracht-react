@@ -1,12 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import Content from '../../components/content/Content';
 import { FaInfoCircle } from 'react-icons/fa';
+import Content from '../../components/content/Content';
 import CharCard from '../../components/charcard/CharCard';
+import ToolTip from '../../components/tooltip/ToolTip';
 import './Favorites.css';
 
 export default function Favorites() {
   const [isAuth, setIsAuth] = useState(true);
+  const [favorites, setFavorites] = useState(18);
   const navigate = useNavigate();
 
   function handleClick() {
@@ -21,7 +23,7 @@ export default function Favorites() {
             {isAuth ? (
               <>
                 <hr />
-                <p>You have 18 favorites</p>
+                <p>You have {favorites} favorites</p><ToolTip info="Hint: Hover over the names"/>
                 <section className="favorites-container">
                   <CharCard />
                   <CharCard />
