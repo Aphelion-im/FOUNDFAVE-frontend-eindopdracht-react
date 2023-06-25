@@ -1,7 +1,7 @@
 // FaHeart (Vol hart)
 // FaRegHeart (Open hart)
 import { FaHeart } from 'react-icons/fa';
-import './ChardCard.css';
+import './CharCard.css';
 
 function handleClick() {
   console.log('Clicked fave!');

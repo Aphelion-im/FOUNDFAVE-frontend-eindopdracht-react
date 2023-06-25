@@ -9,7 +9,7 @@ export default function SearchBar({ slogan, brand, placeholder }) {
   const [isLoading, setIsLoading] = useState(false);
   const searchbar = useRef(null);
 
-  function handleForm(e) {
+  function onFormSubmit(e) {
     e.preventDefault();
 
     if (hasContent.length < 1) {
@@ -40,7 +40,7 @@ export default function SearchBar({ slogan, brand, placeholder }) {
   return (
     <>
       <Logo className="logo" />
-      <form className="search-form" onSubmit={handleForm}>
+      <form className="search-form" onSubmit={onFormSubmit}>
         <div className="searchbar-icon-container">
           <input
             className="searchbar box-shadow"
