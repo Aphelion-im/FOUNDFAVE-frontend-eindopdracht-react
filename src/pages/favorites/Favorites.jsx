@@ -23,7 +23,8 @@ export default function Favorites() {
             {isAuth ? (
               <>
                 <hr />
-                <p>You have {favorites} favorites</p><ToolTip info="Hint: Hover over the names"/>
+                <p>You have {favorites} favorites</p>
+                <ToolTip info="Hint: Mouse-over the names to see more info" />
                 <section className="favorites-container">
                   <CharCard />
                   <CharCard />
