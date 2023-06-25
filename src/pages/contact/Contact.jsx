@@ -24,8 +24,6 @@ export default function Contact() {
     mode: 'onChange',
   });
 
-  // console.log('Errors: ', errors);
-
   function handleFormSubmit(data) {
     console.table(data);
     console.table('Name: ', data.name);
@@ -82,7 +80,7 @@ export default function Contact() {
                 inputType="text"
                 inputName="name"
                 inputId="name-field"
-                placeholder="Fill in your name"
+                placeholder="Name"
                 validationRules={{
                   required: 'Name is required',
                   minLength: {
@@ -101,15 +99,15 @@ export default function Contact() {
 
               {/* E-mail component*/}
               <InputComponent
-                inputType="text"
+                inputType="email"
                 inputName="email"
                 inputId="email-field"
-                placeholder="Fill in your e-mail address"
+                placeholder="E-mail"
                 validationRules={{
                   required: 'This field is required',
                   pattern: {
                     value: /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/gm,
-                    message: 'Please, fill in a valid e-mail address',
+                    message: 'Please fill in a valid e-mail address',
                   },
                 }}
                 register={register}
@@ -121,7 +119,7 @@ export default function Contact() {
               <TextAreaComponent
                 inputName="message-content"
                 inputId="message-field"
-                placeholder="Leave a comment"
+                placeholder="Comment"
                 validationRules={{
                   required: 'This field is required',
                   minLength: {
