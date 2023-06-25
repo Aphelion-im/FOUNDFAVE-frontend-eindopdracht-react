@@ -24,20 +24,20 @@ export default function NotFound() {
               If you would like to contact us, please use the{' '}
               <Link to="/contact" className="hyperlink">
                 contact form
-              </Link>
+              </Link>.
             </p>
             <br />
             <h2>
-              <strong>More information about this error</strong>
+              <strong>More information about this error:</strong>
             </h2>
             <ul>
               <li>We're sorry, the page you requested cannot be found.</li>
             </ul>
             <h2>
-              <strong>Here are some additional tips</strong>
+              <strong>Here are some additional tips:</strong>
             </h2>
             <ul>
-              <li>Verify the URL you are trying to access is correct</li>
+              <li>Verify the URL you are trying to access is correct.</li>
             </ul>
             <h2>Additional technical details:</h2>
             <ul>
