@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Content from '../../components/content/Content';
 import ImageComponent from '../../components/image-component/ImageComponent';
 import illustration from '../../assets/illustrations/man-behind-computer.jpg';
@@ -10,21 +11,28 @@ export default function About() {
         <section className="about-section">
           <article>
             <p>
-              Are you always frustrated when you have to copy-paste your
-              favorite Marvel characters into a document over and over again?
-              Don't grieve any longer! With this handy app you can quickly find
-              and save your Marvel characters online.
+              Do you feel frustrated when you have to copy-paste your favorite
+              Marvel characters into a document over and over again? Don't
+              grieve any longer! With this handy app you can quickly find and
+              save your Marvel characters online.
             </p>
             <p>
-              <strong>FOUNDFAVE</strong> is the online app to find and save your
-              favorite Marvel characters. That's why this is our slogan:{' '}
-              <i>Found your fave with FOUNDFAVE!"</i>.
+              <strong>FOUNDFAVE</strong>&copy;&reg; is the online app to find
+              and save your favorite Marvel characters.
             </p>
             <p>
-              FOUNDFAVE is an idea by André de Groot. On behalf of NOVI
-              University
+              <strong>That's why this is our slogan</strong>:&nbsp;
+              <q>Found your fave with FOUNDFAVE!</q>.
             </p>
-            <p><strong>Current app version</strong>: v1.0.0</p>
+            <p>
+              FOUNDFAVE is an idea by André de Groot. On behalf of{' '}
+              <a target="_blank" className="hyperlink" href="https://novi.nl">
+                NOVI University
+              </a>
+            </p>
+            <p>
+              <strong>Current app version</strong>: v1.0.0 (stable)
+            </p>
           </article>
 
           <article>
