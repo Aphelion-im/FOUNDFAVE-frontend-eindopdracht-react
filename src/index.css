@@ -6,18 +6,9 @@
     2. Typography
     3. Layout
         3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        4.3 Work
-        4.4 Services
-        4.5 Contact
-        4.6 Footer
-    5. Media Queries
 ////////////////////////*/
 
-/* Global styles */
+/********** 1. Global styles **********/
 /* Light theme */
 :root {
   --body-background-clr: whitesmoke;
@@ -115,7 +106,7 @@ button {
   -moz-appearance: none;
 }
 
-/* Typography */
+/********** 2. Typography **********/
 h1 {
   margin-bottom: 8px;
   text-transform: capitalize;
@@ -126,7 +117,8 @@ h2 {
   font-size: 1.1rem;
 }
 
-/* Reusables  */
+/********** 3. Layout **********/
+/***** 3.1 Reusables  *****/
 .outer-container {
   width: 100%;
   display: flex;
@@ -153,7 +145,6 @@ h2 {
   padding-block: 2rem;
 }
 
-/* General hyperlinks styling */
 .hyperlink {
   color: var(--hyperlink);
   text-decoration: underline;
@@ -167,14 +158,3 @@ h2 {
 .hyperlink:hover {
   color: #666;
 }
-
-/* MEDIA QUERIES */
-/* Mobile first! */
-/* @media screen and (min-width: 768px) {
-} */
-
-/* @media screen and (min-width: 992px) {
-}
-
-@media screen and (min-width: 1200px) {
-} */

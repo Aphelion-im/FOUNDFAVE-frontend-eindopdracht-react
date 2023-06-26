@@ -1,3 +1,20 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        4.3 Work
+        4.4 Services
+        4.5 Contact
+        4.6 Footer
+    5. Media Queries
+////////////////////////*/
+
 footer {
   background-color: #262626;
   color: #fff;
@@ -69,8 +86,7 @@ footer .icon:active {
   transform: translateY(1px);
 }
 
-/* MEDIA QUERIES */
-/* Mobilefirst! */
+/********** Media Queries **********/
 @media screen and (min-width: 768px) {
   footer .copyright {
     display: block;
@@ -85,8 +101,3 @@ footer .icon:active {
   }
 }
 
-/* @media screen and (min-width: 992px) {
-}
-
-@media screen and (min-width: 1200px) {
-} */
