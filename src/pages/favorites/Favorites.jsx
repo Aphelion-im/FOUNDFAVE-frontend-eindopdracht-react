@@ -10,7 +10,7 @@ import './Favorites.css';
 // Maximaal aantal favorieten
 
 export default function Favorites() {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [favorites, setFavorites] = useState(18);
   const [userName, setUserName] = useState('André');
   const navigate = useNavigate();

@@ -10,12 +10,15 @@ import { FaLock } from 'react-icons/fa';
 import './SignInRegister.css';
 
 export default function Contact() {
+  const [isAuth, setIsAuth] = useState(false);
   const [signInSuccess, setSignInsetSuccess] = useState(false);
   const [registerAccountSuccess, setRegisterAccountSuccess] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
 
-  console.log(isSubmitted);
+  console.clear();
+  console.log('IsSubmitted: ', isSubmitted);
+  console.log('IsAuth: ', isAuth);
 
   const {
     handleSubmit,
@@ -42,6 +45,7 @@ export default function Contact() {
     console.table('Password: ', data.passwordsignin);
     setSignInsetSuccess(true);
     reset();
+    setIsAuth(true);
     setIsSubmitted(true);
   }
 
@@ -51,6 +55,7 @@ export default function Contact() {
     console.table('Password: ', data.passwordregister);
     setRegisterAccountSuccess(true);
     reset2();
+    setIsAuth(true);
     setIsSubmitted(true);
   }
 
@@ -173,7 +178,8 @@ export default function Contact() {
           <article>
             {registerAccountSuccess ? (
               <p style={{ color: 'var(--marvel-complement-clr)' }}>
-                Registered account succesfully. Logging in, redirecting, please wait ...
+                Registered account succesfully. Logging in, redirecting, please
+                wait ...
               </p>
             ) : (
               <p>Register a new account</p>
