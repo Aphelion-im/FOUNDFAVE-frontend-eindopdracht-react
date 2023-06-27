@@ -12,7 +12,10 @@ import './SignInRegister.css';
 export default function Contact() {
   const [signInSuccess, setSignInsetSuccess] = useState(false);
   const [registerAccountSuccess, setRegisterAccountSuccess] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
+
+  console.log(isSubmitted);
 
   const {
     handleSubmit,
@@ -38,8 +41,8 @@ export default function Contact() {
     console.table('Email: ', data.emailsignin);
     console.table('Password: ', data.passwordsignin);
     setSignInsetSuccess(true);
-    navigate('/favorites');
     reset();
+    setIsSubmitted(true);
   }
 
   function handleRegisterAccount(data) {
@@ -47,8 +50,8 @@ export default function Contact() {
     console.table('Email: ', data.emailregister);
     console.table('Password: ', data.passwordregister);
     setRegisterAccountSuccess(true);
-    navigate('/favorites');
     reset2();
+    setIsSubmitted(true);
   }
 
   useEffect(() => {
@@ -71,6 +74,18 @@ export default function Contact() {
     };
   }, [registerAccountSuccess]);
 
+  useEffect(() => {
+    const timeoutRegisterAccount = setTimeout(() => {
+      if (isSubmitted) {
+        navigate('/favorites');
+      }
+    }, 3000);
+
+    return () => {
+      clearTimeout(timeoutRegisterAccount);
+    };
+  }, [isSubmitted]);
+
   return (
     <>
       <Content title="Sign In & Register">
@@ -79,7 +94,7 @@ export default function Contact() {
           <article>
             {signInSuccess ? (
               <p style={{ color: 'var(--marvel-complement-clr)' }}>
-                Logged in successfully. Redirecting ...
+                Logged in successfully. Redirecting, please wait ...
               </p>
             ) : (
               <p>Sign in for registered users</p>
@@ -92,7 +107,6 @@ export default function Contact() {
               id="signin-form"
               method="POST"
               onSubmit={handleSubmit(handleSignIn)}
-              // action="/contact"
             >
               <input type="hidden" name="form-name" value="contactForm" />
               {/* E-mail component*/}
@@ -159,7 +173,7 @@ export default function Contact() {
           <article>
             {registerAccountSuccess ? (
               <p style={{ color: 'var(--marvel-complement-clr)' }}>
-                Registered account succesfully. Logging in ...
+                Registered account succesfully. Logging in, redirecting, please wait ...
               </p>
             ) : (
               <p>Register a new account</p>
