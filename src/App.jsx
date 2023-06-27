@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import HeaderMenu from './components/header/HeaderMenu';
-import FooterMenu from './components/footer/FooterMenu';
+import HeaderMenu from './components/header/Header';
+import FooterMenu from './components/footer/Footer';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
@@ -10,6 +10,7 @@ import SignInRegister from './pages/signinregister/SignInRegister';
 import Favorites from './pages/favorites/Favorites';
 
 export default function App() {
+
   return (
     <>
       <HeaderMenu />

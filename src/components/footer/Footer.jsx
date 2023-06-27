@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaPinterestSquare } from 'react-icons/fa';
 import { FaFacebookSquare } from 'react-icons/fa';
@@ -5,7 +6,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { ReactComponent as LogoFooter } from '../../assets/logo/logo-footer.svg';
 import { showCurrentYear } from '../../helpers/createdatetime';
-import './FooterMenu.css';
+import './Footer.css';
 
 export default function FooterMenu() {
   const navigate = useNavigate();

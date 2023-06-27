@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import DarkLightMode from '../darklightmode/DarkLightMode';
 import { ReactComponent as LogoHeader } from '../../assets/logo/logo-header.svg';
 import { FaRegHeart } from 'react-icons/fa';
-import './HeaderMenu.css';
+import './Header.css';
 
 export default function HeaderMenu() {
   const navigate = useNavigate();
