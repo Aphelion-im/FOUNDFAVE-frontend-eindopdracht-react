@@ -8,20 +8,15 @@ import ToolTip from '../../components/tooltip/ToolTip';
 import { FaBan } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaLock } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import './SignInRegister.css';
 
 export default function Contact() {
-  const [isAuth, toggleIsAuth] = useState(false);
-  const [signInSuccess, setSignInsetSuccess] = useState(false);
-  const [registerAccountSuccess, setRegisterAccountSuccess] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const navigate = useNavigate();
-
+  const [signInSuccess, toggleSignInsetSuccess] = useState(false);
+  const [registerAccountSuccess, toggleRegisterAccountSuccess] = useState(false);
+  const [isSubmitted, toggleIsSubmitted] = useState(false);
   const { login } = useContext(AuthContext);
-
-  console.clear();
-  console.log('IsSubmitted: ', isSubmitted);
-  console.log('IsAuth: ', isAuth);
+  const navigate = useNavigate();
 
   const {
     handleSubmit,
@@ -46,25 +41,26 @@ export default function Contact() {
     console.table(data);
     console.table('Email: ', data.emailsignin);
     console.table('Password: ', data.passwordsignin);
-    setSignInsetSuccess(true);
+    toggleSignInsetSuccess(true);
     reset();
-    setIsSubmitted(true);
+    toggleIsSubmitted(true);
     login();
   }
 
   function handleRegisterAccount(data) {
     console.table(data);
+    console.table('Username: ', data.usernameregister);
     console.table('Email: ', data.emailregister);
     console.table('Password: ', data.passwordregister);
-    setRegisterAccountSuccess(true);
+    toggleRegisterAccountSuccess(true);
     reset2();
-    setIsSubmitted(true);
+    toggleIsSubmitted(true);
     login();
   }
 
   useEffect(() => {
     const timeoutSignIn = setTimeout(() => {
-      setSignInsetSuccess(false);
+      toggleSignInsetSuccess(false);
     }, 3000);
 
     return () => {
@@ -74,7 +70,7 @@ export default function Contact() {
 
   useEffect(() => {
     const timeoutRegisterAccount = setTimeout(() => {
-      setRegisterAccountSuccess(false);
+      toggleRegisterAccountSuccess(false);
     }, 3000);
 
     return () => {
@@ -116,8 +112,7 @@ export default function Contact() {
               method="POST"
               onSubmit={handleSubmit(handleSignIn)}
             >
-              <input type="hidden" name="form-name" value="contactForm" />
-              {/* E-mail component*/}
+              {/* E-mail field */}
               <InputComponent
                 inputType="email"
                 inputName="emailsignin"
@@ -134,7 +129,7 @@ export default function Contact() {
                 errors={errors}
                 icon={<FaEnvelope />}
               />
-              {/* Password  */}
+              {/* Password field */}
               <InputComponent
                 inputType="password"
                 inputName="passwordsignin"
@@ -144,11 +139,11 @@ export default function Contact() {
                   required: 'You must specify a password',
                   minLength: {
                     value: 3,
-                    message: 'Passwords must have at least 3 characters',
+                    message: 'Passwords must have at least 6 characters',
                   },
                   maxLength: {
                     value: 10,
-                    message: 'Passwords may not exceed 10 characters',
+                    message: 'Passwords may not exceed 20 characters',
                   },
                   pattern: {
                     value: /[A-Za-z0-9]/,
@@ -196,8 +191,32 @@ export default function Contact() {
               method="POST"
               onSubmit={handleSubmit2(handleRegisterAccount)}
             >
-              <input type="hidden" name="form-name" value="contactForm" />
-              {/* E-mail component*/}
+              {/* Username field */}
+              <InputComponent
+                inputType="text"
+                inputName="usernameregister"
+                inputId="usernameregister"
+                placeholder="Username"
+                validationRules={{
+                  required: 'You must specify a password',
+                  minLength: {
+                    value: 3,
+                    message: 'Usernames must have at least 3 characters',
+                  },
+                  maxLength: {
+                    value: 10,
+                    message: 'Usernames may not exceed 10 characters',
+                  },
+                  pattern: {
+                    value: /[A-Za-z0-9]/,
+                    message: 'Usernames may not contain special characters',
+                  },
+                }}
+                register={register2}
+                errors={errors2}
+                icon={<FaUser />}
+              />
+              {/* E-mail field */}
               <InputComponent
                 inputType="email"
                 inputName="emailregister"
@@ -214,7 +233,7 @@ export default function Contact() {
                 errors={errors2}
                 icon={<FaEnvelope />}
               />
-              {/* Password component*/}
+              {/* Password field */}
               <InputComponent
                 inputType="password"
                 inputName="passwordregister"
@@ -224,11 +243,11 @@ export default function Contact() {
                   required: 'You must specify a password',
                   minLength: {
                     value: 3,
-                    message: 'Passwords must have at least 3 characters',
+                    message: 'Passwords must have at least 6 characters',
                   },
                   maxLength: {
                     value: 10,
-                    message: 'Passwords may not exceed 10 characters',
+                    message: 'Passwords may not exceed 20 characters',
                   },
                   pattern: {
                     value: /[A-Za-z0-9]/,
