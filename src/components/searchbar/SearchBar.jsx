@@ -5,21 +5,21 @@ import './SearchBar.css';
 
 export default function SearchBar({ slogan, brand, placeholder }) {
   const [hasContent, setHasContent] = useState('');
-  const [isSearching, setIsSearching] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isSearching, toggleIsSearching] = useState(false);
+  const [isLoading, toggleIsLoading] = useState(false);
   const searchbar = useRef(null);
 
   function onFormSubmit(e) {
     e.preventDefault();
 
     if (hasContent.length < 1) {
-      setIsSearching(false);
-      setIsLoading(false);
+      toggleIsSearching(false);
+      toggleIsLoading(false);
       searchbar.current.focus();
       return;
     }
-    setIsSearching(true);
-    setIsLoading(true);
+    toggleIsSearching(true);
+    toggleIsLoading(true);
     setHasContent('');
     searchbar.current.focus();
   }

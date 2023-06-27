@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 import { FaInfoCircle } from 'react-icons/fa';
 import Content from '../../components/content/Content';
 import CharCard from '../../components/charcard/CharCard';
@@ -8,16 +9,13 @@ import './Favorites.css';
 
 // TODO:
 // Maximaal aantal favorieten
+// User feedback: Removed a favorite
 
 export default function Favorites() {
-  const [isAuth, setIsAuth] = useState(false);
   const [favorites, setFavorites] = useState(18);
-  const [userName, setUserName] = useState('André');
   const navigate = useNavigate();
 
-  function handleClick() {
-    navigate('/sign-in-register');
-  }
+  const { isAuth, user } = useContext(AuthContext);
 
   return (
     <>
@@ -27,7 +25,9 @@ export default function Favorites() {
             {isAuth ? (
               <>
                 <hr />
-                <p>Welcome {userName}, you have {favorites} favorites</p>
+                <p>
+                  Welcome {user}, you have {favorites} favorites. 
+                </p>
                 <ToolTip info="Hint: Mouse-over the names to see more info" />
                 <section className="favorites-container">
                   <CharCard />
@@ -52,7 +52,7 @@ export default function Favorites() {
               </>
             ) : (
               <>
-                <p className="informationbox">
+                <p className="informationbox box-shadow">
                   <FaInfoCircle className="fa-info-circle-icon" />
                   Save all your favorite Marvel characters on this list. Look at
                   your list or edit it?{' '}
@@ -70,7 +70,7 @@ export default function Favorites() {
                   <button
                     className="box-shadow"
                     type="button"
-                    onClick={handleClick}
+                    onClick={() => navigate('/sign-in-register')}
                   >
                     Sign In or Register
                   </button>

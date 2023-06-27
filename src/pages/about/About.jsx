@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Content from '../../components/content/Content';
 import ImageComponent from '../../components/image-component/ImageComponent';
 import illustration from '../../assets/illustrations/man-behind-computer.jpg';

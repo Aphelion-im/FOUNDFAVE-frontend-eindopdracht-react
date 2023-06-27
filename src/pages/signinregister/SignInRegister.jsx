@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 import { useForm } from 'react-hook-form';
 import InputComponent from '../../components/input/InputComponent';
 import Content from '../../components/content/Content';
@@ -10,11 +11,13 @@ import { FaLock } from 'react-icons/fa';
 import './SignInRegister.css';
 
 export default function Contact() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, toggleIsAuth] = useState(false);
   const [signInSuccess, setSignInsetSuccess] = useState(false);
   const [registerAccountSuccess, setRegisterAccountSuccess] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
+
+  const { login } = useContext(AuthContext);
 
   console.clear();
   console.log('IsSubmitted: ', isSubmitted);
@@ -45,8 +48,8 @@ export default function Contact() {
     console.table('Password: ', data.passwordsignin);
     setSignInsetSuccess(true);
     reset();
-    setIsAuth(true);
     setIsSubmitted(true);
+    login();
   }
 
   function handleRegisterAccount(data) {
@@ -55,8 +58,8 @@ export default function Contact() {
     console.table('Password: ', data.passwordregister);
     setRegisterAccountSuccess(true);
     reset2();
-    setIsAuth(true);
     setIsSubmitted(true);
+    login();
   }
 
   useEffect(() => {

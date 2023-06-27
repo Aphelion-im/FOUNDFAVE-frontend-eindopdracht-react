@@ -4,8 +4,8 @@ import { FaRegHeart } from 'react-icons/fa';
 import './CharCard.css';
 
 export default function CharCard() {
-  const [isAuth, setIsAuth] = useState(true);
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isAuth, toggleIsAuth] = useState(true);
+  const [isFavorite, toggleIsFavorite] = useState(false);
 
   return (
     <>
@@ -15,13 +15,13 @@ export default function CharCard() {
             <FaRegHeart
               className="fa-heart-icon"
               title="Click to remove this favorite"
-              onClick={() => setIsFavorite(!isFavorite)}
+              onClick={() => toggleIsFavorite(!isFavorite)}
             />
           ) : (
             <FaHeart
               className="fa-heart-icon"
               title="Click to add this favorite"
-              onClick={() => setIsFavorite(!isFavorite)}
+              onClick={() => toggleIsFavorite(!isFavorite)}
             />
           )
         ) : null}

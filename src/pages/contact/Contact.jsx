@@ -12,7 +12,7 @@ import map from '../../assets/maps/map-novi.jpg';
 import './Contact.css';
 
 export default function Contact() {
-  const [success, setSuccess] = useState(false);
+  const [success, toggleSuccess] = useState(false);
 
   const {
     setFocus,
@@ -29,13 +29,13 @@ export default function Contact() {
     console.table('Name: ', data.name);
     console.table('Email: ', data.email);
     console.table('Comments: ', data['message-content']);
-    setSuccess(true);
+    toggleSuccess(true);
     reset();
   }
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setSuccess(false);
+      toggleSuccess(false);
     }, 3000);
 
     setFocus('name');

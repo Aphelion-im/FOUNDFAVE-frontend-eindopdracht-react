@@ -139,7 +139,7 @@ nav .menu-bottom ul {
 }
 
 nav button {
-  color: #1a1a1a;
+  color: #fff;
   padding: 4px 8px;
   cursor: pointer;
   background-color: #666;
@@ -150,7 +150,7 @@ nav button {
 }
 
 nav button:hover {
-  color: #fff;
+  color: #1a1a1a;
 }
 
 nav button:active {

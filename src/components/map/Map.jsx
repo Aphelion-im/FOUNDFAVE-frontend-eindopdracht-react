@@ -2,7 +2,6 @@ import './Map.css';
 
 export default function Map({
   image,
-  company,
   title,
   address,
   zipcode,
