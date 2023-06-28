@@ -43,6 +43,8 @@ Beste examinator,
 
 Bijgesloten in de root van dit project een .env.dist bestand met daarin de namen van de environment variabelen.
 
+Het oorspronkelijke .env bestand is niet aanwezig in de Github repository van dit project en zal moeten worden aangemaakt.
+
 **Stappenplan:**
 
 1. Een .env bestand aanmaken en deze in de root van het project plaatsen.
