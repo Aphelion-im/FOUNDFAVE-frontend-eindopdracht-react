@@ -13,38 +13,9 @@ import './Favorites.css';
 // User feedback: Removed a favorite
 
 export default function Favorites() {
-  const [profileData, setProfileData] = useState({});
   const [favorites, setFavorites] = useState(18);
   const { isAuth, user } = useContext(AuthContext);
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   const source = axios.CancelToken.source();
-
-  //   async function fetchProfileData() {
-  //     const token = localStorage.getItem('token');
-  //     try {
-  //       const result = await axios.get(
-  //         'http://localhost:3000/660/private-content',
-  //         {
-  //           headers: {
-  //             'Content-Type': 'application/json',
-  //             Authorization: `Bearer ${token}`,
-  //           },
-  //           cancelToken: source.token,
-  //         }
-  //       );
-  //       setProfileData(result.data);
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //   }
-  //   fetchProfileData();
-
-  //   return function cleanup() {
-  //     source.cancel();
-  //   };
-  // }, []);
 
   return (
     <>

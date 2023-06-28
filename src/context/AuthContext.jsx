@@ -7,12 +7,12 @@ import isTokenValid from '../helpers/isTokenValid';
 export const AuthContext = createContext({});
 
 function AuthContextProvider({ children }) {
+  const navigate = useNavigate();
   const [isAuth, toggleIsAuth] = useState({
     isAuth: false,
     user: null,
     status: 'pending',
   });
-  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -42,17 +42,13 @@ function AuthContextProvider({ children }) {
       user: null,
       status: 'done',
     });
-
-    console.log('Gebruiker is uitgelogd!');
     navigate('/');
   }
 
-  // https://frontend-educational-backend.herokuapp.com/api/user/
-  // http://localhost:3000/600/users/${id}
   async function fetchUserData(id, token, redirectUrl) {
     try {
       const result = await axios.get(
-        `https://frontend-educational-backend.herokuapp.com/api/user/${id}`,
+        `https://frontend-educational-backend.herokuapp.com/api/user/`,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -60,7 +56,7 @@ function AuthContextProvider({ children }) {
           },
         }
       );
-      
+
       toggleIsAuth({
         ...isAuth,
         isAuth: true,
@@ -75,8 +71,6 @@ function AuthContextProvider({ children }) {
       if (redirectUrl) {
         navigate(redirectUrl);
       }
-
-      console.log('User Query info: ', result.data);
     } catch (e) {
       console.error(e);
       toggleIsAuth({

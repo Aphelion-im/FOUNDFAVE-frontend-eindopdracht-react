@@ -38,8 +38,8 @@ export default function Contact() {
     mode: 'onChange',
   });
 
-  // https://frontend-educational-backend.herokuapp.com/api/auth/signin // username, password
-  // http://localhost:3000/login // email, password
+  // const username = 'amdegroot2';
+  // const password = '123456';
 
   async function handleSignIn(data) {
     toggleError(false);
