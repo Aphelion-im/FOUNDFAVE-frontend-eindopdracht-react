@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../../context/AuthContext';
+import axios from 'axios';
 import { FaInfoCircle } from 'react-icons/fa';
 import Content from '../../components/content/Content';
 import CharCard from '../../components/charcard/CharCard';
@@ -12,10 +13,38 @@ import './Favorites.css';
 // User feedback: Removed a favorite
 
 export default function Favorites() {
+  const [profileData, setProfileData] = useState({});
   const [favorites, setFavorites] = useState(18);
+  const { isAuth, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const { isAuth, user } = useContext(AuthContext);
+  // useEffect(() => {
+  //   const source = axios.CancelToken.source();
+
+  //   async function fetchProfileData() {
+  //     const token = localStorage.getItem('token');
+  //     try {
+  //       const result = await axios.get(
+  //         'http://localhost:3000/660/private-content',
+  //         {
+  //           headers: {
+  //             'Content-Type': 'application/json',
+  //             Authorization: `Bearer ${token}`,
+  //           },
+  //           cancelToken: source.token,
+  //         }
+  //       );
+  //       setProfileData(result.data);
+  //     } catch (e) {
+  //       console.error(e);
+  //     }
+  //   }
+  //   fetchProfileData();
+
+  //   return function cleanup() {
+  //     source.cancel();
+  //   };
+  // }, []);
 
   return (
     <>
@@ -26,7 +55,7 @@ export default function Favorites() {
               <>
                 <hr />
                 <p>
-                  Welcome {user}, you have {favorites} favorites. 
+                  Welcome {user.username}, you have {favorites} favorites.{' '}
                 </p>
                 <ToolTip info="Hint: Mouse-over the names to see more info" />
                 <section className="favorites-container">

@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import InputComponent from '../../components/input/InputComponent';
 import Content from '../../components/content/Content';
 import ToolTip from '../../components/tooltip/ToolTip';
@@ -12,11 +13,11 @@ import { FaUser } from 'react-icons/fa';
 import './SignInRegister.css';
 
 export default function Contact() {
-  const [signInSuccess, toggleSignInsetSuccess] = useState(false);
   const [registerAccountSuccess, toggleRegisterAccountSuccess] = useState(false);
-  const [isSubmitted, toggleIsSubmitted] = useState(false);
+  const [error, toggleError] = useState(false);
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
+  const source = axios.CancelToken.source();
 
   const {
     handleSubmit,
@@ -37,14 +38,30 @@ export default function Contact() {
     mode: 'onChange',
   });
 
-  function handleSignIn(data) {
-    console.table(data);
-    console.table('Email: ', data.emailsignin);
-    console.table('Password: ', data.passwordsignin);
-    toggleSignInsetSuccess(true);
+  // https://frontend-educational-backend.herokuapp.com/api/auth/signin // username, password
+  // http://localhost:3000/login // email, password
+
+  async function handleSignIn(data) {
+    toggleError(false);
+    try {
+      const result = await axios.post(
+        'https://frontend-educational-backend.herokuapp.com/api/auth/signin',
+        {
+          username: data.usernamesignin,
+          password: data.passwordsignin,
+        },
+        {
+          cancelToken: source.token,
+        }
+      );
+
+      console.log(result.data);
+      login(result.data.accessToken);
+    } catch (e) {
+      console.error(e);
+      toggleError(true);
+    }
     reset();
-    toggleIsSubmitted(true);
-    login();
   }
 
   function handleRegisterAccount(data) {
@@ -52,43 +69,15 @@ export default function Contact() {
     console.table('Username: ', data.usernameregister);
     console.table('Email: ', data.emailregister);
     console.table('Password: ', data.passwordregister);
-    toggleRegisterAccountSuccess(true);
     reset2();
-    toggleIsSubmitted(true);
     login();
   }
 
   useEffect(() => {
-    const timeoutSignIn = setTimeout(() => {
-      toggleSignInsetSuccess(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeoutSignIn);
+    return function cleanup() {
+      source.cancel();
     };
-  }, [signInSuccess]);
-
-  useEffect(() => {
-    const timeoutRegisterAccount = setTimeout(() => {
-      toggleRegisterAccountSuccess(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeoutRegisterAccount);
-    };
-  }, [registerAccountSuccess]);
-
-  useEffect(() => {
-    const timeoutRegisterAccount = setTimeout(() => {
-      if (isSubmitted) {
-        navigate('/favorites');
-      }
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeoutRegisterAccount);
-    };
-  }, [isSubmitted]);
+  }, []);
 
   return (
     <>
@@ -96,9 +85,9 @@ export default function Contact() {
         <section className="signinregister-section">
           {/* Left column: Sign in */}
           <article>
-            {signInSuccess ? (
-              <p style={{ color: 'var(--marvel-complement-clr)' }}>
-                Logged in successfully. Redirecting, please wait ...
+            {error ? (
+              <p className="error">
+                Invalid username and password combination. Please try again!
               </p>
             ) : (
               <p>Sign in for registered users</p>
@@ -112,22 +101,30 @@ export default function Contact() {
               method="POST"
               onSubmit={handleSubmit(handleSignIn)}
             >
-              {/* E-mail field */}
+              {/* Username field */}
               <InputComponent
-                inputType="email"
-                inputName="emailsignin"
-                inputId="emailsignin"
-                placeholder="E-mail"
+                inputType="text"
+                inputName="usernamesignin"
+                inputId="usernamesignin"
+                placeholder="Username"
                 validationRules={{
-                  required: 'This field is required',
+                  required: 'You must specify a username',
+                  minLength: {
+                    value: 6,
+                    message: 'Usernames must have at least 6 characters',
+                  },
+                  maxLength: {
+                    value: 20,
+                    message: 'Usernames may not exceed 20 characters',
+                  },
                   pattern: {
-                    value: /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/gm,
-                    message: 'Please fill in a valid e-mail address',
+                    value: /[A-Za-z0-9]/,
+                    message: 'Usernames may not contain special characters',
                   },
                 }}
                 register={register}
                 errors={errors}
-                icon={<FaEnvelope />}
+                icon={<FaUser />}
               />
               {/* Password field */}
               <InputComponent
@@ -138,11 +135,11 @@ export default function Contact() {
                 validationRules={{
                   required: 'You must specify a password',
                   minLength: {
-                    value: 3,
+                    value: 6,
                     message: 'Passwords must have at least 6 characters',
                   },
                   maxLength: {
-                    value: 10,
+                    value: 20,
                     message: 'Passwords may not exceed 20 characters',
                   },
                   pattern: {
@@ -198,14 +195,14 @@ export default function Contact() {
                 inputId="usernameregister"
                 placeholder="Username"
                 validationRules={{
-                  required: 'You must specify a password',
+                  required: 'You must specify a username',
                   minLength: {
-                    value: 3,
-                    message: 'Usernames must have at least 3 characters',
+                    value: 6,
+                    message: 'Usernames must have at least 6 characters',
                   },
                   maxLength: {
-                    value: 10,
-                    message: 'Usernames may not exceed 10 characters',
+                    value: 20,
+                    message: 'Usernames may not exceed 20 characters',
                   },
                   pattern: {
                     value: /[A-Za-z0-9]/,
