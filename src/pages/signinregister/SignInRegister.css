@@ -77,6 +77,10 @@
   right: 0;
 }
 
+.signinregister-section .error {
+  color: var(--marvel-red-clr);
+}
+
 /********** Media Queries **********/
 @media screen and (min-width: 768px) {
   .signinregister-section {
