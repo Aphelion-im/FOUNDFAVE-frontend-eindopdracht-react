@@ -56,12 +56,14 @@ Neem de waarden over van onderstaande tabel:
 | ------------------- | -------------------------------- |
 | VITE_APP_BASE_URL   | http://gateway.marvel.com/v1/    |
 | VITE_APP_PUBLIC_KEY | 4780bcc0dddcf771e505b68197ce5f56 |
+|VITE_APP_NOVI_BACKEND|https://frontend-educational-backend.herokuapp.com|
 
 **.env bestand inhoud**:
 
 ```javascript
 VITE_APP_BASE_URL='http://gateway.marvel.com/v1/'
 VITE_APP_PUBLIC_KEY='4780bcc0dddcf771e505b68197ce5f56'
+VITE_APP_NOVI_BACKEND='https://frontend-educational-backend.herokuapp.com'
 ```
 
 __Netlify Opmerking__

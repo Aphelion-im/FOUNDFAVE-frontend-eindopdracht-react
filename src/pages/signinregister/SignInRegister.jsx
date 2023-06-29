@@ -11,10 +11,15 @@ import { FaEnvelope } from 'react-icons/fa';
 import { FaLock } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import './SignInRegister.css';
+const NOVI_BACKEND = import.meta.env.VITE_APP_NOVI_BACKEND;
 
 export default function Contact() {
-  const [registerAccountSuccess, toggleRegisterAccountSuccess] = useState(false);
-  const [error, toggleError] = useState(false);
+  const [registerAccountSuccess, toggleRegisterAccountSuccess] =
+    useState(false);
+  const [errorSignIn, toggleErrorSignIn] = useState(false);
+  const [errorMessageSignIn, setErrorMessageSignIn] = useState('');
+  const [errorRegister, toggleErrorRegister] = useState(false);
+  const [errorMessageRegister, setErrorMessageRegister] = useState('');
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
   const source = axios.CancelToken.source();
@@ -38,14 +43,11 @@ export default function Contact() {
     mode: 'onChange',
   });
 
-  // const username = 'amdegroot2';
-  // const password = '123456';
-
   async function handleSignIn(data) {
-    toggleError(false);
+    toggleErrorSignIn(false);
     try {
       const result = await axios.post(
-        'https://frontend-educational-backend.herokuapp.com/api/auth/signin',
+        `${NOVI_BACKEND}/api/auth/signin`,
         {
           username: data.usernamesignin,
           password: data.passwordsignin,
@@ -54,23 +56,45 @@ export default function Contact() {
           cancelToken: source.token,
         }
       );
-
-      console.log(result.data);
       login(result.data.accessToken);
     } catch (e) {
+      toggleErrorSignIn(true);
       console.error(e);
-      toggleError(true);
+      if (e.response.data.message)
+        setErrorMessageSignIn(e.response.data.message);
+
+      if (e.response.status === 401)
+        setErrorMessageSignIn(
+          'User does not exist! Please try something else.'
+        );
     }
     reset();
   }
 
-  function handleRegisterAccount(data) {
-    console.table(data);
-    console.table('Username: ', data.usernameregister);
-    console.table('Email: ', data.emailregister);
-    console.table('Password: ', data.passwordregister);
+  async function handleRegisterAccount(data) {
+    toggleErrorRegister(false);
+    try {
+      const result = await axios.post(
+        `${NOVI_BACKEND}/api/auth/signup`,
+        {
+          email: data.emailregister,
+          password: data.passwordregister,
+          username: data.usernameregister,
+        },
+        {
+          cancelToken: source.token,
+        }
+      );
+      if (result.status === 200) {
+        toggleRegisterAccountSuccess(true);
+      }
+    } catch (e) {
+      toggleErrorRegister(true);
+      console.error(e);
+      if (e.response.data.message)
+        setErrorMessageRegister(e.response.data.message);
+    }
     reset2();
-    login();
   }
 
   useEffect(() => {
@@ -79,16 +103,44 @@ export default function Contact() {
     };
   }, []);
 
+  useEffect(() => {
+    const timeoutRegisterAccount = setTimeout(() => {
+      toggleRegisterAccountSuccess(false);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeoutRegisterAccount);
+    };
+  }, [registerAccountSuccess]);
+
+  useEffect(() => {
+    const timeouterrorMessageSignIn = setTimeout(() => {
+      toggleErrorSignIn(false);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeouterrorMessageSignIn);
+    };
+  }, [errorMessageSignIn]);
+
+  useEffect(() => {
+    const timeouterrorMessageRegister = setTimeout(() => {
+      toggleErrorRegister(false);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeouterrorMessageRegister);
+    };
+  }, [errorMessageRegister]);
+
   return (
     <>
       <Content title="Sign In & Register">
         <section className="signinregister-section">
           {/* Left column: Sign in */}
           <article>
-            {error ? (
-              <p className="error">
-                Invalid username and password combination. Please try again!
-              </p>
+            {errorSignIn ? (
+              <p className="error">{errorMessageSignIn}</p>
             ) : (
               <p>Sign in for registered users</p>
             )}
@@ -171,10 +223,11 @@ export default function Contact() {
 
           {/* Right column: register new account */}
           <article>
-            {registerAccountSuccess ? (
+            {errorRegister ? (
+              <p className="error">{errorMessageRegister}</p>
+            ) : registerAccountSuccess ? (
               <p style={{ color: 'var(--marvel-complement-clr)' }}>
-                Registered account succesfully. Logging in, redirecting, please
-                wait ...
+                Account registered succesfully. You may now sign in.
               </p>
             ) : (
               <p>Register a new account</p>
@@ -239,11 +292,11 @@ export default function Contact() {
                 validationRules={{
                   required: 'You must specify a password',
                   minLength: {
-                    value: 3,
+                    value: 6,
                     message: 'Passwords must have at least 6 characters',
                   },
                   maxLength: {
-                    value: 10,
+                    value: 20,
                     message: 'Passwords may not exceed 20 characters',
                   },
                   pattern: {
