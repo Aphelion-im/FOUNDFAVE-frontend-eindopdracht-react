@@ -27,9 +27,6 @@ function AuthContextProvider({ children }) {
         status: 'done',
       });
     }
-    console.log('isAuth: ', isAuth);
-    console.log('token', token);
-    console.log('isTokenValid: ', isTokenValid(token));
   }, []);
 
   function login(JWT) {

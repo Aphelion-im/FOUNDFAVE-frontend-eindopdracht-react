@@ -26,7 +26,8 @@ export default function Favorites() {
               <>
                 <hr />
                 <p>
-                  Welcome {user.username}, you have {favorites} favorites.{' '}
+                  Welcome <span className="username">{user.username}</span>, you
+                  have {favorites} favorites.
                 </p>
                 <ToolTip info="Hint: Mouse-over the names to see more info" />
                 <section className="favorites-container">
