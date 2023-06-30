@@ -1,21 +1,9 @@
 /*////////////////////////
     Table of Contents
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        4.3 Work
-        4.4 Services
-        4.5 Contact
-        4.6 Footer
-    5. Media Queries
+    1. Dark Mode
 ////////////////////////*/
 
-
+/********** 1. Dark Mode styles **********/
 .dark-mode {
   display: flex;
   justify-content: center;
@@ -42,7 +30,7 @@
   position: absolute;
   top: 3px;
   left: 3px;
-  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  background: linear-gradient(180deg, var(--marvel-sun-clr), var(--marvel-sun-2-clr));
   border-radius: 180px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: 0.3s;

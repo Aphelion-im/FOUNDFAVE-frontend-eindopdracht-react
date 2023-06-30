@@ -216,7 +216,7 @@ export default function Contact() {
                 <Link to="#" className="hyperlink">
                   Forgot password?
                 </Link>
-                <ToolTip info="Does not work in this version of the app" />
+                <ToolTip info="This feature has been disabled" />
               </span>
             </form>
           </article>
