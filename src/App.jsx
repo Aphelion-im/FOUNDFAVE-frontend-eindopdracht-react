@@ -7,7 +7,6 @@ import Contact from './pages/contact/Contact';
 import NotFound from './pages/notfound/NotFound';
 import SignInRegister from './pages/signinregister/SignInRegister';
 import Favorites from './pages/favorites/Favorites';
-import './App.css';
 
 export default function App() {
 

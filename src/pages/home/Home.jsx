@@ -1,6 +1,6 @@
 import SearchBar from '../../components/searchbar/SearchBar';
 import Content from '../../components/content/Content';
-import './Home.css';
+
 
 export default function Home() {
   return (

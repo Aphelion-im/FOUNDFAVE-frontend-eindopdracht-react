@@ -1,22 +1,10 @@
 /*////////////////////////
     Table of Contents
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        4.3 Work
-        4.4 Services
-        4.5 Contact
-        4.6 Footer
-    5. Media Queries
+    1. CharCard Styles
+    2. Media Queries
 ////////////////////////*/
 
-
-
+/********** 1. CharCard Styles **********/
 .charcard {
   flex: 1 1 175px;
   height: 200px;
@@ -72,7 +60,7 @@
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-/********** Media Queries **********/
+/********** 2. Media Queries **********/
 @media screen and (min-width: 768px) {
   .charcard {
     flex: 0 1 175px;

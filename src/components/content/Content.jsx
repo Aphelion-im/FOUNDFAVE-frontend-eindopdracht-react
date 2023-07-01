@@ -1,5 +1,3 @@
-import './Content.css';
-
 export default function Content({ children, title }) {
   return (
     <>

@@ -1,9 +1,9 @@
 /*////////////////////////
     Table of Contents
-    1. Dark Mode
+    1. DarkLightMode Styles
 ////////////////////////*/
 
-/********** 1. Dark Mode styles **********/
+/********** 1. Dark Mode Styles **********/
 .dark-mode {
   display: flex;
   justify-content: center;
