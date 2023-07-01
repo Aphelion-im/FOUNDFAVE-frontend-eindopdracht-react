@@ -257,7 +257,7 @@ export default function Contact() {
             ) : (
               <p>
                 Register a new account
-                <ToolTip info="It may take a few seconds to confirm registration" />
+                <ToolTip info="Server response time may vary" />
               </p>
             )}
 
