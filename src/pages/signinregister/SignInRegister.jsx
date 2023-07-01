@@ -26,6 +26,8 @@ export default function Contact() {
   const [errorMessageRegister, setErrorMessageRegister] = useState('');
   const [isVisibleSignIn, toggleIsVisibleSignIn] = useState(false);
   const [isVisibleRegister, toggleIsVisibleRegister] = useState(false);
+  const [isWaitingSignIn, toggleIsWaitingSignIn] = useState(false);
+  const [isWaitingRegister, toggleIsWaitingRegister] = useState(false);
   const { login } = useContext(AuthContext);
   const source = axios.CancelToken.source();
 
@@ -49,6 +51,7 @@ export default function Contact() {
   });
 
   async function handleSignIn(data) {
+    toggleIsWaitingSignIn(true);
     toggleErrorSignIn(false);
     try {
       const result = await axios.post(
@@ -74,9 +77,11 @@ export default function Contact() {
         );
     }
     reset();
+    toggleIsWaitingSignIn(false);
   }
 
   async function handleRegisterAccount(data) {
+    toggleIsWaitingRegister(true);
     toggleErrorRegister(false);
     try {
       const result = await axios.post(
@@ -100,6 +105,7 @@ export default function Contact() {
         setErrorMessageRegister(e.response.data.message);
     }
     reset2();
+    toggleIsWaitingRegister(false);
   }
 
   useEffect(() => {
@@ -154,6 +160,8 @@ export default function Contact() {
           <article>
             {errorSignIn ? (
               <p className="error">{errorMessageSignIn}</p>
+            ) : isWaitingSignIn ? (
+              <p className="pending">Waiting for server response ...</p>
             ) : (
               <p>Sign in for registered users</p>
             )}
@@ -244,9 +252,12 @@ export default function Contact() {
               <p style={{ color: 'var(--marvel-complement-clr)' }}>
                 Account registered succesfully. You may now sign in.
               </p>
+            ) : isWaitingRegister ? (
+              <p className="pending">Waiting for server response ...</p>
             ) : (
               <p>
-                Register a new account<ToolTip info="It may take a few seconds to confirm registration" />
+                Register a new account
+                <ToolTip info="It may take a few seconds to confirm registration" />
               </p>
             )}
 
