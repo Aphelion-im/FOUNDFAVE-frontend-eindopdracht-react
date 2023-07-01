@@ -1,15 +1,12 @@
 import { useState, useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import InputComponent from '../../components/input/InputComponent';
 import Content from '../../components/content/Content';
 import ToolTip from '../../components/tooltip/ToolTip';
-import { FaBan } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
-import { FaLock } from 'react-icons/fa';
-import { FaUser } from 'react-icons/fa';
+import { FaBan, FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
 import './SignInRegister.css';
 const NOVI_BACKEND = import.meta.env.VITE_APP_NOVI_BACKEND;
 
@@ -21,7 +18,6 @@ export default function Contact() {
   const [errorRegister, toggleErrorRegister] = useState(false);
   const [errorMessageRegister, setErrorMessageRegister] = useState('');
   const { login } = useContext(AuthContext);
-  const navigate = useNavigate();
   const source = axios.CancelToken.source();
 
   const {
@@ -216,7 +212,7 @@ export default function Contact() {
                 <Link to="#" className="hyperlink">
                   Forgot password?
                 </Link>
-                <ToolTip info="This feature has been disabled" />
+                <ToolTip info="This feature is not yet available" />
               </span>
             </form>
           </article>
