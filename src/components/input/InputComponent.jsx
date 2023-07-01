@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { FaExclamationTriangle, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaExclamationTriangle } from 'react-icons/fa';
 import './InputComponent.css';
 
 export default function InputComponent({
@@ -13,29 +12,24 @@ export default function InputComponent({
   errors,
   autoFocus,
   icon,
+  handlePassword,
+  eyeIcon,
 }) {
-  const [isVisible, toggleIsVisible] = useState(false);
-
-  function togglePassword() {
-    if (inputType === 'password') toggleIsVisible((isVisible) => !isVisible);
-  }
-
   return (
     <>
       <div className="input-component-container">
         <label htmlFor={inputId}>{inputLabel}</label>
         <span className="input-icon">{icon}</span>
         <span
-          className={inputType === 'password' ? 'eye-icon' : 'no-eye-icon'}
-          onClick={togglePassword}
+          className="eye-icon"
+          onClick={handlePassword}
           title="Toggle password"
         >
-          {isVisible ? <FaEye /> : <FaEyeSlash />}
+          {eyeIcon}
         </span>
         <input
           className="input-component box-shadow"
           type={inputType}
-          // type={isVisible ? "text" : "password"}
           id={inputId}
           placeholder={placeholder}
           {...register(inputName, validationRules)}

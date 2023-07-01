@@ -6,7 +6,14 @@ import axios from 'axios';
 import InputComponent from '../../components/input/InputComponent';
 import Content from '../../components/content/Content';
 import ToolTip from '../../components/tooltip/ToolTip';
-import { FaBan, FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
+import {
+  FaBan,
+  FaEnvelope,
+  FaLock,
+  FaUser,
+  FaEye,
+  FaEyeSlash,
+} from 'react-icons/fa';
 import './SignInRegister.css';
 const NOVI_BACKEND = import.meta.env.VITE_APP_NOVI_BACKEND;
 
@@ -17,6 +24,8 @@ export default function Contact() {
   const [errorMessageSignIn, setErrorMessageSignIn] = useState('');
   const [errorRegister, toggleErrorRegister] = useState(false);
   const [errorMessageRegister, setErrorMessageRegister] = useState('');
+  const [isVisibleSignIn, toggleIsVisibleSignIn] = useState(false);
+  const [isVisibleRegister, toggleIsVisibleRegister] = useState(false);
   const { login } = useContext(AuthContext);
   const source = axios.CancelToken.source();
 
@@ -129,6 +138,14 @@ export default function Contact() {
     };
   }, [errorMessageRegister]);
 
+  function togglePasswordSignIn() {
+    toggleIsVisibleSignIn((isVisibleSignIn) => !isVisibleSignIn);
+  }
+
+  function togglePasswordRegister() {
+    toggleIsVisibleRegister((isVisibleRegister) => !isVisibleRegister);
+  }
+
   return (
     <>
       <Content title="Sign In & Register">
@@ -176,7 +193,7 @@ export default function Contact() {
               />
               {/* Password field */}
               <InputComponent
-                inputType="password"
+                inputType={isVisibleSignIn ? 'text' : 'password'}
                 inputName="passwordsignin"
                 inputId="passwordsignin"
                 placeholder="Password"
@@ -198,6 +215,8 @@ export default function Contact() {
                 register={register}
                 errors={errors}
                 icon={<FaLock />}
+                eyeIcon={isVisibleSignIn ? <FaEye /> : <FaEyeSlash />}
+                handlePassword={togglePasswordSignIn}
               />
 
               <button
@@ -281,7 +300,7 @@ export default function Contact() {
               />
               {/* Password field */}
               <InputComponent
-                inputType="password"
+                inputType={isVisibleRegister ? 'text' : 'password'}
                 inputName="passwordregister"
                 inputId="passwordregister"
                 placeholder="Password"
@@ -303,10 +322,12 @@ export default function Contact() {
                 register={register2}
                 errors={errors2}
                 icon={<FaLock />}
+                eyeIcon={isVisibleRegister ? <FaEye /> : <FaEyeSlash />}
+                handlePassword={togglePasswordRegister}
               />
               {/* Verify password */}
               <InputComponent
-                inputType="password"
+                inputType={isVisibleRegister ? 'text' : 'password'}
                 inputName="passwordregisterverify"
                 inputId="passwordregisterverify"
                 placeholder="Repeat password"
@@ -322,6 +343,8 @@ export default function Contact() {
                 register={register2}
                 errors={errors2}
                 icon={<FaLock />}
+                eyeIcon={isVisibleRegister ? <FaEye /> : <FaEyeSlash />}
+                handlePassword={togglePasswordRegister}
               />
 
               <button
