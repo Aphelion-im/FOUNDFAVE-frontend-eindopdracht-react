@@ -1,20 +1,10 @@
 /*////////////////////////
     Table of Contents
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        4.3 Work
-        4.4 Services
-        4.5 Contact
-        4.6 Footer
-    5. Media Queries
+    1. Page Not Found styling
+    2. Media Queries
 ////////////////////////*/
 
+/********** 1. Page Not Found styling **********/
 .fa-reg-arrow-alt-circle-right-icon {
   vertical-align: middle;
   font-size: 1.5rem;
@@ -39,6 +29,10 @@
   margin-bottom: 8px;
 }
 
+.pagenotfound-section ul li::marker {
+  content: '▶ ';
+}
+
 .pagenotfound-section .illustration {
   width: 100%;
   object-fit: cover;
@@ -46,7 +40,7 @@
   border-radius: 50%;
 }
 
-/********** Media Queries **********/
+/********** 2. Media Queries **********/
 @media screen and (min-width: 768px) {
   .pagenotfound-section {
     flex-direction: row;

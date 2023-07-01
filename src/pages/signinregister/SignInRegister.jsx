@@ -245,7 +245,9 @@ export default function Contact() {
                 Account registered succesfully. You may now sign in.
               </p>
             ) : (
-              <p>Register a new account</p>
+              <p>
+                Register a new account<ToolTip info="It may take a few seconds to confirm registration" />
+              </p>
             )}
 
             <form

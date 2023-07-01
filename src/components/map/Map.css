@@ -27,3 +27,7 @@
   list-style-type: none;
   line-height: 1.5;
 }
+
+.map-component ul li::marker {
+  content: '▶ ';
+}

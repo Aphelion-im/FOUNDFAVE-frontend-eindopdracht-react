@@ -108,6 +108,11 @@ button {
   -moz-appearance: none;
 }
 
+ul,
+ol {
+  list-style-position: inside;
+}
+
 /********** 2. Typography **********/
 h1 {
   margin-bottom: 8px;
