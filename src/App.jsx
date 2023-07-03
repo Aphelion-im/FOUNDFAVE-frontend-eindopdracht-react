@@ -7,14 +7,15 @@ import Contact from './pages/contact/Contact';
 import NotFound from './pages/notfound/NotFound';
 import SignInRegister from './pages/signinregister/SignInRegister';
 import Favorites from './pages/favorites/Favorites';
+import HeroDetails from './pages/herodetails/HeroDetails';
 
 export default function App() {
-
   return (
     <>
       <HeaderMenu />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<HeroDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sign-in-register" element={<SignInRegister />} />

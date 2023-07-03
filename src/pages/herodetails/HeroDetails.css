@@ -1,0 +1,44 @@
+/*////////////////////////
+    Table of Contents
+    1. Contact Styles
+    2. Media Queries
+////////////////////////*/
+
+/********** 1. Contact Styles **********/
+.herodetails-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+  text-align: left;
+}
+
+.herodetails-section article {
+  flex: 1 1 50%;
+}
+
+.herodetails-section .container {
+  width: 100%;
+  text-align: right;
+}
+
+.herodetails-section .favorite-icon {
+  color: var(--marvel-red-clr);
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.herodetails-section h2 {
+  margin-block: 8px;
+}
+
+.herodetails-section ul li::marker {
+  content: '▶ ';
+}
+
+/********** 2. Media Queries **********/
+@media screen and (min-width: 768px) {
+  .herodetails-section {
+    flex-direction: row;
+  }
+}

@@ -11,6 +11,7 @@ import './Favorites.css';
 // TODO:
 // Maximaal aantal favorieten
 // User feedback: Removed a favorite
+// Axios import verwijderen?
 
 export default function Favorites() {
   const [favorites, setFavorites] = useState(18);
