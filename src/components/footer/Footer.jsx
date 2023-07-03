@@ -20,7 +20,7 @@ export default function FooterMenu() {
                 className="logo-footer"
                 onClick={() => navigate('/')}
               />
-              <span>Data provided by Marvel. © {showCurrentYear()} MARVEL</span>
+              <span>Data provided by Marvel. © {showCurrentYear()} Marvel</span>
             </div>
             <p className="copyright">
               © {showCurrentYear()} FOUNDFAVE. All Rights Reserved. NOVI

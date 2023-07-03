@@ -13,7 +13,7 @@
 :root {
   --body-background-clr: whitesmoke;
   --main-bg-clr: #1a1a1a;
-  --marvel-red-clr: hsl(358, 84%, 52%);
+  --marvel-red-clr: hsl(358, 84%, 52%); /* #eb1e25 */
   --marvel-sun-clr: hsl(50, 84%, 52%);
   --marvel-sun-2-clr: hsl(40, 84%, 52%);
   --marvel-complement-clr: hsl(136, 84%, 52%);

@@ -1,4 +1,4 @@
-Datum laatste update: 1-7-2023
+Datum laatste update: 3-7-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
@@ -54,15 +54,19 @@ Neem de waarden over van onderstaande tabel:
 
 | Variabele           | Waarde                           |
 | ------------------- | -------------------------------- |
-| VITE_APP_BASE_URL   | http://gateway.marvel.com/v1/    |
+| VITE_APP_BASE_URL   | http://gateway.marvel.com/       |
 | VITE_APP_PUBLIC_KEY | 4780bcc0dddcf771e505b68197ce5f56 |
+| VITE_APP_HASH       | d9ed2fbdb825b21f96f7f62eb48cecef |
+| VITE_APP_TIMESTAMP  | 1                                |
 |VITE_APP_NOVI_BACKEND|https://frontend-educational-backend.herokuapp.com|
 
 **.env bestand inhoud**:
 
 ```javascript
-VITE_APP_BASE_URL='http://gateway.marvel.com/v1/'
+VITE_APP_BASE_URL='http://gateway.marvel.com/'
 VITE_APP_PUBLIC_KEY='4780bcc0dddcf771e505b68197ce5f56'
+VITE_APP_HASH='d9ed2fbdb825b21f96f7f62eb48cecef'
+VITE_APP_TIMESTAMP='1'
 VITE_APP_NOVI_BACKEND='https://frontend-educational-backend.herokuapp.com'
 ```
 
