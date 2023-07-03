@@ -36,21 +36,21 @@ export default function HeroDetails() {
                 />
               )}
             </div>
-            <h2>Unnamed title</h2>
+            <h2>Name</h2>
+            <p>Spider-Man</p>
+            <h2>Description</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur ex perspiciatis eveniet nemo, esse quidem quisquam
+              facilis id eius magni.
+            </p>
+            <h2>Series</h2>
             <ul>
-              <li>Fact #1: Lorem, ipsum dolor.</li>
-              <li>Fact #2: Lorem, ipsum dolor.</li>
-              <li>Fact #3: Lorem, ipsum dolor.</li>
-              <li>Fact #4: Lorem, ipsum dolor.</li>
-              <li>Fact #5: Lorem, ipsum dolor.</li>
-            </ul>
-            <h2>Unnamed title</h2>
-            <ul>
-              <li>Fact #1: Lorem, ipsum dolor.</li>
-              <li>Fact #2: Lorem, ipsum dolor.</li>
-              <li>Fact #3: Lorem, ipsum dolor.</li>
-              <li>Fact #4: Lorem, ipsum dolor.</li>
-              <li>Fact #5: Lorem, ipsum dolor.</li>
+              <li>Series #1: Lorem, ipsum dolor.</li>
+              <li>Series #2: Lorem, ipsum dolor.</li>
+              <li>Series #3: Lorem, ipsum dolor.</li>
+              <li>Series #4: Lorem, ipsum dolor.</li>
+              <li>Series #5: Lorem, ipsum dolor.</li>
             </ul>
           </article>
         </section>

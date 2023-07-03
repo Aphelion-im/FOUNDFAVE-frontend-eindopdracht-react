@@ -51,14 +51,19 @@ footer .icon {
   font-size: 1.5rem;
 }
 
-footer .social-media a {
+footer a {
   color: #fff;
   transition: all 100ms ease-in;
+  text-decoration: none;
 }
 
-footer .social-media a:link,
-footer .social-media a:visited {
+footer a:link,
+footer a:visited {
   color: #fff;
+}
+
+footer a:hover {
+  color: #666;
 }
 
 footer .icon:hover {
