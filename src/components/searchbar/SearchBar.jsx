@@ -1,13 +1,26 @@
 import { useState, useRef } from 'react';
 import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
-import { FaSearch } from 'react-icons/fa';
+import SearchButton from '../searchbutton/SearchButton';
 import './SearchBar.css';
 
-export default function SearchBar({ slogan, brand, placeholder }) {
+// TODO: input field useRef & autoFocus na submit
+
+export default function SearchBar({
+  slogan,
+  brand,
+  placeholder,
+  handleClick,
+  setHeroes,
+  setError,
+}) {
   const [hasContent, setHasContent] = useState('');
   const [isSearching, toggleIsSearching] = useState(false);
   const [isLoading, toggleIsLoading] = useState(false);
   const searchbar = useRef(null);
+  let input = useRef();
+
+  // console.log('Is Searching: ', isSearching);
+  // console.log('Is Loading: ', isLoading);
 
   function onFormSubmit(e) {
     e.preventDefault();
@@ -15,17 +28,14 @@ export default function SearchBar({ slogan, brand, placeholder }) {
     if (hasContent.length < 1) {
       toggleIsSearching(false);
       toggleIsLoading(false);
-      searchbar.current.focus();
+      // searchbar.current.focus();
       return;
     }
     toggleIsSearching(true);
     toggleIsLoading(true);
     setHasContent('');
-    searchbar.current.focus();
+    // searchbar.current.focus();
   }
-
-  console.log('Is Searching: ', isSearching);
-  console.log('Is Loading: ', isLoading);
 
   function checkHasContent(e) {
     setHasContent(e.target.value);
@@ -34,7 +44,7 @@ export default function SearchBar({ slogan, brand, placeholder }) {
   function closeQueryHandler(e) {
     e.stopPropagation();
     setHasContent('');
-    searchbar.current.focus();
+    // searchbar.current.focus();
   }
 
   return (
@@ -51,7 +61,7 @@ export default function SearchBar({ slogan, brand, placeholder }) {
             autoFocus
             onChange={checkHasContent}
             value={hasContent}
-            ref={searchbar}
+            ref={input}
           />
           {hasContent.length > 0 && (
             <span
@@ -62,9 +72,13 @@ export default function SearchBar({ slogan, brand, placeholder }) {
               &#10006;
             </span>
           )}
-          <button type="submit" className="inputfield-button" title="Search">
-            <FaSearch title={placeholder} className="fa-search icon" />
-          </button>
+          <SearchButton
+            handleClick={(e) => {
+              handleClick(e, input.current.value)
+                .then((data) => setHeroes(data.data.results))
+                .catch((err) => setError(err));
+            }}
+          />
         </div>
         <p className="slogan">
           {slogan} {brand}

@@ -4,11 +4,12 @@ import { FaHeart } from 'react-icons/fa';
 import { FaRegHeart } from 'react-icons/fa';
 import CharCardStyles from './CharCard.module.css';
 
-export default function CharCard() {
+export default function CharCard({ name, id, thumbnail, description }) {
   const [isAuth, toggleIsAuth] = useState(true);
   const [isFavorite, toggleIsFavorite] = useState(false);
 
   // TODO: loading en error states
+  // Fave wel of niet zichtbaar met isAuth
 
   return (
     <>
@@ -33,16 +34,15 @@ export default function CharCard() {
           )
         ) : null}
 
-        <Link to={`/products/${product.id}`}>
-          <img src="https://picsum.photos/200/300" alt="Test alt" />
+        <Link to={`/${id}`}>
+          <img src={thumbnail} alt="Thumbnail" />
         </Link>
         <div className={CharCardStyles['info-window']}>
-          <span className={CharCardStyles['char-title']}>Spider-Man</span>
+          <span className={CharCardStyles['char-title']}>{name}</span>
           <p>
-            Spider-Man's secret identity is Peter Parker, a teenage high school
-            student and an orphan raised by his Aunt May and Uncle Ben in New
-            York City after his parents Richard and Mary Parker died in a plane
-            crash.
+            {description.length > 0
+              ? description.substring(0, 180)
+              : 'No description available'}
           </p>
         </div>
       </div>

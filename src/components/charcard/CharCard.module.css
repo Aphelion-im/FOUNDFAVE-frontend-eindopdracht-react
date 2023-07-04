@@ -41,6 +41,7 @@
   padding: 4px;
   transition: all 250ms ease-in;
   font-size: 0.8rem;
+  width: 100%;
 }
 
 .charcard .info-window:hover {

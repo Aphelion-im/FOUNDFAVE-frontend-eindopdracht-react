@@ -1,0 +1,14 @@
+/*////////////////////////
+    Table of Contents
+    1. Home Styles
+////////////////////////*/
+
+/********** 1. Home Styles **********/
+.favorites-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
