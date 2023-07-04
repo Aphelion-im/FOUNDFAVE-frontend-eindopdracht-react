@@ -4,7 +4,6 @@ import Content from '../../components/content/Content';
 import CharCard from '../../components/charcard/CharCard';
 import { fetchHeroes } from '../../helpers/fetchHeroes';
 import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
-import { ReactComponent as Loader } from '../../assets/loaders/infinity-1s-200px.svg';
 import ToolTip from '../../components/tooltip/ToolTip';
 import './Home.css';
 const IMG_FANTASTIC = 'portrait_fantastic';
