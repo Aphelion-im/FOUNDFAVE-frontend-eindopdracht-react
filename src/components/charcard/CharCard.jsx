@@ -20,13 +20,13 @@ export default function CharCard({ name, id, thumbnail, description }) {
       >
         {isAuth ? (
           isFavorite ? (
-            <FaRegHeart
+            <FaHeart
               className={CharCardStyles['fa-heart-icon']}
               title="Click to remove this favorite"
               onClick={() => toggleIsFavorite(!isFavorite)}
             />
           ) : (
-            <FaHeart
+            <FaRegHeart
               className={CharCardStyles['fa-heart-icon']}
               title="Click to add this favorite"
               onClick={() => toggleIsFavorite(!isFavorite)}
@@ -41,7 +41,7 @@ export default function CharCard({ name, id, thumbnail, description }) {
           <span className={CharCardStyles['char-title']}>{name}</span>
           <p>
             {description.length > 0
-              ? description.substring(0, 180)
+              ? `${description.substring(0, 180)} ...`
               : 'No description available'}
           </p>
         </div>

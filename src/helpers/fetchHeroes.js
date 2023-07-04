@@ -4,7 +4,7 @@ const fetchHeroes = async (name) => {
   const ts = import.meta.env.VITE_APP_TIMESTAMP;
   const hash = import.meta.env.VITE_APP_HASH;
   const heroUrl = `${API_URL}/v1/public/characters`;
-  const url = `${heroUrl}?ts=${ts}&apikey=${apiKey}&hash=${hash}&nameStartsWith=${name}`;
+  const url = `${heroUrl}?ts=${ts}&apikey=${apiKey}&hash=${hash}&nameStartsWith=${name}&limit=100&orderBy=name`;
 
   try {
     const response = await fetch(url);

@@ -9,13 +9,6 @@
   width: 100%;
 }
 
-.logo {
-  width: 100%;
-  max-width: 300px;
-  margin-top: 3.4rem;
-  margin-bottom: 1rem;
-}
-
 .searchbar-icon-container {
   position: relative;
   display: inline-block;
@@ -42,7 +35,7 @@
 }
 
 .searchbar-icon-container .close-icon {
-  color: #666666;
+  color: #666;
   font-size: 1.25rem;
   position: absolute;
   top: 50%;

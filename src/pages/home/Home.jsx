@@ -3,18 +3,22 @@ import SearchBar from '../../components/searchbar/SearchBar';
 import Content from '../../components/content/Content';
 import CharCard from '../../components/charcard/CharCard';
 import { fetchHeroes } from '../../helpers/fetchHeroes';
+import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
+import { ReactComponent as Loader } from '../../assets/loaders/Infinity-1s-200px.svg';
+import ToolTip from '../../components/tooltip/ToolTip';
 import './Home.css';
 const IMG_FANTASTIC = 'portrait_fantastic';
 
 export default function Home() {
   const [heroes, setHeroes] = useState([]);
   const [error, setError] = useState();
+  const [query, setQuery] = useState('');
   let cards;
 
   const handleClick = async (e, args) => {
     e.preventDefault();
     if (args === '') return;
-
+    setQuery(args);
     try {
       return await fetchHeroes(args);
     } catch (err) {
@@ -37,17 +41,27 @@ export default function Home() {
   return (
     <>
       <Content>
+        {heroes.length === 0 && <Logo className="logo" />}
         <SearchBar
-          slogan="found your fave with"
-          brand="FOUNDFAVE!"
+          slogan={heroes.length === 0 && 'found your fave with'}
+          brand={heroes.length === 0 && 'FOUNDFAVE!'}
           placeholder="Search"
           handleClick={handleClick}
           setHeroes={setHeroes}
           setError={setError}
         />
-        <section className="favorites-container">
-          {cards ? cards : null}
-        </section>
+        <div className="information">
+          {heroes.length > 0 && (
+            <>
+              <span>
+                {heroes.length} results found for {query}
+                <ToolTip info="Mouse-over the names to see more info" />
+              </span>
+              <div>Sort A-B</div>
+            </>
+          )}
+        </div>
+        <section className="results-container">{cards ? cards : null}</section>
       </Content>
     </>
   );

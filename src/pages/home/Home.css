@@ -4,11 +4,27 @@
 ////////////////////////*/
 
 /********** 1. Home Styles **********/
-.favorites-container {
+.results-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.information {
+  width: 100%;
+  text-align: left;
+  margin-block: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 3.4rem;
+  margin-bottom: 1rem;
 }

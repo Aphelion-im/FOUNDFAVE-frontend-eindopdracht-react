@@ -1,9 +1,6 @@
 import { useState, useRef } from 'react';
-import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
 import SearchButton from '../searchbutton/SearchButton';
 import './SearchBar.css';
-
-// TODO: input field useRef & autoFocus na submit
 
 export default function SearchBar({
   slogan,
@@ -14,28 +11,7 @@ export default function SearchBar({
   setError,
 }) {
   const [hasContent, setHasContent] = useState('');
-  const [isSearching, toggleIsSearching] = useState(false);
-  const [isLoading, toggleIsLoading] = useState(false);
   const searchbar = useRef(null);
-  let input = useRef();
-
-  // console.log('Is Searching: ', isSearching);
-  // console.log('Is Loading: ', isLoading);
-
-  function onFormSubmit(e) {
-    e.preventDefault();
-
-    if (hasContent.length < 1) {
-      toggleIsSearching(false);
-      toggleIsLoading(false);
-      // searchbar.current.focus();
-      return;
-    }
-    toggleIsSearching(true);
-    toggleIsLoading(true);
-    setHasContent('');
-    // searchbar.current.focus();
-  }
 
   function checkHasContent(e) {
     setHasContent(e.target.value);
@@ -44,13 +20,12 @@ export default function SearchBar({
   function closeQueryHandler(e) {
     e.stopPropagation();
     setHasContent('');
-    // searchbar.current.focus();
+    searchbar.current.focus();
   }
 
   return (
     <>
-      <Logo className="logo" />
-      <form className="search-form" onSubmit={onFormSubmit}>
+      <form className="search-form">
         <div className="searchbar-icon-container">
           <input
             className="searchbar box-shadow"
@@ -61,7 +36,7 @@ export default function SearchBar({
             autoFocus
             onChange={checkHasContent}
             value={hasContent}
-            ref={input}
+            ref={searchbar}
           />
           {hasContent.length > 0 && (
             <span
@@ -74,7 +49,8 @@ export default function SearchBar({
           )}
           <SearchButton
             handleClick={(e) => {
-              handleClick(e, input.current.value)
+              searchbar.current.focus();
+              handleClick(e, hasContent)
                 .then((data) => setHeroes(data.data.results))
                 .catch((err) => setError(err));
             }}
