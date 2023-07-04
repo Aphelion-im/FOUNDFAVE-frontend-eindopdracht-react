@@ -28,3 +28,19 @@
   margin-top: 3.4rem;
   margin-bottom: 1rem;
 }
+
+.information .sorting {
+  width: 150px;
+  color: #fff;
+  vertical-align: middle;
+  border: 3px solid #fff;
+  border-radius: 24px;
+  background-color: transparent;
+  padding: 2px 4px;
+  outline: none;
+}
+
+.information option {
+  background-color: #fff;
+  color: var(--l-10-dark-clr);
+}

@@ -4,7 +4,7 @@ import Content from '../../components/content/Content';
 import CharCard from '../../components/charcard/CharCard';
 import { fetchHeroes } from '../../helpers/fetchHeroes';
 import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
-import { ReactComponent as Loader } from '../../assets/loaders/Infinity-1s-200px.svg';
+import { ReactComponent as Loader } from '../../assets/loaders/infinity-1s-200px.svg';
 import ToolTip from '../../components/tooltip/ToolTip';
 import './Home.css';
 const IMG_FANTASTIC = 'portrait_fantastic';
@@ -21,8 +21,9 @@ export default function Home() {
     setQuery(args);
     try {
       return await fetchHeroes(args);
-    } catch (err) {
-      return err;
+    } catch (e) {
+      console.error(e);
+      // return e;
     }
   };
 
@@ -57,7 +58,12 @@ export default function Home() {
                 {heroes.length} results found for {query}
                 <ToolTip info="Mouse-over the names to see more info" />
               </span>
-              <div>Sort A-B</div>
+              <div>
+                <select className="sorting" id="cars">
+                  <option value="ab">Sort A-B</option>
+                  <option value="ba">Sort B-A</option>
+                </select>
+              </div>
             </>
           )}
         </div>

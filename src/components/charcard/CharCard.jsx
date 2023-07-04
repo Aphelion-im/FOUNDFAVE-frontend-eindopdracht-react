@@ -34,7 +34,7 @@ export default function CharCard({ name, id, thumbnail, description }) {
           )
         ) : null}
 
-        <Link to={`/${id}`}>
+        <Link to={`/${id}`} target="_blank">
           <img src={thumbnail} alt="Thumbnail" />
         </Link>
         <div className={CharCardStyles['info-window']}>

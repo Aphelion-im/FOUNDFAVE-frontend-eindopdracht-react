@@ -9,7 +9,7 @@ import './HeroDetails.css';
 // useEffect [favorite] --> remove from localStorage
 
 export default function HeroDetails() {
-  const [isFavorite, toggleIsFavorite] = useState(true);
+  const [isFavorite, toggleIsFavorite] = useState(false);
 
   return (
     <>
@@ -17,7 +17,7 @@ export default function HeroDetails() {
         <section className="herodetails-section">
           {/* Left column */}
           <article>
-            <img src="https://picsum.photos/200" alt="Placeholder" />
+            <img className="illustration box-shadow" src="https://picsum.photos/200" alt="Placeholder" />
           </article>
           {/* Right column */}
           <article>
