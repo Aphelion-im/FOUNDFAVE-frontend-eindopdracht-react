@@ -29,7 +29,7 @@ export default function Home() {
     } else {
       toggleIsLoading(true);
     }
-    setQuery(() => searchquery);
+    setQuery(searchquery);
     setError(false);
     try {
       const response = await axios.get(`${API_URL}v1/public/characters`, {
