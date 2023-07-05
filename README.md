@@ -1,4 +1,4 @@
-Datum laatste update: 5-7-2023
+Datum laatste update: 6-7-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
@@ -27,7 +27,7 @@ Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 
 ## Hoe ziet de FOUNDFAVE App er uit?
 
-![FOUNDFAVE React App ](./src/assets/screenshots/screenshot-app.jpg)
+![FOUNDFAVE React App ](./src/assets/screenshots/screenshot-app.gif)
 
 ## Live demo FOUNDFAVE App
 
