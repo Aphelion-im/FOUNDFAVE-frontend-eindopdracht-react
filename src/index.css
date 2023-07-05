@@ -35,6 +35,7 @@
   --input-bg-clr: #fff;
   --image-border: #262626;
   --hyperlink: #1a1a1a;
+  --sorting-clr: #1a1a1a;
 }
 
 /* Dark theme */
@@ -46,6 +47,7 @@
   --input-bg-clr: #1a1a1a;
   --image-border: #fff;
   --hyperlink: #fff;
+  --sorting-clr: #fff;
 }
 
 *,

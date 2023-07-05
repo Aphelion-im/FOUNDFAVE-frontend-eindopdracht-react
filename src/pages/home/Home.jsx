@@ -22,18 +22,22 @@ export default function Home() {
   const [sorted, toggleSorted] = useState(false);
   let cards;
 
-  async function handleClick(e, args) {
+  async function handleClick(e, searchquery) {
     e.preventDefault();
-    toggleIsLoading(true);
-    if (args === '') return;
-    setQuery(() => args);
+    if (searchquery === '') {
+      return;
+    } else {
+      toggleIsLoading(true);
+    }
+    setQuery(() => searchquery);
+    setError(false);
     try {
       const response = await axios.get(`${API_URL}v1/public/characters`, {
         params: {
           apikey: `${apiKey}`,
           ts: `${ts}`,
           hash: `${hash}`,
-          nameStartsWith: `${args}`,
+          nameStartsWith: `${searchquery}`,
           limit: 100,
           orderBy: 'name',
         },
@@ -42,32 +46,22 @@ export default function Home() {
       const data = response.data.data.results;
       setHeroes(data);
     } catch (e) {
-      console.error(e);
+      console.error('Error', e);
+      setError(true);
     }
     toggleIsLoading(false);
   }
 
   if (heroes) {
-    sorted
-      ? (cards = heroes.map((hero) => (
-          <CharCard
-            key={hero.id}
-            name={hero.name}
-            id={hero.id}
-            description={hero.description}
-            thumbnail={`${hero.thumbnail.path}/${IMG_FANTASTIC}.${hero.thumbnail.extension}`}
-          />
-        )))
-      : // https://stackoverflow.com/questions/51219133/how-to-sort-a-map-by-a-specific-field-in-es6-react
-        (cards = heroes.map((hero) => (
-          <CharCard
-            key={hero.id}
-            name={hero.name}
-            id={hero.id}
-            description={hero.description}
-            thumbnail={`${hero.thumbnail.path}/${IMG_FANTASTIC}.${hero.thumbnail.extension}`}
-          />
-        )));
+    cards = heroes.map((hero) => (
+      <CharCard
+        key={hero.id}
+        name={hero.name}
+        id={hero.id}
+        description={hero.description}
+        thumbnail={`${hero.thumbnail.path}/${IMG_FANTASTIC}.${hero.thumbnail.extension}`}
+      />
+    ));
   }
 
   useEffect(() => {
@@ -81,10 +75,14 @@ export default function Home() {
   return (
     <>
       <Content>
-        {Object.keys(heroes).length === 0 && <Logo className="logo" />}
+        {Object.keys(heroes).length === 0 && !query && (
+          <Logo className="logo" />
+        )}
         <SearchBar
-          slogan={Object.keys(heroes).length === 0 && 'found your fave with'}
-          brand={Object.keys(heroes).length === 0 && 'FOUNDFAVE!'}
+          slogan={
+            Object.keys(heroes).length === 0 && !query && 'found your fave with'
+          }
+          brand={Object.keys(heroes).length === 0 && !query && 'FOUNDFAVE!'}
           placeholder="Search"
           handleClick={handleClick}
           setHeroes={setHeroes}
@@ -92,7 +90,7 @@ export default function Home() {
         />
         <div className="information">
           {isLoading && <Loader className="loader" />}
-          {Object.keys(heroes).length > 0 && (
+          {query && (
             <>
               <span>
                 {Object.keys(heroes).length} results for <i>{query}</i>

@@ -34,9 +34,9 @@
 
 .information .sorting {
   width: 150px;
-  color: #fff;
+  color: var(--sorting-clr);
   vertical-align: middle;
-  border: 3px solid #fff;
+  border: 3px solid var(--sorting-clr);
   border-radius: 24px;
   background-color: transparent;
   padding: 2px 4px;
