@@ -15,11 +15,10 @@ import {
   FaEyeSlash,
 } from 'react-icons/fa';
 import './SignInRegister.css';
-const NOVI_BACKEND = import.meta.env.VITE_APP_NOVI_BACKEND;
 
 export default function Contact() {
   const [registerAccountSuccess, toggleRegisterAccountSuccess] =
-    useState(false);
+  useState(false);
   const [errorSignIn, toggleErrorSignIn] = useState(false);
   const [errorMessageSignIn, setErrorMessageSignIn] = useState('');
   const [errorRegister, toggleErrorRegister] = useState(false);
@@ -29,6 +28,7 @@ export default function Contact() {
   const [isWaitingSignIn, toggleIsWaitingSignIn] = useState(false);
   const [isWaitingRegister, toggleIsWaitingRegister] = useState(false);
   const { login } = useContext(AuthContext);
+  const NOVI_BACKEND = import.meta.env.VITE_APP_NOVI_BACKEND;
   const source = axios.CancelToken.source();
 
   const {

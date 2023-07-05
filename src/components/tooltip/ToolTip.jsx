@@ -1,5 +1,5 @@
-import './ToolTip.css';
 import { FaInfoCircle } from 'react-icons/fa';
+import './ToolTip.css';
 
 export default function ToolTip({ info }) {
   return (

@@ -1,3 +1,6 @@
+  // TODO: loading en error states
+  // Fave wel of niet zichtbaar met isAuth
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHeart } from 'react-icons/fa';
@@ -7,9 +10,6 @@ import CharCardStyles from './CharCard.module.css';
 export default function CharCard({ name, id, thumbnail, description }) {
   const [isAuth, toggleIsAuth] = useState(true);
   const [isFavorite, toggleIsFavorite] = useState(false);
-
-  // TODO: loading en error states
-  // Fave wel of niet zichtbaar met isAuth
 
   return (
     <>

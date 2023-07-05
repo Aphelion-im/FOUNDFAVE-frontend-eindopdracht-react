@@ -1,23 +1,23 @@
+// FaHeart/Favorite: isFavorite true/false
+// useEffect [favorite] --> remove from localStorage
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import Content from '../../components/content/Content';
 import { FaHeart } from 'react-icons/fa';
 import { FaRegHeart } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
 import './HeroDetails.css';
 
-import { fetchHero } from '../../helpers/fetchHeroes';
-
-// FaHeart/Favorite: isFavorite true/false
-// useEffect [favorite] --> remove from localStorage
-
 export default function HeroDetails() {
   const [isFavorite, toggleIsFavorite] = useState(false);
-  let { id } = useParams();
-  let navigate = useNavigate();
-
   const [hero, setHero] = useState();
-
+  let navigate = useNavigate();
+  let { id } = useParams();
+  const API_URL = import.meta.env.VITE_APP_BASE_URL;
+  const apiKey = import.meta.env.VITE_APP_PUBLIC_KEY;
+  const ts = import.meta.env.VITE_APP_TIMESTAMP;
+  const hash = import.meta.env.VITE_APP_HASH;
   let name;
   let description;
   let thumbnailPath;
@@ -25,10 +25,25 @@ export default function HeroDetails() {
   let thumbnailUrl;
   let series;
 
+  async function fetchHero(id) {
+    try {
+      const response = await axios.get(`${API_URL}v1/public/characters/${id}`, {
+        params: {
+          apikey: `${apiKey}`,
+          ts: `${ts}`,
+          hash: `${hash}`,
+        },
+      });
+      const data = response.data;
+      setHero(data);
+    } catch (err) {
+      console.error(err);
+      return;
+    }
+  }
+
   useEffect(() => {
-    fetchHero(id)
-      .then((data) => setHero(data))
-      .catch((err) => console.error(err));
+    fetchHero(id);
   }, []);
 
   if (hero) {

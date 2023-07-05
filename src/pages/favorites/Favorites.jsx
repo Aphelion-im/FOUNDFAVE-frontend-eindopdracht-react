@@ -11,7 +11,6 @@ import './Favorites.css';
 // TODO:
 // Maximaal aantal favorieten
 // User feedback: Removed a favorite
-// Axios import verwijderen?
 
 export default function Favorites() {
   const [favorites, setFavorites] = useState(18);
@@ -32,24 +31,6 @@ export default function Favorites() {
                 </p>
                 <ToolTip info="Mouse-over the names to see more info" />
                 <section className="favorites-container">
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
-                  <CharCard />
                 </section>
               </>
             ) : (
