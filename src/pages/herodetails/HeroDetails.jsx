@@ -1,23 +1,63 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Content from '../../components/content/Content';
 import { FaHeart } from 'react-icons/fa';
 import { FaRegHeart } from 'react-icons/fa';
+import { FaChevronLeft } from 'react-icons/fa';
 import './HeroDetails.css';
+
+import { fetchHero } from '../../helpers/fetchHeroes';
 
 // FaHeart/Favorite: isFavorite true/false
 // useEffect [favorite] --> remove from localStorage
 
 export default function HeroDetails() {
   const [isFavorite, toggleIsFavorite] = useState(false);
+  let { id } = useParams();
+  let navigate = useNavigate();
+
+  const [hero, setHero] = useState();
+
+  let name;
+  let description;
+  let thumbnailPath;
+  let thumbnailExtension;
+  let thumbnailUrl;
+  let series;
+
+  useEffect(() => {
+    fetchHero(id)
+      .then((data) => setHero(data))
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (hero) {
+    name = hero.data.results[0].name;
+    description = hero.data.results[0].description;
+    thumbnailPath = hero.data.results[0].thumbnail.path;
+    thumbnailExtension = hero.data.results[0].thumbnail.extension;
+    thumbnailUrl = `${thumbnailPath}.${thumbnailExtension}`;
+    series = hero.data.results[0].series.items;
+  }
+
+  if (!hero) return;
 
   return (
     <>
-      <Content title="Spider-Man">
+      <Content title={name}>
         <section className="herodetails-section">
           {/* Left column */}
           <article>
-            <img className="illustration box-shadow" src="https://picsum.photos/200" alt="Placeholder" />
+            <FaChevronLeft
+              className="goback"
+              onClick={() => navigate('/')}
+              title="Go back to the previous page"
+            />
+            <img
+              className="illustration box-shadow"
+              src={thumbnailUrl}
+              alt="Hero image"
+            />
           </article>
           {/* Right column */}
           <article>
@@ -37,20 +77,22 @@ export default function HeroDetails() {
               )}
             </div>
             <h2>Name</h2>
-            <p>Spider-Man</p>
+            <p>{name}</p>
             <h2>Description</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur ex perspiciatis eveniet nemo, esse quidem quisquam
-              facilis id eius magni.
-            </p>
+            {description ? (
+              <>
+                <p>{description}</p>
+              </>
+            ) : (
+              <p>No description available</p>
+            )}
             <h2>Series</h2>
             <ul>
-              <li>Series #1: Lorem, ipsum dolor.</li>
-              <li>Series #2: Lorem, ipsum dolor.</li>
-              <li>Series #3: Lorem, ipsum dolor.</li>
-              <li>Series #4: Lorem, ipsum dolor.</li>
-              <li>Series #5: Lorem, ipsum dolor.</li>
+              {series
+                ? series.map((title) => (
+                    <li key={Math.random() * 1000}>{title.name}</li>
+                  ))
+                : null}
             </ul>
           </article>
         </section>

@@ -36,15 +36,16 @@ export default function CharCard({ name, id, thumbnail, description }) {
 
         <Link to={`/${id}`} target="_blank">
           <img src={thumbnail} alt="Thumbnail" />
+
+          <div className={CharCardStyles['info-window']}>
+            <span className={CharCardStyles['char-title']}>{name}</span>
+            <p>
+              {description.length > 0
+                ? `${description.substring(0, 180)} ...`
+                : 'No description available'}
+            </p>
+          </div>
         </Link>
-        <div className={CharCardStyles['info-window']}>
-          <span className={CharCardStyles['char-title']}>{name}</span>
-          <p>
-            {description.length > 0
-              ? `${description.substring(0, 180)} ...`
-              : 'No description available'}
-          </p>
-        </div>
       </div>
     </>
   );

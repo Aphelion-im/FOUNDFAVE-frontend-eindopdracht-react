@@ -5,8 +5,8 @@ import Content from '../../components/content/Content';
 import CharCard from '../../components/charcard/CharCard';
 import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
 import { ReactComponent as Loader } from '../../assets/loaders/infinity-loader.svg';
-
 import ToolTip from '../../components/tooltip/ToolTip';
+
 const API_URL = import.meta.env.VITE_APP_BASE_URL;
 const apiKey = import.meta.env.VITE_APP_PUBLIC_KEY;
 const ts = import.meta.env.VITE_APP_TIMESTAMP;

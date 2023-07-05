@@ -11,6 +11,7 @@
   width: 100%;
   gap: 2rem;
   text-align: left;
+  position: relative;
 }
 
 .herodetails-section article {
@@ -44,6 +45,18 @@
   width: 100%;
   object-fit: cover;
   border: 4px solid var(--image-border);
+}
+
+.herodetails-section .goback {
+  font-size: 2rem;
+  position: absolute;
+  left: -5px;
+  top: -46px;
+  cursor: pointer;
+}
+
+.herodetails-section .goback:hover {
+  color: #666;
 }
 
 /********** 2. Media Queries **********/
