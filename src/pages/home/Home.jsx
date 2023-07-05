@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchBar from '../../components/searchbar/SearchBar';
 import Content from '../../components/content/Content';
@@ -19,6 +19,7 @@ export default function Home() {
   const [error, setError] = useState();
   const [query, setQuery] = useState('');
   const [isLoading, toggleIsLoading] = useState(false);
+  const [sorted, toggleSorted] = useState(false);
   let cards;
 
   async function handleClick(e, args) {
@@ -47,16 +48,35 @@ export default function Home() {
   }
 
   if (heroes) {
-    cards = heroes.map((hero) => (
-      <CharCard
-        key={hero.id}
-        name={hero.name}
-        id={hero.id}
-        description={hero.description}
-        thumbnail={`${hero.thumbnail.path}/${IMG_FANTASTIC}.${hero.thumbnail.extension}`}
-      />
-    ));
+    sorted
+      ? (cards = heroes.map((hero) => (
+          <CharCard
+            key={hero.id}
+            name={hero.name}
+            id={hero.id}
+            description={hero.description}
+            thumbnail={`${hero.thumbnail.path}/${IMG_FANTASTIC}.${hero.thumbnail.extension}`}
+          />
+        )))
+      : // https://stackoverflow.com/questions/51219133/how-to-sort-a-map-by-a-specific-field-in-es6-react
+        (cards = heroes.map((hero) => (
+          <CharCard
+            key={hero.id}
+            name={hero.name}
+            id={hero.id}
+            description={hero.description}
+            thumbnail={`${hero.thumbnail.path}/${IMG_FANTASTIC}.${hero.thumbnail.extension}`}
+          />
+        )));
   }
+
+  useEffect(() => {
+    const heroesArrayBA = [...heroes];
+    const sortedHeroesBA = heroesArrayBA.reverse();
+    if (heroes) {
+      setHeroes(() => sortedHeroesBA);
+    }
+  }, [sorted]);
 
   return (
     <>
@@ -78,7 +98,10 @@ export default function Home() {
                 <ToolTip info="Mouse-over the names to see more info" />
               </span>
               <div>
-                <select className="sorting" id="cars">
+                <select
+                  className="sorting"
+                  onChange={() => toggleSorted((prevState) => !prevState)}
+                >
                   <option value="ab">Sort A-B</option>
                   <option value="ba">Sort B-A</option>
                 </select>
