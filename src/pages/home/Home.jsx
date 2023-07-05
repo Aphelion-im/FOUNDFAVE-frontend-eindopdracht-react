@@ -91,6 +91,7 @@ export default function Home() {
           setError={setError}
         />
         <div className="information">
+          {isLoading && <Loader className="loader" />}
           {Object.keys(heroes).length > 0 && (
             <>
               <span>
@@ -110,9 +111,7 @@ export default function Home() {
           )}
         </div>
 
-        <section className="results-container">
-          {isLoading ? <Loader className="loader" /> : cards ? cards : null}
-        </section>
+        <section className="results-container">{cards ? cards : null}</section>
       </Content>
     </>
   );
