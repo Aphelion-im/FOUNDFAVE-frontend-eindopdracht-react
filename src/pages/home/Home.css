@@ -11,6 +11,8 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+  position: relative;
+  width: 100%;
 }
 
 .information {
@@ -43,4 +45,11 @@
 .information option {
   background-color: #fff;
   color: var(--l-10-dark-clr);
+}
+
+.results-container .loader {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

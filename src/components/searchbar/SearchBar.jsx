@@ -2,14 +2,7 @@ import { useState, useRef } from 'react';
 import SearchButton from '../searchbutton/SearchButton';
 import './SearchBar.css';
 
-export default function SearchBar({
-  slogan,
-  brand,
-  placeholder,
-  handleClick,
-  setHeroes,
-  setError,
-}) {
+export default function SearchBar({ slogan, brand, placeholder, handleClick }) {
   const [hasContent, setHasContent] = useState('');
   const searchbar = useRef(null);
 
@@ -50,9 +43,7 @@ export default function SearchBar({
           <SearchButton
             handleClick={(e) => {
               searchbar.current.focus();
-              handleClick(e, hasContent)
-                .then((data) => setHeroes(data.data.results))
-                .catch((err) => setError(err));
+              handleClick(e, hasContent);
             }}
           />
         </div>
