@@ -95,10 +95,9 @@ export default function HeroDetails() {
           {/* Right column */}
           <article>
             <div className="container">
-
-            {isLoading ? <Loader className="loader-hero-details" /> :
-
-              isFavorite ? (
+              {isLoading ? (
+                <Loader className="loader-hero-details" />
+              ) : isFavorite ? (
                 <FaHeart
                   className="favorite-icon"
                   title="Click to remove this favorite"
