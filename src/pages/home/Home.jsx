@@ -14,6 +14,9 @@ export default function Home() {
   const [query, setQuery] = useState('');
   const [isLoading, toggleIsLoading] = useState(false);
   const [sorted, toggleSorted] = useState(false);
+  const [selectState, setSelectState] = useState({
+    selector: 'ab',
+  });
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
   const apiKey = import.meta.env.VITE_APP_PUBLIC_KEY;
   const ts = import.meta.env.VITE_APP_TIMESTAMP;
@@ -30,6 +33,7 @@ export default function Home() {
     }
     setQuery(searchquery);
     setError(false);
+
     try {
       const response = await axios.get(`${API_URL}v1/public/characters`, {
         params: {
@@ -49,6 +53,7 @@ export default function Home() {
       setError(true);
     }
     toggleIsLoading(false);
+    setSelectState({ selector: 'ab' });
   }
 
   if (heroes) {
@@ -70,6 +75,14 @@ export default function Home() {
       setHeroes(() => sortedHeroesBA);
     }
   }, [sorted]);
+
+  function handleSorting(e) {
+    toggleSorted((prevState) => !prevState);
+
+    setSelectState({
+      selected: e.target.value,
+    });
+  }
 
   return (
     <>
@@ -97,8 +110,11 @@ export default function Home() {
               </span>
               <div>
                 <select
+                  name="selector"
+                  id="selector"
                   className="sorting"
-                  onChange={() => toggleSorted((prevState) => !prevState)}
+                  onChange={handleSorting}
+                  value={selectState.selector}
                 >
                   <option value="ab">Sort A-B</option>
                   <option value="ba">Sort B-A</option>
