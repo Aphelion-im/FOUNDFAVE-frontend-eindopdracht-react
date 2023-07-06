@@ -60,13 +60,11 @@
   color: #666;
 }
 
-.loader-hero-details {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 3%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.herodetails-section .hypnotic {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  right: -46%;
 }
 
 /********** 2. Media Queries **********/

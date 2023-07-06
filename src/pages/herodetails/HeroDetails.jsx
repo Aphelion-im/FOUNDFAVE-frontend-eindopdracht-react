@@ -13,7 +13,7 @@ import './HeroDetails.css';
 export default function HeroDetails() {
   const [isFavorite, toggleIsFavorite] = useState(false);
   const [hero, setHero] = useState();
-  const [isLoading, toggleIsLoading] = useState(true);
+  const [isLoading, toggleIsLoading] = useState(false);
   let navigate = useNavigate();
   let { id } = useParams();
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
@@ -27,27 +27,39 @@ export default function HeroDetails() {
   let thumbnailUrl;
   let series;
 
-  async function fetchHero(id) {
-    toggleIsLoading(true);
-    try {
-      const response = await axios.get(`${API_URL}v1/public/characters/${id}`, {
-        params: {
-          apikey: `${apiKey}`,
-          ts: `${ts}`,
-          hash: `${hash}`,
-        },
-      });
-      const data = response.data;
-      setHero(data);
-    } catch (err) {
-      console.error(err);
-      return;
-    }
-    toggleIsLoading(false);
-  }
-
   useEffect(() => {
+    const controller = new AbortController();
+    async function fetchHero(id) {
+      toggleIsLoading(true);
+      try {
+        const response = await axios.get(
+          `${API_URL}v1/public/characters/${id}`,
+          {
+            signal: controller.signal,
+            params: {
+              apikey: `${apiKey}`,
+              ts: `${ts}`,
+              hash: `${hash}`,
+            },
+          }
+        );
+        const data = response.data;
+        setHero(data);
+      } catch (e) {
+        if (axios.isCancel(e)) {
+          console.log('The axios request was cancelled');
+        } else {
+          console.error(e);
+        }
+        toggleIsLoading(false);
+      }
+    }
+
     fetchHero(id);
+
+    return function cleanup() {
+      controller.abort();
+    };
   }, []);
 
   if (hero) {
@@ -59,7 +71,7 @@ export default function HeroDetails() {
     series = hero.data.results[0].series.items;
   }
 
-  if (!hero) return;
+  // if (!hero) return;
 
   return (
     <>
@@ -72,21 +84,21 @@ export default function HeroDetails() {
               onClick={() => navigate('/')}
               title="Go back to the previous page"
             />
-            {isLoading ? (
-              <Loader className="loader-hero-details" />
-            ) : (
-              <img
-                className="illustration box-shadow"
-                src={thumbnailUrl}
-                alt="Hero image"
-              />
-            )}
+
+            <img
+              className="illustration box-shadow"
+              src={thumbnailUrl}
+              alt="Hero image"
+            />
           </article>
 
           {/* Right column */}
           <article>
             <div className="container">
-              {isFavorite ? (
+
+            {isLoading ? <Loader className="loader-hero-details" /> :
+
+              isFavorite ? (
                 <FaHeart
                   className="favorite-icon"
                   title="Click to remove this favorite"
