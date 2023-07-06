@@ -16,6 +16,7 @@
 
 .herodetails-section article {
   flex: 1 1 50%;
+  position: relative;
 }
 
 .herodetails-section .container {
@@ -57,6 +58,15 @@
 
 .herodetails-section .goback:hover {
   color: #666;
+}
+
+.loader-hero-details {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /********** 2. Media Queries **********/

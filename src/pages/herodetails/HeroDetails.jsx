@@ -7,11 +7,13 @@ import Content from '../../components/content/Content';
 import { FaHeart } from 'react-icons/fa';
 import { FaRegHeart } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
+import { ReactComponent as Loader } from '../../assets/loaders/infinity-loader.svg';
 import './HeroDetails.css';
 
 export default function HeroDetails() {
   const [isFavorite, toggleIsFavorite] = useState(false);
   const [hero, setHero] = useState();
+  const [isLoading, toggleIsLoading] = useState(true);
   let navigate = useNavigate();
   let { id } = useParams();
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
@@ -26,6 +28,7 @@ export default function HeroDetails() {
   let series;
 
   async function fetchHero(id) {
+    toggleIsLoading(true);
     try {
       const response = await axios.get(`${API_URL}v1/public/characters/${id}`, {
         params: {
@@ -40,6 +43,7 @@ export default function HeroDetails() {
       console.error(err);
       return;
     }
+    toggleIsLoading(false);
   }
 
   useEffect(() => {
@@ -68,12 +72,17 @@ export default function HeroDetails() {
               onClick={() => navigate('/')}
               title="Go back to the previous page"
             />
-            <img
-              className="illustration box-shadow"
-              src={thumbnailUrl}
-              alt="Hero image"
-            />
+            {isLoading ? (
+              <Loader className="loader-hero-details" />
+            ) : (
+              <img
+                className="illustration box-shadow"
+                src={thumbnailUrl}
+                alt="Hero image"
+              />
+            )}
           </article>
+
           {/* Right column */}
           <article>
             <div className="container">

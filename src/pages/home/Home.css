@@ -48,7 +48,7 @@
   color: var(--l-10-dark-clr);
 }
 
-.loader {
+.information .loader {
   position: absolute;
   top: -35px;
   left: 50%;
