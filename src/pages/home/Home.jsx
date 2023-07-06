@@ -49,8 +49,8 @@ export default function Home() {
       const data = response.data.data.results;
       setHeroes(data);
     } catch (e) {
-      console.error('Error', e);
       setError(true);
+      console.error('Error', e);
     }
     toggleIsLoading(false);
     setSelectState({ selector: 'ab' });
