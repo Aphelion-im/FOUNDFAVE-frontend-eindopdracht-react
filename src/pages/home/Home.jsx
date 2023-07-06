@@ -18,7 +18,7 @@ export default function Home() {
   const apiKey = import.meta.env.VITE_APP_PUBLIC_KEY;
   const ts = import.meta.env.VITE_APP_TIMESTAMP;
   const hash = import.meta.env.VITE_APP_HASH;
-  const IMG_FANTASTIC = 'portrait_fantastic';
+  const IMG_UNCANNY = 'portrait_uncanny'; // 300x450px
   let cards;
 
   async function handleClick(e, searchquery) {
@@ -58,7 +58,7 @@ export default function Home() {
         name={hero.name}
         id={hero.id}
         description={hero.description}
-        thumbnail={`${hero.thumbnail.path}/${IMG_FANTASTIC}.${hero.thumbnail.extension}`}
+        thumbnail={`${hero.thumbnail.path}/${IMG_UNCANNY}.${hero.thumbnail.extension}`}
       />
     ));
   }

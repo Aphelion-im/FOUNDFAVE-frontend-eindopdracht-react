@@ -173,8 +173,6 @@ npm run preview
 
 Mocht je nog vragen of opmerkingen hebben, stuur dan gerust een e-mail naar: andre.de.groot@novi-education.nl of stuur me een bericht via Teams.
 
-Een bericht sturen via het contactformulier op https://foundfave.online mag natuurlijk ook😉
-
 Met vriendelijke groet,
 
 André de Groot
