@@ -71,7 +71,7 @@ export default function HeroDetails() {
     series = hero.data.results[0].series.items;
   }
 
-  // if (!hero) return;
+  if (!hero) return;
 
   return (
     <>

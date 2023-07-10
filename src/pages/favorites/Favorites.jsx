@@ -17,6 +17,11 @@ export default function Favorites() {
   const { isAuth, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const id = localStorage.getItem('fave');
+    console.log('ID: ', id);
+  }, []);
+
   return (
     <>
       <Content title="My Favorites">
@@ -30,8 +35,7 @@ export default function Favorites() {
                   have {favorites} favorites.
                 </p>
                 <ToolTip info="Mouse-over the names to see more info" />
-                <section className="favorites-container">
-                </section>
+                <section className="favorites-container"></section>
               </>
             ) : (
               <>

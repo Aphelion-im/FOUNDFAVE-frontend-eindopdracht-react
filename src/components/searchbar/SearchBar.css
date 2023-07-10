@@ -46,7 +46,7 @@
 }
 
 .searchbar-icon-container .close-icon:hover {
-  color: #ffffff;
+  color: var(--close-query-clr);
 }
 
 .searchbar-icon-container .fa-search {
