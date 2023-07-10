@@ -11,7 +11,6 @@ import { ReactComponent as Loader } from '../../assets/loaders/infinity-loader.s
 import './HeroDetails.css';
 
 export default function HeroDetails() {
-  const [isFavorite, toggleIsFavorite] = useState(false);
   const [hero, setHero] = useState();
   const [isLoading, toggleIsLoading] = useState(false);
   let navigate = useNavigate();
@@ -51,8 +50,8 @@ export default function HeroDetails() {
         } else {
           console.error(e);
         }
-        toggleIsLoading(false);
       }
+      toggleIsLoading(false);
     }
 
     fetchHero(id);
