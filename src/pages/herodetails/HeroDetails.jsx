@@ -13,6 +13,7 @@ import './HeroDetails.css';
 export default function HeroDetails() {
   const [hero, setHero] = useState();
   const [isLoading, toggleIsLoading] = useState(false);
+  const [isFavorite, toggleIsFavorite] = useState(false);
   let navigate = useNavigate();
   let { id } = useParams();
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
