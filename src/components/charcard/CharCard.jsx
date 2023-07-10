@@ -1,17 +1,13 @@
-// TODO: loading en error states
-// Fave wel of niet zichtbaar met isAuth
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHeart } from 'react-icons/fa';
-import { FaRegHeart } from 'react-icons/fa';
+import Favorite from '../favorite/Favorite';
 import CharCardStyles from './CharCard.module.css';
 
 export default function CharCard({ name, id, thumbnail, description }) {
   const [isAuth, toggleIsAuth] = useState(true);
   const [isFavorite, toggleIsFavorite] = useState(false);
 
-  function addToFavorites(e) {
+    function addToFavorites(e) {
     console.log(id, name, thumbnail, description);
     toggleIsFavorite(!isFavorite);
     localStorage.setItem('fave', id);
@@ -24,21 +20,7 @@ export default function CharCard({ name, id, thumbnail, description }) {
           ' '
         )}
       >
-        {isAuth ? (
-          isFavorite ? (
-            <FaHeart
-              className={CharCardStyles['fa-heart-icon']}
-              title="Click to remove this favorite"
-              onClick={addToFavorites}
-            />
-          ) : (
-            <FaRegHeart
-              className={CharCardStyles['fa-heart-icon']}
-              title="Click to add this favorite"
-              onClick={addToFavorites}
-            />
-          )
-        ) : null}
+        <Favorite isFavorite={isFavorite} isAuth={isAuth} handleClick={addToFavorites}/>
 
         <Link to={`/${id}`} target="_blank">
           <img src={thumbnail} alt="Thumbnail" />

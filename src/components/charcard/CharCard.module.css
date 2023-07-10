@@ -21,20 +21,6 @@
   transform: scale(1.1);
 }
 
-.fa-heart-icon {
-  position: absolute;
-  color: var(--marvel-red-clr);
-  right: 8px;
-  top: 8px;
-  font-size: 1.5rem;
-  z-index: 100;
-  cursor: pointer;
-}
-
-.fa-heart-icon:hover {
-  color: var(--marvel-complement-clr);
-}
-
 .charcard .info-window {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
