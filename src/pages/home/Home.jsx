@@ -72,7 +72,7 @@ export default function Home() {
   useEffect(() => {
     const timeoutMessageFavoriteAdded = setTimeout(() => {
       setMessage('');
-    }, 5000);
+    }, 1000);
 
     return () => {
       clearTimeout(timeoutMessageFavoriteAdded);
@@ -108,6 +108,7 @@ export default function Home() {
   return (
     <>
       <Content>
+        {message && <p className="message-big">{message}</p>}
         {Object.keys(heroes).length === 0 && !query && (
           <Logo className="logo" />
         )}
