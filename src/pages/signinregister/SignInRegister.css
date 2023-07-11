@@ -67,13 +67,6 @@
   right: 0;
 }
 
-.signinregister-section .error {
-  color: var(--marvel-red-clr);
-}
-
-.signinregister-section .pending {
-  color: var(--marvel-sun-clr);
-}
 /********** 2. Media Queries **********/
 @media screen and (min-width: 768px) {
   .signinregister-section {

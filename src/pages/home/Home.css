@@ -57,17 +57,3 @@
   height: 100px;
 }
 
-.information .message {
-  color: var(--marvel-complement-clr);
-  display: inline-block;
-}
-
-.message-big {
-  color: var(--marvel-complement-clr);
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 200;
-  font-size: 3rem;
-
-}

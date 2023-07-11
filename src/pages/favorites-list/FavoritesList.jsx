@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { FaveContext } from '../../context/FaveContext';
 import GenerateList from '../../components/generate-list/GenerateList';
@@ -10,6 +10,7 @@ import './FavoritesList.css';
 import RemoveFavoriteComponent from '../../components/removefavorite-component/RemoveFavoriteComponent';
 
 export default function Favorites() {
+  const [message, setMessage] = useState('');
   const { isAuth, user } = useContext(AuthContext);
   const { favorites, setFavorites } = useContext(FaveContext);
   const navigate = useNavigate();
@@ -39,20 +40,42 @@ export default function Favorites() {
     localStorage.setItem(`faves-of-${user.username}`, JSON.stringify(items));
   }
 
+  useEffect(() => {
+    const timeoutMessageFavoriteAdded = setTimeout(() => {
+      setMessage('');
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutMessageFavoriteAdded);
+    };
+  }, [message]);
+
   return (
     <>
       <Content title="My Favorites">
+        {message && <p className="message-big">{message}</p>}
         <section className="favorites-section">
           <article>
             {isAuth ? (
               <>
                 <hr />
                 <p>
-                  Welcome <span className="username">{user.username}</span>, you
-                  have {Object.keys(favorites).length} favorites.
+                  {message ? (
+                    <>
+                      <p className="message">{message}</p>
+                      <ToolTip info="Mouse-over the names to see more info" />
+                      <ToolTip info="Other accounts can store other favorites" />
+                    </>
+                  ) : (
+                    <>
+                      Welcome <span className="username">{user.username}</span>,
+                      you have {Object.keys(favorites).length} favorites.
+                      <ToolTip info="Mouse-over the names to see more info" />
+                      <ToolTip info="Other accounts can store other favorites" />
+                    </>
+                  )}
                 </p>
-                <ToolTip info="Mouse-over the names to see more info" />
-                <ToolTip info="Other accounts can store other favorites" />
+
                 <section className="favorites-container">
                   <GenerateList
                     heroes={favorites}

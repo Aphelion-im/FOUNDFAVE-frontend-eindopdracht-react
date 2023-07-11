@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ReactComponent as Loader } from '../assets/loaders/infinity-loader.svg';
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
 import isTokenValid from '../helpers/isTokenValid';
@@ -90,7 +91,11 @@ function AuthContextProvider({ children }) {
 
   return (
     <AuthContext.Provider value={contextData}>
-      {isAuth.status === 'done' ? children : <p>Loading...</p>}
+      {isAuth.status === 'done' ? (
+        children
+      ) : (
+        <Loader className="loading-authcontext" />
+      )}
     </AuthContext.Provider>
   );
 }

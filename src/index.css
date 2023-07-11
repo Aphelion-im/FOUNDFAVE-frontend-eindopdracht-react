@@ -6,6 +6,7 @@
     2. Typography
     3. Layout
         3.1 Reusables
+    4. Miscellaneous
 ////////////////////////*/
 
 /********** 1. Global styles **********/
@@ -168,4 +169,35 @@ h2 {
 
 .hyperlink:hover {
   color: #666;
+}
+
+.message {
+  color: var(--marvel-complement-clr);
+  display: inline-block;
+}
+
+.message-big {
+  color: var(--marvel-complement-clr);
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+  font-size: 3rem;
+}
+
+.error {
+  color: var(--marvel-red-clr);
+}
+
+.pending {
+  color: var(--marvel-sun-clr);
+}
+
+/********** 4. Miscellaneous **********/
+.loading-authcontext {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
 }

@@ -16,6 +16,7 @@ export default function Home() {
   const [heroes, setHeroes] = useState([]);
   const [error, setError] = useState();
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const [query, setQuery] = useState('');
   const [isLoading, toggleIsLoading] = useState(false);
   const [sorted, toggleSorted] = useState(false);
@@ -56,6 +57,7 @@ export default function Home() {
     } catch (e) {
       setError(true);
       console.error('Error', e);
+      if (e.response.status === 500) setErrorMessage('Internal Server error');
     }
     toggleIsLoading(false);
     setSelectState({ selector: 'ab' });
@@ -78,6 +80,16 @@ export default function Home() {
       clearTimeout(timeoutMessageFavoriteAdded);
     };
   }, [message]);
+
+  useEffect(() => {
+    const timeoutErrorMessage = setTimeout(() => {
+      setErrorMessage('');
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeoutErrorMessage);
+    };
+  }, [errorMessage]);
 
   function handleSorting(e) {
     toggleSorted((prevState) => !prevState);
@@ -127,7 +139,9 @@ export default function Home() {
           {query && (
             <>
               <span>
-                {message ? (
+                {errorMessage ? (
+                  <p className="error">{errorMessage}</p>
+                ) : message ? (
                   <>
                     <p className="message">{message}</p>
                     <ToolTip info="Mouse-over the names to see more info" />
