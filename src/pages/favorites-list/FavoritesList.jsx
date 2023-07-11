@@ -1,26 +1,43 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState, useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-import axios from 'axios';
+import { FaveContext } from '../../context/FaveContext';
+import GenerateList from '../../components/generate-list/GenerateList';
 import { FaInfoCircle } from 'react-icons/fa';
 import Content from '../../components/content/Content';
-import CharCard from '../../components/charcard/CharCard';
 import ToolTip from '../../components/tooltip/ToolTip';
-import './Favorites.css';
-
-// TODO:
-// Maximaal aantal favorieten
-// User feedback: Removed a favorite
+import './FavoritesList.css';
+import RemoveFavoriteComponent from '../../components/removefavorite-component/RemoveFavoriteComponent';
 
 export default function Favorites() {
-  const [favorites, setFavorites] = useState(18);
   const { isAuth, user } = useContext(AuthContext);
+  const { favorites, setFavorites } = useContext(FaveContext);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const id = localStorage.getItem('fave');
-    console.log('ID: ', id);
+    if (isAuth) {
+      const heroFavorites = JSON.parse(
+        localStorage.getItem(`faves-of-${user.username}`)
+      );
+
+      if (heroFavorites) {
+        setFavorites(heroFavorites);
+      }
+    }
   }, []);
+
+  function removeFavoriteHero(hero) {
+    const newFavoriteList = favorites.filter(
+      (favorite) => favorite.id !== hero.id
+    );
+
+    setFavorites(newFavoriteList);
+    saveToLocalStorage(newFavoriteList);
+  }
+
+  function saveToLocalStorage(items) {
+    localStorage.setItem(`faves-of-${user.username}`, JSON.stringify(items));
+  }
 
   return (
     <>
@@ -32,10 +49,17 @@ export default function Favorites() {
                 <hr />
                 <p>
                   Welcome <span className="username">{user.username}</span>, you
-                  have {favorites} favorites.
+                  have {Object.keys(favorites).length} favorites.
                 </p>
                 <ToolTip info="Mouse-over the names to see more info" />
-                <section className="favorites-container"></section>
+                <ToolTip info="Other accounts can store other favorites" />
+                <section className="favorites-container">
+                  <GenerateList
+                    heroes={favorites}
+                    handleFavoritesClick={removeFavoriteHero}
+                    favoriteComponent={RemoveFavoriteComponent}
+                  />
+                </section>
               </>
             ) : (
               <>

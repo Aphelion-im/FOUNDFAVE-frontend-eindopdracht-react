@@ -1,17 +1,18 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Favorite from '../favorite/Favorite';
 import CharCardStyles from './CharCard.module.css';
 
-export default function CharCard({ name, id, thumbnail, description }) {
-  const [isAuth, toggleIsAuth] = useState(true);
-  const [isFavorite, toggleIsFavorite] = useState(false);
+export default function CharCard({
+  name,
+  id,
+  thumbnail,
+  description,
+  isAuth,
+  isFavorite,
+  handleClick,
+  favoriteComponent,
+}) {
+  const FavoriteComponent = favoriteComponent;
 
-    function addToFavorites(e) {
-    console.log(id, name, thumbnail, description);
-    toggleIsFavorite(!isFavorite);
-    localStorage.setItem('fave', id);
-  }
 
   return (
     <>
@@ -20,8 +21,11 @@ export default function CharCard({ name, id, thumbnail, description }) {
           ' '
         )}
       >
-        <Favorite isFavorite={isFavorite} isAuth={isAuth} handleClick={addToFavorites}/>
-
+        <FavoriteComponent
+          handleClick={handleClick}
+          isAuth={isAuth}
+          isFavorite={isFavorite}
+        />
         <Link to={`/${id}`} target="_blank">
           <img src={thumbnail} alt="Thumbnail" />
         </Link>

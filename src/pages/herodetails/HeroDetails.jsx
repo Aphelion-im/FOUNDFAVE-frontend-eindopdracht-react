@@ -1,11 +1,7 @@
-// FaHeart/Favorite: isFavorite true/false
-// useEffect [favorite] --> remove from localStorage
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Content from '../../components/content/Content';
-import { FaHeart } from 'react-icons/fa';
-import { FaRegHeart } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
 import { ReactComponent as Loader } from '../../assets/loaders/infinity-loader.svg';
 import './HeroDetails.css';
@@ -13,7 +9,6 @@ import './HeroDetails.css';
 export default function HeroDetails() {
   const [hero, setHero] = useState();
   const [isLoading, toggleIsLoading] = useState(false);
-  const [isFavorite, toggleIsFavorite] = useState(false);
   let navigate = useNavigate();
   let { id } = useParams();
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
@@ -95,21 +90,7 @@ export default function HeroDetails() {
           {/* Right column */}
           <article>
             <div className="container">
-              {isLoading ? (
-                <Loader className="loader-hero-details" />
-              ) : isFavorite ? (
-                <FaHeart
-                  className="favorite-icon"
-                  title="Click to remove this favorite"
-                  onClick={() => toggleIsFavorite(!isFavorite)}
-                />
-              ) : (
-                <FaRegHeart
-                  className="favorite-icon"
-                  title="Click to remove this favorite"
-                  onClick={() => toggleIsFavorite(!isFavorite)}
-                />
-              )}
+              {isLoading && <Loader className="loader-hero-details" />}
             </div>
             <h2>Name</h2>
             <p>{name}</p>

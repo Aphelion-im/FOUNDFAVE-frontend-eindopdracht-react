@@ -1,28 +1,33 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import { FaveContext } from '../../context/FaveContext';
+import { AuthContext } from '../../context/AuthContext';
 import SearchBar from '../../components/searchbar/SearchBar';
 import Content from '../../components/content/Content';
-import CharCard from '../../components/charcard/CharCard';
+import GenerateList from '../../components/generate-list/GenerateList';
 import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
 import { ReactComponent as Loader } from '../../assets/loaders/infinity-loader.svg';
 import ToolTip from '../../components/tooltip/ToolTip';
 import './Home.css';
+import AddFavoriteComponent from '../../components/addfavorite-component/AddFavoriteComponent';
+import EmptyComponent from '../../components/empty-component/EmptyComponent';
 
 export default function Home() {
   const [heroes, setHeroes] = useState([]);
   const [error, setError] = useState();
+  const [message, setMessage] = useState('');
   const [query, setQuery] = useState('');
   const [isLoading, toggleIsLoading] = useState(false);
   const [sorted, toggleSorted] = useState(false);
   const [selectState, setSelectState] = useState({
     selector: 'ab',
   });
+  const { isAuth, user } = useContext(AuthContext);
+  const { favorites, setFavorites } = useContext(FaveContext);
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
   const apiKey = import.meta.env.VITE_APP_PUBLIC_KEY;
   const ts = import.meta.env.VITE_APP_TIMESTAMP;
   const hash = import.meta.env.VITE_APP_HASH;
-  const IMG_UNCANNY = 'portrait_uncanny'; // 300x450px
-  let cards;
 
   async function handleClick(e, searchquery) {
     e.preventDefault();
@@ -56,18 +61,6 @@ export default function Home() {
     setSelectState({ selector: 'ab' });
   }
 
-  if (heroes) {
-    cards = heroes.map((hero) => (
-      <CharCard
-        key={hero.id}
-        name={hero.name}
-        id={hero.id}
-        description={hero.description}
-        thumbnail={`${hero.thumbnail.path}/${IMG_UNCANNY}.${hero.thumbnail.extension}`}
-      />
-    ));
-  }
-
   useEffect(() => {
     const heroesArrayBA = [...heroes];
     const sortedHeroesBA = heroesArrayBA.reverse();
@@ -76,12 +69,40 @@ export default function Home() {
     }
   }, [sorted]);
 
+  useEffect(() => {
+    const timeoutMessageFavoriteAdded = setTimeout(() => {
+      setMessage('');
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeoutMessageFavoriteAdded);
+    };
+  }, [message]);
+
   function handleSorting(e) {
     toggleSorted((prevState) => !prevState);
 
     setSelectState({
       selected: e.target.value,
     });
+  }
+
+  function addFavoriteHero(hero) {
+    const checkForDouble = favorites.find(
+      (favorite) => hero.id === favorite.id
+    );
+
+    if (checkForDouble) return;
+
+    const newFavoriteList = [...favorites, hero];
+    setFavorites(newFavoriteList);
+    saveToLocalStorage(newFavoriteList);
+    console.log(newFavoriteList);
+    setMessage('Favorite added!');
+  }
+
+  function saveToLocalStorage(items) {
+    localStorage.setItem(`faves-of-${user.username}`, JSON.stringify(items));
   }
 
   return (
@@ -105,8 +126,17 @@ export default function Home() {
           {query && (
             <>
               <span>
-                {Object.keys(heroes).length} results for <i>{query}</i>
-                <ToolTip info="Mouse-over the names to see more info" />
+                {message ? (
+                  <>
+                    <p className="message">{message}</p>
+                    <ToolTip info="Mouse-over the names to see more info" />
+                  </>
+                ) : (
+                  <>
+                    {Object.keys(heroes).length} results for <i>{query}</i>
+                    <ToolTip info="Mouse-over the names to see more info" />
+                  </>
+                )}
               </span>
               <div>
                 <select
@@ -124,7 +154,15 @@ export default function Home() {
           )}
         </div>
 
-        <section className="results-container">{cards ? cards : null}</section>
+        <section className="results-container">
+          {heroes && (
+            <GenerateList
+              heroes={heroes}
+              handleFavoritesClick={addFavoriteHero}
+              favoriteComponent={isAuth ? AddFavoriteComponent : EmptyComponent}
+            />
+          )}
+        </section>
       </Content>
     </>
   );

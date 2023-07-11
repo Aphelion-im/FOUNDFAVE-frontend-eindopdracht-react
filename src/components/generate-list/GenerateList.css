@@ -1,0 +1,55 @@
+/*////////////////////////
+    Table of Contents
+    1. GenerateList Styles
+    2. Media Queries
+////////////////////////*/
+
+/********** 1. GenerateList Styles **********/
+.charcard {
+  flex: 1 1 175px;
+  height: 250px;
+  max-width: 175px;
+  object-fit: cover;
+  position: relative;
+  cursor: pointer;
+  border: 4px solid #262626;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: all 100ms ease-in;
+}
+
+.charcard:hover {
+  transform: scale(1.1);
+}
+
+.charcard .info-window {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+  padding: 4px;
+  transition: all 250ms ease-in;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.charcard .info-window:hover {
+  height: 100%;
+}
+
+.charcard .char-title {
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+  margin: 14px 0 16px 0;
+}
+
+/********** 2. Media Queries **********/
+@media screen and (min-width: 768px) {
+  .charcard {
+    flex: 0 1 175px;
+  }
+}

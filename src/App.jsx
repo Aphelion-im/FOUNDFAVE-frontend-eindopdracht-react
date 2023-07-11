@@ -6,7 +6,7 @@ import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import NotFound from './pages/notfound/NotFound';
 import SignInRegister from './pages/signinregister/SignInRegister';
-import Favorites from './pages/favorites/Favorites';
+import FavoritesList from './pages/favorites-list/FavoritesList';
 import HeroDetails from './pages/herodetails/HeroDetails';
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sign-in-register" element={<SignInRegister />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/favorites" element={<FavoritesList />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <FooterMenu />

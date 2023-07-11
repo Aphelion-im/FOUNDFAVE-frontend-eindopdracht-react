@@ -24,16 +24,6 @@
   text-align: right;
 }
 
-.herodetails-section .favorite-icon {
-  color: var(--marvel-red-clr);
-  cursor: pointer;
-  font-size: 2rem;
-}
-
-.herodetails-section .favorite-icon:hover {
-  color: var(--marvel-complement-clr);
-}
-
 .herodetails-section h2 {
   margin-block: 8px;
 }

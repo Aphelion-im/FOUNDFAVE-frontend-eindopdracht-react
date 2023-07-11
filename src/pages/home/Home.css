@@ -56,3 +56,8 @@
   width: 100px;
   height: 100px;
 }
+
+.information .message {
+  color: var(--marvel-complement-clr);
+  display: inline-block;
+}
