@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaPinterestSquare } from 'react-icons/fa';
 import { FaFacebookSquare } from 'react-icons/fa';

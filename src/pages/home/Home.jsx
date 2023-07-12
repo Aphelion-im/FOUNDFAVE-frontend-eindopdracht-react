@@ -51,7 +51,6 @@ export default function Home() {
           orderBy: 'name',
         },
       });
-      console.log(response);
       const data = response.data.data.results;
       setHeroes(data);
     } catch (e) {
@@ -100,7 +99,6 @@ export default function Home() {
   }
 
   function addFavoriteHero(hero) {
-    console.log('Hero', hero.id);
     const checkForDouble = favorites.find(
       (favorite) => hero.id === favorite.id
     );
@@ -110,7 +108,6 @@ export default function Home() {
     const newFavoriteList = [...favorites, hero];
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList);
-    console.log(newFavoriteList);
     setMessage('Favorite added!');
   }
 

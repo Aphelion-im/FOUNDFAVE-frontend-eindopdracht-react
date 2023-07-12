@@ -6,8 +6,8 @@ import GenerateList from '../../components/generate-list/GenerateList';
 import { FaInfoCircle } from 'react-icons/fa';
 import Content from '../../components/content/Content';
 import ToolTip from '../../components/tooltip/ToolTip';
-import './FavoritesList.css';
 import RemoveFavoriteComponent from '../../components/removefavorite-component/RemoveFavoriteComponent';
+import './FavoritesList.css';
 
 export default function Favorites() {
   const [message, setMessage] = useState('');
