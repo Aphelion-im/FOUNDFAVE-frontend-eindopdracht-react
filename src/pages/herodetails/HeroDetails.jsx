@@ -42,7 +42,7 @@ export default function HeroDetails() {
         setHero(data);
       } catch (e) {
         if (axios.isCancel(e)) {
-          console.log('The axios request was cancelled');
+          console.log('Axios request cancelled');
         } else {
           console.error(e);
         }
@@ -71,6 +71,7 @@ export default function HeroDetails() {
   return (
     <>
       <Content title={name}>
+        {isLoading && <Loader className="loader-hero-details" />}
         <section className="herodetails-section">
           {/* Left column */}
           <article>
@@ -89,9 +90,6 @@ export default function HeroDetails() {
 
           {/* Right column */}
           <article>
-            <div className="container">
-              {isLoading && <Loader className="loader-hero-details" />}
-            </div>
             <h2>Name</h2>
             <p>{name}</p>
             <h2>Description</h2>
@@ -108,7 +106,7 @@ export default function HeroDetails() {
                 ? series.map((title) => (
                     <li key={Math.random() * 1000}>{title.name}</li>
                   ))
-                : null}
+                : <p>No data available</p>}
             </ul>
           </article>
         </section>

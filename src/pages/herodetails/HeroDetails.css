@@ -19,11 +19,6 @@
   position: relative;
 }
 
-.herodetails-section .container {
-  width: 100%;
-  text-align: right;
-}
-
 .herodetails-section h2 {
   margin-block: 8px;
 }
@@ -50,11 +45,12 @@
   color: #666;
 }
 
-.herodetails-section .loader-hero-details {
-  width: 2rem;
-  height: 2rem;
-  position: relative;
-  right: -46%;
+.loader-hero-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
 }
 
 /********** 2. Media Queries **********/
