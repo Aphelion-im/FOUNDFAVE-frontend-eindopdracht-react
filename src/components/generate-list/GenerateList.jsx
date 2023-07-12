@@ -7,10 +7,8 @@ import './GenerateList.css';
 
 export default function GenerateList({
   handleFavoritesClick,
-  favorites,
   heroes,
   favoriteComponent,
-  hero
 }) {
   const FavoriteComponent = favoriteComponent;
   const IMG_UNCANNY = 'portrait_uncanny'; // 300x450px
@@ -23,20 +21,6 @@ export default function GenerateList({
             <FavoriteComponent
               handleFavoritesClick={() => handleFavoritesClick(hero)}
             />
-
-            {/* {favorites ? (
-              <FaHeart
-                onClick={() => handleFavoritesClick(hero)}
-                className="fa-heart-icon"
-                title="Click to remove this favorite"
-              />
-            ) : (
-              <FaRegHeart
-                onClick={() => handleFavoritesClick(hero)}
-                className="fa-heart-icon"
-                title="Click to add this favorite"
-              />
-            )} */}
 
             <Link to={`/${hero.id}`} target="_blank">
               <img

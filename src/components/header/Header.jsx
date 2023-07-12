@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
+import { FaveContext } from '../../context/FaveContext';
 import DarkLightMode from '../darklightmode/DarkLightMode';
 import { ReactComponent as LogoHeader } from '../../assets/logo/logo-header.svg';
 import { FaRegHeart } from 'react-icons/fa';
@@ -8,7 +9,13 @@ import './Header.css';
 
 export default function HeaderMenu() {
   const { isAuth, logout } = useContext(AuthContext);
+  const { setFavorites } = useContext(FaveContext);
   const navigate = useNavigate();
+
+  function loggingout() {
+    setFavorites([]);
+    logout();
+  }
 
   return (
     <>
@@ -18,11 +25,7 @@ export default function HeaderMenu() {
             <LogoHeader className="logo-header" onClick={() => navigate('/')} />
             <div className="loginlogout">
               {isAuth ? (
-                <button
-                  onClick={logout}
-                  type="button"
-                  title="Sign out"
-                >
+                <button onClick={loggingout} type="button" title="Sign out">
                   Sign Out
                 </button>
               ) : (
