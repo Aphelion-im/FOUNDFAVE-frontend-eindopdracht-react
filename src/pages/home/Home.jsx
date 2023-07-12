@@ -100,6 +100,7 @@ export default function Home() {
   }
 
   function addFavoriteHero(hero) {
+    console.log('Hero', hero.id);
     const checkForDouble = favorites.find(
       (favorite) => hero.id === favorite.id
     );

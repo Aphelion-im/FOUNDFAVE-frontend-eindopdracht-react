@@ -1,4 +1,4 @@
-Datum laatste update: 11-7-2023
+Datum laatste update: 12-7-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
@@ -50,7 +50,7 @@ Het oorspronkelijke .env bestand is niet aanwezig in de Github repository van di
 1. Een .env bestand aanmaken en deze in de root van het project plaatsen.
 2. De volgende variabelen en bijhorende waarden in het .env bestand plaatsen. 
 
-Neem de waarden over van onderstaande tabel:
+Neem de waarden over van onderstaande tabel of copy-paste de code uit het code block onder de tabel:
 
 | Variabele           | Waarde                           |
 | ------------------- | -------------------------------- |
