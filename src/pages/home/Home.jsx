@@ -118,6 +118,19 @@ export default function Home() {
     localStorage.setItem(`faves-of-${user.username}`, JSON.stringify(items));
   }
 
+  useEffect(() => {
+    if (heroes.length > 0)
+      localStorage.setItem('searchresults', JSON.stringify(heroes));
+  }, [heroes]);
+
+  useEffect(() => {
+    const results = JSON.parse(localStorage.getItem('searchresults'));
+
+    if (results) {
+      setHeroes(results);
+    }
+  }, []);
+
   return (
     <>
       <Content>

@@ -22,7 +22,7 @@ export default function GenerateList({
               handleFavoritesClick={() => handleFavoritesClick(hero)}
             />
 
-            <Link to={`/${hero.id}`} target="_blank">
+            <Link to={`/${hero.id}`}>
               <img
                 src={`${hero.thumbnail.path}/${IMG_UNCANNY}.${hero.thumbnail.extension}`}
                 alt={`Thumbnail ${hero.name}`}
