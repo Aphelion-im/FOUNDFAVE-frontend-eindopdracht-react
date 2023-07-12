@@ -177,7 +177,7 @@ export default function Home() {
               <div>
                 <select
                   name="selected"
-                  id="selected"
+                  id="select"
                   className="sorting"
                   onChange={handleSorting}
                   value={selectState.selected}
