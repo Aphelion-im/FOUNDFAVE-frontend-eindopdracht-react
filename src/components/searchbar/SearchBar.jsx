@@ -44,6 +44,7 @@ export default function SearchBar({ slogan, brand, placeholder, handleClick }) {
             handleClick={(e) => {
               searchbar.current.focus();
               handleClick(e, hasContent);
+              setHasContent('');
             }}
           />
         </div>

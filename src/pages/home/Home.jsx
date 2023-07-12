@@ -119,15 +119,18 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if (heroes.length > 0)
-      localStorage.setItem('searchresults', JSON.stringify(heroes));
+    if (heroes.length > 0) {
+      sessionStorage.setItem('searchresults', JSON.stringify(heroes));
+      sessionStorage.setItem('searchquery', query);
+    }
   }, [heroes]);
 
   useEffect(() => {
-    const results = JSON.parse(localStorage.getItem('searchresults'));
-
-    if (results) {
-      setHeroes(results);
+    const searchresults = JSON.parse(sessionStorage.getItem('searchresults'));
+    const searchquery = sessionStorage.getItem('searchquery');
+    if (searchresults && searchquery) {
+      setHeroes(searchresults);
+      setQuery(searchquery);
     }
   }, []);
 
