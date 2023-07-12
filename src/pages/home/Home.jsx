@@ -21,7 +21,7 @@ export default function Home() {
   const [isLoading, toggleIsLoading] = useState(false);
   const [sorted, toggleSorted] = useState(false);
   const [selectState, setSelectState] = useState({
-    selector: 'ab',
+    selected: 'ab',
   });
   const { isAuth, user } = useContext(AuthContext);
   const { favorites, setFavorites } = useContext(FaveContext);
@@ -60,7 +60,7 @@ export default function Home() {
       if (e.response.status === 500) setErrorMessage('Internal server error');
     }
     toggleIsLoading(false);
-    setSelectState({ selector: 'ab' });
+    setSelectState({ selected: 'ab' });
   }
 
   useEffect(() => {
@@ -122,15 +122,19 @@ export default function Home() {
     if (heroes.length > 0) {
       sessionStorage.setItem('searchresults', JSON.stringify(heroes));
       sessionStorage.setItem('searchquery', query);
+      sessionStorage.setItem('selected', JSON.stringify(selectState));
     }
   }, [heroes]);
 
   useEffect(() => {
     const searchresults = JSON.parse(sessionStorage.getItem('searchresults'));
     const searchquery = sessionStorage.getItem('searchquery');
-    if (searchresults && searchquery) {
+    const selectedstate = JSON.parse(sessionStorage.getItem('selected'));
+
+    if (searchresults && searchquery && selectedstate) {
       setHeroes(searchresults);
       setQuery(searchquery);
+      setSelectState(selectedstate);
     }
   }, []);
 
@@ -172,11 +176,11 @@ export default function Home() {
               </span>
               <div>
                 <select
-                  name="selector"
-                  id="selector"
+                  name="selected"
+                  id="selected"
                   className="sorting"
                   onChange={handleSorting}
-                  value={selectState.selector}
+                  value={selectState.selected}
                 >
                   <option value="ab">Sort A-B</option>
                   <option value="ba">Sort B-A</option>
