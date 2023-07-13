@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+  background-color: #1a1a1a;
+  font-family: 'Roboto', Verdana, sans-serif;
+}
+
+noscript {
+  color: #eb1e25;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
