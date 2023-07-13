@@ -56,7 +56,8 @@ export default function Home() {
     } catch (e) {
       setError(true);
       console.error('Error', e);
-      if (e.response.status === 500) setErrorMessage('Internal server error');
+      if (e.response.status === 500) setErrorMessage('Internal server error.');
+      if (e.response.status === 404 || 401) setErrorMessage('An error has occured. Please try again later.');
     }
     toggleIsLoading(false);
     setSelectState({ selected: 'ab' });

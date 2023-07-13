@@ -102,7 +102,7 @@ export default function HeroDetails() {
             )}
             <h2>Series</h2>
             <ul>
-              {series
+              {series.length > 0
                 ? series.map((title) => (
                     <li key={Math.random() * 1000}>{title.name}</li>
                   ))
