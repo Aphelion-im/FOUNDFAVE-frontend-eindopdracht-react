@@ -8,7 +8,7 @@ import './HeroDetails.css';
 
 export default function HeroDetails() {
   const [hero, setHero] = useState();
-  const [isLoading, toggleIsLoading] = useState(false);
+  const [isLoading, toggleIsLoading] = useState(true);
   let navigate = useNavigate();
   let { id } = useParams();
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
@@ -22,10 +22,11 @@ export default function HeroDetails() {
   let thumbnailUrl;
   let series;
 
+  console.log('isLoading 2', isLoading);
+
   useEffect(() => {
     const controller = new AbortController();
     async function fetchHero(id) {
-      toggleIsLoading(true);
       try {
         const response = await axios.get(
           `${API_URL}v1/public/characters/${id}`,

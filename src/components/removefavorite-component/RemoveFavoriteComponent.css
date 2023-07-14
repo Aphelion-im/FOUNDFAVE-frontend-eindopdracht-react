@@ -1,3 +1,9 @@
+/*////////////////////////
+    Table of Contents
+    1. RemoveFavoriteComponent Styles
+////////////////////////*/
+
+/**********  1. RemoveFavoriteComponent Styles **********/
 .fa-heart-icon {
   position: absolute;
   color: var(--marvel-red-clr);

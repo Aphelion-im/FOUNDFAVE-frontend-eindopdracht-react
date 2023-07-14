@@ -1,4 +1,4 @@
-Datum laatste update: 13-7-2023
+Datum laatste update: 16-7-2023
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
 
@@ -16,7 +16,7 @@ Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 
 ## Inhoud
 
-- [Hoe ziet de FOUNDFAVE App er uit?](#hoe-ziet-de-foundfave-app-er-uit)
+- [Animatie: Hoe ziet de FOUNDFAVE App er uit?](#animatie-hoe-ziet-de-foundfave-app-er-uit)
 - [Live demo](#live-demo-foundfave-app)
 - [Aan de examinator](#aan-de-examinator)
 - [Benodigdheden](#benodigdheden)
@@ -25,7 +25,7 @@ Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 - [Overige commando's](#overige-commandos)
 - [Contact](#contact)
 
-## Hoe ziet de FOUNDFAVE App er uit?
+## Animatie: Hoe ziet de FOUNDFAVE App er uit?
 
 ![FOUNDFAVE React App ](./src/assets/screenshots/screenshot-app.gif)
 
@@ -96,7 +96,7 @@ Zorg er eerst voor dat je [NodeJS](https://nodejs.org/en) hebt geïnstalleerd op
 
 De NodeJS LTS (Long Term Support) versie installeren.
 
-Om te controleren of je NodeJS hebt geïnstalleerd typ dan het volgende commando in de terminal:
+Om te controleren of je NodeJS hebt geïnstalleerd, typ dan het volgende commando in de terminal:
 
 ```bash
 node -v
@@ -130,7 +130,7 @@ npm install
 
 ## De applicatie opstarten
 
-De volgende commando's zijn beschikbaar binnen ViteJS en zullen hierna kort besproken worden:
+De volgende commando's zijn beschikbaar binnen ViteJS en zullen hierna kort worden besproken:
 * `npm run dev`
 * `npm run build`
 * `npm run preview` 
@@ -152,7 +152,7 @@ Om de live server te stoppen druk je op de volgende toetsencombinatie: `CTRL + C
 ### npm run build 
 Als je de React app wilt hosten op een server en handmatig wilt deployen op bijvoorbeeld Netlify, kun je een build maken. 
 
-Dit zal een `dist` (distributie) folder creëren in de root: ./dist. Deze specifieke folder kun je dan uploaden naar de server. 
+Dit zal een `dist` (distributie) folder creëren in de root: ./dist. Deze specifieke folder kun je dan uploaden naar de server van Netlify.
 
 Om een distributie folder te maken kun je het volgende commando typen in de terminal:
 

@@ -8,9 +8,9 @@ import GenerateList from '../../components/generate-list/GenerateList';
 import { ReactComponent as Logo } from '../../assets/logo/logo-header.svg';
 import { ReactComponent as Loader } from '../../assets/loaders/infinity-loader.svg';
 import ToolTip from '../../components/tooltip/ToolTip';
-import './Home.css';
 import AddFavoriteComponent from '../../components/addfavorite-component/AddFavoriteComponent';
 import EmptyComponent from '../../components/empty-component/EmptyComponent';
+import './Home.css';
 
 export default function Home() {
   const [heroes, setHeroes] = useState([]);
@@ -57,7 +57,8 @@ export default function Home() {
       setError(true);
       console.error('Error', e);
       if (e.response.status === 500) setErrorMessage('Internal server error.');
-      if (e.response.status === 404 || 401) setErrorMessage('An error has occured. Please try again later.');
+      if (e.response.status === 404 || 401)
+        setErrorMessage('An error has occured. Please try again later.');
     }
     toggleIsLoading(false);
     setSelectState({ selected: 'ab' });

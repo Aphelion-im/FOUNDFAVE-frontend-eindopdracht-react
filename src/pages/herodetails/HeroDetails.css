@@ -1,10 +1,10 @@
 /*////////////////////////
     Table of Contents
-    1. Contact Styles
+    1. HeroDetails Styles
     2. Media Queries
 ////////////////////////*/
 
-/********** 1. Contact Styles **********/
+/********** 1. HeroDetails Styles **********/
 .herodetails-section {
   display: flex;
   flex-direction: column;

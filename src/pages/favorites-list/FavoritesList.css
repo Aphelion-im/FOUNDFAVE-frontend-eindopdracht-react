@@ -1,10 +1,10 @@
 /*////////////////////////
     Table of Contents
-    1. Favorites Styles
+    1. FavoritesList Styles
     2. Media Queries
 ////////////////////////*/
 
-/********** 1. Favorites Styles **********/
+/********** 1. FavoritesList Styles **********/
 .favorites-section {
   display: flex;
   flex-direction: column;
