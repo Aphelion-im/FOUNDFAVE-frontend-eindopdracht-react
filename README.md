@@ -54,20 +54,20 @@ Neem de waarden over van onderstaande tabel of copy-paste de code uit het code b
 
 | Variabele           | Waarde                           |
 | ------------------- | -------------------------------- |
-| VITE_APP_BASE_URL   | http://gateway.marvel.com/       |
-| VITE_APP_PUBLIC_KEY | 4780bcc0dddcf771e505b68197ce5f56 |
-| VITE_APP_HASH       | d9ed2fbdb825b21f96f7f62eb48cecef |
-| VITE_APP_TIMESTAMP  | 1                                |
-|VITE_APP_NOVI_BACKEND|https://frontend-educational-backend.herokuapp.com|
+| VITE_APP_BASE_URL   |                                  |
+| VITE_APP_PUBLIC_KEY |                                  |
+| VITE_APP_HASH       |                                  |
+| VITE_APP_TIMESTAMP  |                                  |
+|VITE_APP_NOVI_BACKEND|                                  |
 
 **.env bestand inhoud**:
 
 ```javascript
-VITE_APP_BASE_URL='http://gateway.marvel.com/'
-VITE_APP_PUBLIC_KEY='4780bcc0dddcf771e505b68197ce5f56'
-VITE_APP_HASH='d9ed2fbdb825b21f96f7f62eb48cecef'
-VITE_APP_TIMESTAMP='1'
-VITE_APP_NOVI_BACKEND='https://frontend-educational-backend.herokuapp.com'
+VITE_APP_BASE_URL=''
+VITE_APP_PUBLIC_KEY=''
+VITE_APP_HASH=''
+VITE_APP_TIMESTAMP=''
+VITE_APP_NOVI_BACKEND=''
 ```
 
 __Netlify Opmerking__
