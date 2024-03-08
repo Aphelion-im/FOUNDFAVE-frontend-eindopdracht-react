@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import HeaderMenu from './components/header/Header';
 import FooterMenu from './components/footer/Footer';
 import Home from './pages/home/Home';
@@ -15,12 +15,13 @@ export default function App() {
       <HeaderMenu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<HeroDetails />} />
+        <Route path="/character/:id" element={<HeroDetails />} /> // useParams :id and path="*" don't work well together
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sign-in-register" element={<SignInRegister />} />
         <Route path="/favorites" element={<FavoritesList />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
       <FooterMenu />
     </>
