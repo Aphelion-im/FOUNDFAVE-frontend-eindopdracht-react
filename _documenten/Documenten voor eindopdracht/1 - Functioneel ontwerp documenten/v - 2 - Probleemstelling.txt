@@ -1,0 +1,68 @@
+Voordat je direct de diepte in duikt, leg je globaal uit welk probleem je hebt willen oplossen met jouw applicatie 
+en wat de belangrijkste kernfunctionaliteiten zijn. 
+
+Probleemstelling: bepalen welk probleem je wilt oplossen voor jouw gebruikers met deze applicatie 
+en wat de vier á vijf belangrijkste functionaliteiten zijn.
+
+--> Beschrijft het probleem en de manier waarop deze applicatie dat probleem oplost.
+
+Probleemstelling (vraagstuk, gevraagde oplossing, functionaliteiten)
+---
+Versimpelde probleemstelling:
+---
+Deze app is voor Marvel comics fans. 
+- Als ik de details van een favoriet karakter wil onthouden, dan schrijf ik deze gegevens momenteel op in een digitaal kladblok. 
+- Veel van de details missen dan, bijvoorbeeld een afbeelding hoe het personage er uit ziet en andere details. Tevens beter om alle details bij de hand te hebben en afbeeldingen.
+- Het opschrijven kost onnodig veel werk. Of zelfs copy-pasten. 
+- Kan ook zijn dat er nieuwe informatie beschikbaar komt(Bijvoorbeeld een nieuwe release datum) en ik deze dan misloop. Niet up-to-date en niet beschikbaar.
+- Maar op 1 apparaat beschikbaar. Niet op meerdere apparaten tegelijk.
+- Niet gesynchroniseerd
+- Niet snel en makkelijk te raadplegen. 
+- Kladblok document kan wegraken
+
+Oplossingen
+---
++ Via de app, die volledig up-to-date is, is dat verleden tijd. Meest up-to-date informatie bij de hand.
++ Ik wil mijn favoriete karakters snel en makkelijk kunnen opzoeken en de up-to-date details daarvan kunnen opvragen. 
+Snel opzoeken met de zoekmachine en via favorieten.
++ Het zou mooi zijn als ik alles online (snel) kan opzoeken, opslaan en kan bijhouden. Alles in een handig overzicht.
++ Op alle apparaten beschikbaar
++ FOUNDFAVE.online is makkelijk benaderbaar en gehost op een betrouwbaar netwerk.
+
+
+
+VOORBEELDEN
+---
+Voorbeeld probleemstelling
+---
+Weet jij ook nooit wat je vanavond moet koken? Lijkt het alsof jouw creativiteit en besluitvaardigheid rond etenstijd ook ineens verdwenen is? 
+Persoonlijk ervaar ik dit ongeveer iedere dag. Daarom ga ik een applicatie programmeren waar ik een aantal grappige vragen 
+kan beantwoorden over o.a. mijn stemming, eetgezelschap en motivatie-om-te-koken-niveau, waarna deze applicatie een 
+aantal passende recepten voorstelt om uit te kiezen. Wanneer iemand een rotdag heeft gehad, zal de applicatie bijvoorbeeld 
+meer comfort-food recepten voorstellen. Wanneer iemand geen zin heeft om te koken, worden er snelle en 
+makkelijke recepten getoond. Op de dagen dat de gebruiker zich wel besluitvaardig voelt, is er ook een mogelijkheid 
+om door alle beschikbare recepten te browsen en op zoek te gaan naar specifieke recepten met behulp van een zoekfunctie. 
+Ten slotte heeft de gebruiker ook de mogelijkheid om recepten te bekijken op basis van de ingrediënten die nog in de koelkast liggen. 
+Om dit te doen maak gebruik ik de Edamam API (https://www.edamam.com/) om zo recepten op te vragen en te verwerken in mijn applicatie.
+
+
+
+Voorbeeld probleemoplossing
+---
+Als ik een opdracht open zet via Teams, kan iedereen de link naar zijn Pull Request
+inleveren. Wanneer ik een peer-review wil uitzetten, laat Teams me de ingeleverde
+links echter niet in één keer exporteren, die moet ik student voor student in een
+Excel-bestandje zetten. Het koppelen van de studenten die iets ingeleverd hebben,
+moet ik ook met de hand doen. Vervolgens vul ik dit bericht telkens handmatig in
+
+Voorbeeld oplossing
+---
+Ik wil een systeem waar ik per groep (startmoment) een lijst met student-namen
+en e-mailadressen kan uploaden. Voor zo’n groep wil ik opdrachten klaar kunnen
+zetten, inclusief beschrijving en geautomatiseerd bericht. Ik wil daar vervolgens
+een deadline aan koppelen. Inleveren is daarna niet meer mogelijk.
+
+Studenten kunnen bij het inleveren van hun GitHub-link hun eigen naam uit de lijst
+selecteren en hoeven niet in te loggen. Wanneer de deadline verstreken is, worden
+studenten automatisch aan elkaar gekoppeld en krijgen zij een email met daarin
+het geautomatiseerde bericht.

@@ -1,0 +1,40 @@
+Eindopdracht Frontend
+---
+1) Marvel app
+2) OMDB
+3) Privacy app met diverse tools
+
+
+
+* Luchtkwaliteit app
+* Weer app
+* E-mail alias creator
+* Fake user generator. Privacy app. Password generator. Password strength. Credit card generator.
+* CV creator en portfolio in 1
+* Een frontend project die ik later kan aansluiten op een bijhorend backend project
+* Star Trek API
+* Star Wars API
+* Game of thrones API
+* LOTR API
+* NASA
+* open movie database
+* IMDB
+* Unsplash
+* Marvel
+* Jurassic Park API
+* Currency converter
+* Pokémon API
+
+API's
+---
+! https://spoonacular.com
+https://deckofcardsapi.com
+https://developers.giphy.com
+https://api.adviceslip.com
+http://jservice.io
+! http://www.omdbapi.com
+https://funtranslations.com
+https://thedogapi.com
+! https://developer.marvel.com
+https://pokeapi.co
+! https://randommer.io/

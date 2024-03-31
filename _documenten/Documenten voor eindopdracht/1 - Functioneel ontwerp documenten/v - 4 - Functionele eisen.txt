@@ -1,0 +1,28 @@
+Beschrijft wat de applicatie moet kunnen middels een sommering van tenminste 50 functionele- en niet-functionele eisen. 
+Dit hoeft niet evenredig verdeeld te zijn.
+
+--> Je kunt het zien als productkenmerken waarbij de focus ligt op de vereisten. 
+Als er niet aan deze eisen wordt voldaan, werkt de applicatie niet.
+---
+
+Functionele eisen bepalen het basale gedrag van het systeem, ofwel: wat moet het systeem wel of juist niet doen. 
+Je kunt dit zien als een manier waarop het systeem reageert op input. Als een gebruiker op “Versturen” klikt, 
+wat doet de applicatie dan? Deze eigenschappen zorgen ervoor dat het systeem kan functioneren zoals bedoeld.
+
+Intro Functionele eisen
+---
+Om de app te ontwerpen zijn er diverse functionele eisen en niet-functionele eisen bedacht.
+
+Hierbij beschrijven functionele eisen wat het systeem doet, en niet-functionele eisen vooral hoe het systeem dit doet.
+
+Nogmaals, de 5 kernfunctionaliteiten van de app:
+Als gebruiker kun je registreren en inloggen;
+Een zoekmachine om het gewenste karakter op te zoeken;
+Op de SERP (Search Engine Results Page) kun je de details van een specifiek karakter opvragen;
+Andere filters om resultaten te filteren naar wens. Bijvoorbeeld is een karakter een boef of een held?;
+Je kunt karakters toevoegen aan je favorieten.
+
+Daarop gebaseerd zijn de volgende functionele eisen in kaart gebracht, onderverdeeld in diverse categorien:
+
+
+

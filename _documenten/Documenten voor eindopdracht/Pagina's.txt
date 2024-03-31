@@ -1,0 +1,11 @@
+Pagina's
+---
+w About.
+w Home
+w SERP (SERP details pagina, modal, of andere help van het scherm)
+w 404.
+w Detailspagina karakter
+w Login en registratie pagina. 2-in-1 op 1 pagina, zoals op Bol.com. Succespage of bericht.
+w Contactpagina. Succespage of bericht.
+w 2x Favorieten pagina (Wit hartje): Ingelogd en uitgelogd.
+* Optioneel: Hulp, documentatie, FAQ (Niet-functionele eis)

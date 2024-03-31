@@ -1,0 +1,27 @@
+Algemene beschrijving
+Zie pagina 12/14 van de v3.3 PDF
+---
+FOUNDFAVE is een app die ik eigenlijk voor mezelf zou willen bouwen. "Scratch my own itch" als het ware.
+
+Aangezien ik veel series en films kijk, en vooral die van Marvel, hou ik momenteel een lijstje bij in Windows Kladblok op mijn PC. 
+
+In dat lijstje hou ik bij welke film of serie ik nog wil zien, op welke datum deze uitkomt, 
+waar deze uitkomt: in de bioscoop of op dvd, welk seizoen dat is of welk deel.
+
+Soms open ik het kladblok om te bekijken of ik nog iets heb gemist en vaak kom ik er achter dat ik een bepaalde publicatiedatum heb gemist.
+
+Een tijdelijke oplossing zou kunnen zijn dat ik dergelijke data in de digitale agenda zet van mijn mobiele telefoon.
+
+Graag zou ik willen dat ik snel en makkelijk mijn lijstje online kan raadplegen met de actueelste informatie bij de hand en op welk apparaat dan ook,
+compleet gesynchroniseerd.
+
+De FOUNDFAVE App die ik nu ga bouwen is een 'dumbed down'(MVP: Minimum Viable Product) versie van de app die ik eigenlijk wil bouwen
+ en zal minder functies bevatten. Hier zal ik dieper op in gaan in het verantwoordingsdocument.
+
+De volgende vijf kernfunctionaliteiten komen in de app:
+1) Als gebruiker kun je registreren en inloggen;
+2) Een zoekmachine om het gewenste karakter of comic op te zoeken;
+3) Op de SERP (Search Engine Results Page) kun je de details van een specifiek karakter opvragen;
+4) Andere filters om resultaten te filteren naar wens. Bijvoorbeeld is een karakter een boef of een held?;
+5) Je kunt karakters toevoegen aan je favorieten.
+6) Bonus: Darkmode thema

@@ -1,0 +1,57 @@
+https://www.stuvia.com/nl-nl/knowledge-base/studeertips/wat-is-het-verschil-tussen-een-voorwoord-en-een-inleiding/
+
+
+Voorwoord
+---
+Toen ik begon bij NOVI Hogeschool had ik al ruim een jaar of zes ervaring als freelance webdesigner, internet marketeer en SEO/SEA-consultant.
+
+Ik dacht al aardig wat te weten van web development en tijdens de lessen bij NOVI Hogeschool werd ik
+aangenaam verrast en ben ik op dingen geattendeerd die ik nog niet wist.
+
+Voor de leerlijn frontend is ons gevraagd een onderwerp te verzinnen, en met dit onderwerp een React app te bouwen
+en daaraan een interessante online API te koppelen. In dit project gebruik ik de Marvel API.
+
+Om tot dit ontwerp te komen heb ik diverse interesses gebundeld en ben ik op het
+idee gekomen om een Marvel app te ontwerpen waar je Marvel karakters 
+kunt opzoeken, aan je favorieten kunt toevoegen en online kunt bewaren (Daarom de naam FOUNDFAVE: FOUND = Gevonden. FAVE = Favoriet)
+
+FOUNDFAVE App is een project gemaakt in opdracht van NOVI Hogeschool en voor de opbouw en indeling van dit 
+document heb ik zoveel mogelijk de richtlijnen en aanwijzingen aangehouden die in de lesstof staan vermeld.
+
+Met grote dank aan NOVI Hogeschool, mijn docenten, de SME'ers (Subject Matter Experts) en medestudenten voor deze leuke en leerzame periode.
+André de Groot
+Amsterdam, 16 juli 2023
+
+
+
+--------
+* Aanvankelijk zag ik er een beetje tegenop om te beginnen bij NOVI Hogeschool. 
+Vooral na Covid-19 is alles veranderd in het onderwijs. 
+
+* Fijn dat alle lessen online worden gegeven met de optie om op locatie te studeren.
+NOVI is leuker en beter dan dat ik dacht en er hangt een gemoedelijke sfeer in studentengroep. 
+
+* Om tot deze keuze komen zat ik eerst te twijfelen tussen een Movie database API en de Marvel API. 
+
+* Van NOVI Hogeschool heb ik de opdracht gekregen om een React app te bouwen voor 
+de frontend eindopdracht van de opleiding Full-stack developer en daarbij een interessante online API te kiezen.
+
+* Ik heb gekozen voor de Marvel API aangezien ik zo'n beetje alle Marvel films en series heb gezien, leek me dit een leuke opdracht. 
+
+* Aangezien ik zo'n beetje alle Marvel films en series heb gezien heb ik voor de Marvel API gekozen.
+
+---
+Voor module 1, webdesign, is ons gevraagd een onderwerp te verzinnen, en met dit onderwerp
+diverse creatieve uitingen te creëren, waaronder dit conceptboek die voor u ligt.
+
+Om tot dit onderwerp te komen heb ik diverse interesses samengebundeld en ben ik op het
+idee gekomen om een webshop te ontwerpen die bijenproducten en supplementen verkoopt
+aan krachtsporters.
+
+Geïnspireerd door Coolblue en Body & fitshop. Mijn favoriete webshops waar ik vaak op te vinden ben.
+
+Beide sites hebben jaren op rij allerlei prijzen in de wacht gesleept. Mede door de manier waarop de sites zijn gebouwd en de uitmuntende service die zij verlenen.
+Het is het idee om de bezoekers op de Bee Strong! webshop een dergelijke ervaring te geven door een prettig werkende website en een goede service.
+---
+
+

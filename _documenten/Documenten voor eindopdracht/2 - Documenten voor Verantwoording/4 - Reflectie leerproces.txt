@@ -1,0 +1,162 @@
+Reflecteer hierbij ook op je eigen leerproces: wat ging goed en wat kan de volgende keer beter?
+---
+Reflectie
+---
+Inleiding
+---
+* Toen ik me ging oriënteren op een opleiding tot web developer ben ik op gesprek geweest met drie potentiële kandidaten: 
+Techgrounds, Winc Academy en NOVI Hogeschool. Het werd voor mij al snel duidelijk dat NOVI (voor mij) de beste van de drie is. 
+
+* NOVI bevalt me beter dan verwacht en heb het eerste half jaar van de opleiding als prettig ervaren. Er hangt hier een gemoedelijke en vriendelijke sfeer.
+
+* Daarbij ook fijn dat je een HBO-functiecertificaat krijgt uitgereikt na het succesvol voltooien van de opleiding.
+
+* De lesstof wordt langzaam opgebouwd richting de eindopdracht en wordt steeds iets moeilijker. 
+Naarmate de tijd verstrijkt begint het toch wel pittig te worden.
+Deze opleiding is niet voor de poes, maar zeker wel haalbaar. 
+
+* Er is voldoende ondersteuning vanuit NOVI om de wekelijkse opdrachten met succes te kunnen voltooien in de vorm van lessen, lesstof, huiswerkklassen, etc. 
+Ook kun je vragen stellen online via teams aan de docenten, SME'ers (Subject Matter Experts) en ook aan je medestudenten.
+
+* Na Covid-19 zijn er een hoop dingen veranderd in het onderwijs. Les volgen gaat nu (grotendeels) online. 
+Daarom heb ik het contact met medestudenten wel gemist, ook al kon ik naar de locatie komen in Utrecht. 
+
+* Aan de andere kant erg fijn dat ik de studie 100% thuis en online kon doen in verband met de mantelzorg van mijn pa. 
+
+
+V Wat ging goed?
+---
+* Dat ik al kennis had van grafisch ontwerpen kwam wel goed uit tijdens de opleiding. 
+Daarom ging het ontwerpen van het logo, de wireframes, prototypes en deze documenten, in een stijl die op die van Marvel lijkt, goed.
+
+* Om de tijd om te studeren goed te verdelen doe ik per dagdeel iets anders. Dit geeft ook afwisseling. 
+Omdat ik me 's avonds creatiever en productiever voel, doe ik 's middags voornamelijk mantelzorg, huishouden, theorie en schrijven. 
+
+* In de avond, na het avondeten, ga ik programmeren. Ook omdat ik het prettiger vind om met een volle maag te coden. 
+Als ik honger heb kan ik me niet goed concentreren.
+
+* Wat betreft de planning, op het moment van schrijven, heb ik de laatste 4 weken gereserveerd om de React app eindopdracht te voltooien. 
+In de weken daarvoor ben ik voornamelijk bezig geweest met de use cases, wireframes, om documenten te schrijven, etc. 
+Eerst de basis goed en daarna pas daadwerkelijk programmeren.
+
+* Voordat ik begon aan de eindopdracht heb ik allerlei losse projecten gemaakt. 
+Een los project behandelt React-router-dom. Een ander project behandelt Axios. Nog een project behandelt useState, etc.
+
+* Al deze losse projecten heb ik samengebracht in de eindopdracht. 
+Ook van de NOVI GitHub-repositories heb ik veel voorbeeldcode kunnen gebruiken. 
+Wat dat betreft zijn de studenten erg verwend door de docenten en is deze code aan ons geserveerd op een dienblad en te gebruiken in de eindopdracht.
+
+* Ik doe elke dag, consistent, iets aan de opleiding. Al is het maar een klein beetje. 
+
+
+v Wat kon beter?
+---
+* Ik heb vaak de neiging om op een dag alleen theorie te gaan doen (Lezen of YouTube video's kijken) in plaats van daadwerkelijk te coden. 
+
+* Dit is iets waar ik steeds tegenaan loop. Misschien is het een vorm van uitstelgedrag. Soms moet ik mezelf dwingen om te gaan coden,
+en als ik eenmaal bezig ben, dan geniet ik ervan en ga dan vaak tot in de nacht door. 
+Je leert toch het meeste als je je kennis daadwerkelijk toepast, heb ik gemerkt.
+
+* Het gekke is dat ik de volgende dag als ik opsta weer geen zin heb om te coden, 
+terwijl ik de dag daarvoor zo lekker op dreef was. Hoe dit psychische mechanisme werkt, ontgaat me.
+
+* Ik had de Marvel API beter moeten controleren voordat ik het idee ging indienen bij de SME tijdens de ideefase.
+Achteraf gezien is dit niet de API die ik in gedachten had. De API geeft niet de gewenste informatie die ik zoek en enkele endpoints geven een 404 foutmelding. 
+
+* Ik ben uiteindelijk toch maar met de Marvel API doorgegaan omdat er online allerlei voorbeelden zijn te vinden over het werken met React en de Marvel API,
+wat voor mijn gevoel de kansen om de opleiding te halen vergroten. Na de opleiding kan ik de app alsnog perfectioneren.
+
+Het project inschatten
+---
+* Beetje lastig om in te schatten tijdens het plannen en ontwerpen van de app wat ik waarschijnlijk wel of niet kan bouwen.
+Ik heb mezelf hier echt mee moeten remmen qua wensen om niet te hard van stapel te lopen. 
+
+* Lastig om in te schatten hoeveel tijd ik nodig heb om de app te bouwen. 
+Daarom probeer ik zoveel mogelijk vooruit te lopen op het schema die de groep aanhoudt.
+
+Documenten schrijven
+---
+* Ik had wat moeite met het schrijven van de documenten. De inleidingen schrijven heb ik enkele uren over gedaan. 
+Ik had deze tijd liever willen besteden aan het maken van het project. 
+Al met al gaf het me voldoening om een mooi document op te leveren en schrijf ik nu beter voor mijn gevoel door het vinden van een zogenaamde "tone of voice".
+
+Demotivatie
+---
+* Ik heb zeker wel momenten gehad dat ik me even gedemotiveerd voelde, geen zin had om te studeren, me niet goed voelde of gewoonweg moe.
+Me afvroeg of ik wel tijd genoeg heb om de eindopdracht op tijd te voltooien en zat ik lichtelijk te stressen. 
+
+* Toch blij dat ik deeltijd ben gaan doen. Als ik sommige van mijn medestudenten zo inschat, die de voltijdopleiding doen en beide leerlijnen volgen. 
+
+* Respect voor diegene die de voltijd bootcamp halen.
+
+
+v Vooruitzicht tweede helft van de opleiding
+---
+* 2e helft van de opleiding (backend) zal vast beter gaan schat ik in wat betreft efficiënt studeren, alhoewel ik frontend beter beheers. 
+
+Ik heb nog weinig tot geen kennis van backend en zal voor mijn gevoel enorm gaan groeien in de tweede helft van de opleiding. 
+
+Ik weet nu beter hoe NOVI te werk gaat en waar ik op moet letten, hoe Teams werkt, de indeling van de lesstof, etc. 
+
+Op naar de tweede helft van de opleiding. Ik heb er veel zin in!
+
+André de Groot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Archief
+---
+* Ik heb er voor gezorgd dat ik minstens elke dag een stuk van het project voltooi. Ik heb geen dag overgeslagen.
+
+* Een dag vooraf plannen wat ik de dag er op ga doen vond ik erg prettig. Dan weet je waar je aan toe bent en 
+heb je aan het einde van de dag een goed gevoel dat je je doelen hebt behaald.
+
+* Ik heb er naar gestreefd om aan alle criteria van de eindopdracht te voldoen. 
+
+Op dagen dat ik me wat minder energiek/gemotiveerd voel, doe ik meer schrijfwerk of theorie.
+
+* Voordat ik begon met coden heb ik eerst goed uitgewerkt hoe ik de losse onderdelen in elkaar ga zetten.
+- Eerst de routing met React Router DOM.
+
+* Ik zal in het tweede gedeelte niet meer mee gaan doen aan de peer reviews. Dit had voor een lage return on investment. Het kost veel tijd om 
+een project na te kijken van de medestudenten en enkele studenten waren te beroerd of hadden geen zin om mijn werk na te kijken.
+Het was wel handig om met Git/GitHub te oefenen en Pull Requests.
+
+? Heb ik last minute nog extra functionaliteit/effecten e.d. kunnen bijvoegen?
+
+* Voordat ik begon bij NOVI Hogeschool zat ik te twijfelen of ik een opleiding wou volgen bij Winc Academy of bij NOVI Hogeschool. 
+
+* kwam ik het kraampje van NOVI Hogeschool tegen op een opleidingsbeurs.
+Op die beurs stonden ook een aantal andere opleidingen, waaronder Techgrounds. 
+
+* Techgrounds had de opleiding last-minute geannuleerd en ben
+ik me verder gaan oriënteren. 
+
+* Bij de kraampje stonden diverse mensen waar je informatie over de opleiding kon inwinnen.
+
+* Een heuse Hbo opleiding met een Hbo certificaat.
+
+* Uiteindelijk heb ik gekozen voor NOVI Hogeschool. Winc Academy gaf een gevoel alsof ik bij de LOI zou gaan studeren. NOVI gaf me echt een Hbo gevoel.
+
+* Het principe van de gegevens weergeven van de API in de UI (User Interface) blijft hetzelfde. 
+
+* Dat geeft voor mij toch wel aan dat ik coden leuker vind dan schrijven. 
+
+* En ik heb sowieso nog niet de kennis in huis om een uitgebreide app te bouwen met de gewenste functionaliteit. 
+
+* Mijn prioriteit is het behalen van de opleiding en om te leren.
+
+* De app kan ik na de opleiding alsnog perfectioneren en aansluiten op een andere API. Of ik maak zelf een API.
+
+* Ik had liever een films en series database willen gebruiken.

@@ -1,0 +1,8 @@
+Als je een zoekterm zoekt
+Daarna een char toevoegt aan favo
+Daarna favo lijst bekijkt
+Daarna op een favo char klikt om details te bekijken
+
+Pijl linksboven gaat dan naar?:
+Vanuit favo char --> details page
+Vanuit search --> char 

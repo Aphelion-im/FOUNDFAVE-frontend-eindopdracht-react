@@ -1,0 +1,58 @@
+Iedere use case tabel bestaat uit een main success scenario en 1 tot 3 alternatieve scenario’s. 
+Use cases: je kiest vier kernfunctionaliteiten uit die je gaat uitwerken in use case tabellen. 
+Hierin beschrijf je op gedetailleerde wijze welk proces de gebruiker doorloopt om zijn doel te behalen en hoe de applicatie 
+hierop zou moeten reageren. 
+
+Ook ga je nadenken over gebruiksvriendelijkheid: hoe kun je de gebruiker ondersteunen bij het behalen van zijn doel? 
+Door het maken van use case tabellen zul je erachter komen dat de applicatie functionaliteiten moet bevatten waar je voorheen nog niet over nagedacht had.
+Beschrijf de belangrijkste gebruikershandelingen in minimaal vier use case tabellen: 
+één voor authenticatie (registreren of inloggen) en drie voor zelfbedachte functionaliteit. 
+Dit dienen de kernfunctionaliteiten van de applicatie te zijn, in het format zoals je hebt geleerd tijdens de leerlijn. 
+Ieder main success scenario wordt gecomplementeerd met 1 tot 3 alternatieve scenario’s.
+
+
+
+Beschrijf de belangrijkste gebruikershandelingen in minimaal vier use case tabellen: 
+één voor authenticatie (registreren of inloggen) en drie 
+voor zelfbedachte functionaliteit. Dit dienen de kernfunctionaliteiten van de applicatie te zijn, 
+in het format zoals je hebt geleerd tijdens de leerlijn. 
+Ieder main success scenario wordt gecomplementeerd met 1 tot 3 alternatieve scenario’s.
+
+Inleiding
+---
+De volgende use case tabellen bevatten de kernfunctionaliteiten (Zie de opsomming hieronder) en beschrijven de processen 
+die de gebruiker doorloopt in de app om zijn of haar doel te bereiken en hoe de applicatie hier op zou moeten reageren.
+
+Tevens geven de alternatieve scenario's aan waar het mis zou kunnen gaan en hoe het systeem hier op zou gaat reageren.
+
+Hieronder volgt een overzicht.
+
+De volgende use cases worden behandeld en beschrijven de belangrijkste gebruikershandelingen:
+1. De gebruiker wil inloggen. 
+- Gebruiker is wachtwoord vergeten.
+- Gebruiker voert 5x verkeerde gebruikersnaam/wachtwoord combinatie in.
+2. De gebruiker wil registreren.
+- De ingetype wachtwoorden ter controle komen niet overeen.
+- De gebruiker voert een niet geldig e-mailadres in.
+3. De gebruiker gebruikt de zoekmachine.
+- Het systeem kan het gewenste karakter niet vinden.
+- Gebruiker maakt een typfout.
+4. De gebruiker wil een karakter toevoegen aan de lijst met favorieten.
+- x
+5. De gebruiker wil een karakter verwijderen uit de lijst met favorieten.
+- Gebruiker klikt op het witte hartje in het menu terwijl de gebruiker niet is ingelogd.
+6. De gebruiker wil de lijst met favorieten bekijken.
+- Gebruiker klikt op het witte hartje in het menu terwijl de gebruiker niet is ingelogd.
+7. De gebruiker wil contact opnemen. 
+- De gebruiker voert minder dan 3 letters in in het naam-veld.
+- De gebruiker voert een niet geldig e-mail adres in.
+- De gebruiker voert geen commentaar in.
+8. De gebruiker wil de zoekresultaten sorteren.
+
+
+
+
+
+
+
+

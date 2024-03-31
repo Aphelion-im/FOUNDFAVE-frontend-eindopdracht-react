@@ -1,0 +1,81 @@
+* https://www.stuvia.com/nl-nl/knowledge-base/studeertips/wat-is-het-verschil-tussen-een-voorwoord-en-een-inleiding/
+* https://www.schrijfvis.nl/inleiding-schrijven/
+
+Inleiding
+---
+* De inleiding fungeert net zoals de inhoudsopgave als een routekaart voor de lezer: hier leg je uit wat de lezer kan verwachten van jouw verslag. 
+* Met een inleiding wil je de lezer nieuwsgierig maken door te vertellen wat hij of zij kan verwachten, vertel je de probleemstelling 
+en som je de  hoofd -en deelvragen op.
+
+---
+v de use cases
+v de functionele eisen
+v de niet-functionele eisen
+v wireframes
+v inspiratiebronnen
+v Schermontwerpen/prototypes
+---
+* Het mooie aan het beroep als web developer is dat je je eigen coole apps kunt programmeren met daarin alle functionaliteit die je maar kunt wensen.
+Je nuttige dingen kunt bouwen waar mens en maatschappij echt wat aan hebben. Een baan met betekenis. "The sky is the limit" met dit beroep.
+Je kunt er heel veel creativiteit in kwijt. Meer dan met bijvoorbeeld tekenen of schilderen naar mijn mening.
+
+* Dit is een van de redenen waarom ik de Fullstack developer opleiding ben gaan volgen aan NOVI Hogeschool. Creatief bezig zijn met code en
+andere mensen ontmoeten met dezelfde interesses. Na de opleiding als programmeur aan de slag bij een leuk bedrijf of als zelfstandige.
+
+* Voor de leerlijn frontend is ons gevraagd, de te bouwen ReactJS app voor de eindopdracht, eerst uit te werken in de vorm van use cases, functionele en niet-functionele eisen, 
+wireframes en prototypes en pas daarna de app daadwerkelijk in code om te zetten. 
+
+* Tijdens het uitwerken van de app met behulp van de uses cases kwam ik op ideeën waar ik nog niet eerder bij had stilgestaan en heb deze ideeën direct verwerkt in de use cases en wireframes van de app. Bekijk hier het hoofdstuk over de use cases.
+
+* Na het uitwerken van de use cases in diverse overzichtelijke tabellen had ik een goede basis om de systeemeisen in kaart te brengen:
+Wat moet het systeem doen? En hoe moet het systeem dat doen? Ik heb rond de vijftig eisen in kaart gebracht waaraan het systeem moet voldoen die je hier kunt vinden.
+
+* Tijd om de app meer visueel te krijgen en dan komen de wireframes om de hoek kijken. Het is niet logisch om meteen heel gedetailleerd
+te gaan werken. Het is beter om eerst schetsen te maken.
+
+* De wireframes zijn met pen en papier getekend en zijn een ruwe, maar wel nette schets, die weergeven hoe een scherm of pagina van de app er ongeveer uit komt te zien. Zo kun je in korte tijd allerlei ontwerpen op papier zetten en uitwerken. 
+
+* Als de wireframes goed zijn uitgewerkt kunnen deze worden gebruikt als basis voor de prototypes. Bekijk de uitgewerkte wireframes.
+
+* Voor dit project heb ik gekozen voor de Marvel API en om de app dezelfde look-and-feel te geven als Marvel heb ik bepaalde delen van het design overgenomen van de Marvel.com website. Het design van Marvel lijkt erg op een zogenaamde "Dark theme", wat ik erg mooi vind.
+
+* Om het ontwerp niet te veel te laten lijken op de Marvel website heb ik er enkele andere invloeden doorheen gemixt en heb inspiratie opgedaan op sites zoals Bol.com, Amazon.com, Google Material Design, YouTube, etc.
+
+* Bekijk het hoofdstuk Inspiratiebronnen om de dark theme en de onderdelen te bekijken die ik heb overgenomen van onder andere Bol.com.
+
+* Als alle voorgaande onderdelen klaar zijn kan er worden begonnen met het ontwerpen van de prototypes in het programma genaamd Figma.
+
+* Prototypes zijn ontwerpen van het scherm in een hoge resolutie en geven een goed beeld van hoe de app er uiteindelijk uit komt te zien.
+De prototypes kun je hier vinden.
+
+* In Figma kunnen de hoge resolutie prototypes interactief worden gemaakt. Dat laat ik voor dit project achterwege.
+
+* Het uiteindelijke resultaat, de app, kun je hier vinden: https://foundfave.online
+
+
+
+
+
+-----------------------------
+* In de volgende hoofdstukken ...
+* Ik heb het getracht kort en bondig te houden.
+* Op mijn 13e verjaardag kreeg ik mijn eerste computer: de Commodore 64. Sindsdien ben ik niet achter de computer weg te slaan. 
+Al op jonge leeftijd begon ik met het maken van simpele programma's met het destijds populaire C64 BASIC v2.
+* Dit zal ons straks helpen als we voor een werkgever aan de slag gaan of misschien wel als zelfstandige ondernemer.
+* Dit beroep vind ik zeker niet makkelijk en ik heb er door de jaren heen erg veel tijd in gestopt om het te leren.
+Daarbij de ontwikkelingen op dit gebied razend snel gaan. 
+* Al met al trekt dit beroep me erg omdat het ontzettend creatief is en wil hier graag een vaste baan vinden.
+* Zou het niet mooi zijn als je ten alle tijden bij je favorieten kan komen? Mits je achter een computer zit die is aangesloten op het internet.
+Zoiets had ik voor ogen met de FOUNDFAVE app, zoals beschreven in de Algemene beschrijving van dit document.
+* De wireframes in dit document zijn er in 2 soorten en zijn hier te vinden:
+1) Wireframes desktop
+2) Wireframes mobiel
+* Daarna bespreek ik hoe ik inspiratie kreeg voor dit project. 
+* Dark theme vind ik mooi om te zien en gebruik dit zelf ook 
+* Dark theme wordt steeds populairder, ook omdat het enkele voordelen met zich meebrengt.
+Het is onder andere bekend gemaakt door Google met Material Design.
+* Marvel.com heeft een thema dat erg lijkt op het zogenaamde Dark theme.
+* De use cases brengen in kaart hoe een gebruiker en het systeem op elkaar reageren. Het beste scenario. En ook scenario's waar het mis kan gaan.
+* De uses cases, die in dit document, in een tabel zijn weergegeven, worden vrij gedetailleerd uitgewerkt en laten zien hoe een gebruiker, stap voor stap, zich gedraagt om een doel te bereiken.
+
+

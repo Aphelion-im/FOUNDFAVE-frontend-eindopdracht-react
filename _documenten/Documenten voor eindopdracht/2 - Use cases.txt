@@ -1,0 +1,222 @@
+Use cases
+---
+* Inloggen, registreren, uitloggen, 
+
+Alt. scenario's
+---
+Inloggen:
+v Gebruiker voert foutief password 5x in
+v Gebruiker voert bepaalde velden niet goed in
+* Gebruiker voert bepaalde velden niet in
+* Wat doet het systeem na het verzenden van het formulier?
+
+Actor: gebruiker. 
+Er is geen admin in dit geval.
+
+Trigger
+---
+* De gebruiker bezoekt de website.
+* De gebruiker klikt op ‘Maak nieuwe blogpost-knop
+* Gebruiker navigeert naar pagina ‘Nieuwe post maken’”
+* “De gebruiker maakt een spelfout”
+* “De gebruiker ziet melding dat hij/zij een nieuwe chatbericht heeft ontvangen”
+
+Postcondities
+---
+* De gebruiker had succesvol het formulier verzonden
+
+Formulieren
+---
+* Registratieformulier. 
+* Contact. 
+* Inloggen. 
+Error bericht na foutief. Bij elke invoerveld een specifieke informatieve melding.
+Button uitgeschakeld.
+RegEx. Validatie.
+
+
+Zoekmachine
+---
+* Zoekmachine. Gebruiker typt een zoekterm in en klikt op het vergrootglasicoon of op Enter. 
+Na het zoeken laat de app het aantal zoekresultaten zien en de zoekresultaten in Cards.
+Als er geen zoekresultaten zijn, dan krijgt de gebruiker terugkoppeling van de app.
+De gebruiker klikt op meer laden als er nog meer zoekresultaten zijn. Of er is een infinite scroll.
+* Zoekvlak bevat een X om een zoekopdracht te verwijderen. X heeft een cursor: pointer;
+* Zoekvlak mag maximaal 30 tekens.
+
+Detailspagina
+---
+?: Wat gebeurt er als vanaf de detailspagina teruggaat naar de vorige pagina? Blijft de SERP behouden?
+De gebruiker klikt op pijltje terug, op Home/logo of andere plek: wat gebeurt er met SERP?
+* Of in plaats van een detailspagina een modal laten zien met daarin de details van het karakter. Dan is het misschien ook niet nodig om de SERP te behouden als je van de detailspagina naar de SERP pagina gaat.
+* Of mbv een modal de info laten zien
+* Of op de andere helft vd pagina
+
+Contact
+---
+* De gebruiker krijgt een bericht te zien en visuele feedback als gegevens niet correct/compleet zijn ingevuld.
+* Bericht na succesvol verzenden van het formulier. Veld niet juist ingevuld. Button uitgeschakeld. RegEx. Validatie.
+* De gebruiker klikt op de reset button om de velden te wissen.
+* De gebruiker klikt op Verzenden button om het formulier te verzenden.
+* Na het verzenden komt de gebruiker op de --- pagina.
+* Na het verzenden ziet de gebruiker een bericht dat het is gelukt.
+
+Favorieten
+---
+* Toevoegen aan favorieten. De gebruiker klikt op het leeg rood hartje om X toe te voegen. 
+Na het toevoegen van een favoriet, krijgt de gebruiker een melding te zien. (Rechtsonder?): favoriet toegevoegd.
+* Verwijderen van favorieten. De gebruiker klikt op een vol rood hartje om X te verwijderen.
+* Bekijken favorieten. De gebruikers klikt op het lege witte hartje in het menu om alle toegevoegde favorieten te bekijken.
+De gebruiker moet ingelogd zijn om de favorieten te bekijken.
+Als de gebruiker op het witte hartje klikt en niet is ingelogd, krijgt de gebruiker een melding te zien op een favorieten pagina (Zie Bol.com): "Bewaar al jouw favoriete artikelen handig op dit verlanglijstje. Lijstjes bewaren, bekijken of delen? Log in of maak een account."
+Als de gebruiker op het witte hartje klikt en wel is ingelogd, komt de gebruiker op de favorieten beheer pagina.
+Bericht: Registreer om jouw favorieten op te slaan en te bekijken! Het is gratis.
+Bericht v2: "Van deze functionaliteit kun je pas gebruik maken als je registreert"
+De rode hartjes zijn wel zichtbaar als niet ingelogd. Als niet ingelogd een melding dat je moet registreren/inloggen.
+
+Dark/light theme
+---
+* Dark/light theme. De gebruiker klikt op het zon/maan icoon om het thema te wijzigen. De website verandert van thema.
+* Als de gebruiker de volgende keer naar deze website terugkeert, zal hetzelfde thema nog actief zijn zoals de gebruiker had ingesteld.
+
+Login/Sign out/join
+---
+Login en signout zitten op 1 pagina, net zoals op Bol.com
+* Registreren (Join). Gebruiker vult de velden in. Button uitgeschakeld. Na invullen en verzenden formulier: bericht of redirect naar een succespage.
+* RegEx. Validatie. Dubbel password inputveld. Bericht na succesvol registreren. Veld niet juist ingevuld. Verplichte velden. Button uitgeschakeld.
+* Inloggen (authenticatie). Gebruiker voert x maal de verkeerde gegevens in. Berichtgeving success.
+Na succesvol inloggen zal menuoptie: Login veranderen in de tekst: Sign Out.
+* Sign Out. Na op Sign out te hebben geklikt, krijg je een redirect naar de login pagina.
+* De gebruiker klikt op de reset button om de velden te wissen.
+* De gebruiker klikt op Verzenden button om in te loggen.
+* Na het inloggen komt de gebruiker op de --- pagina.
+* Na het inloggen ziet de gebruiker een bericht dat het is gelukt.
+* Invoeren wachtwoord. Invoeren gebruikersnaam. Error messages. Feedback messages. Restricties, bv max 10 cijfers. Visuele effecten.
+Successbericht na succesvol inloggen.
+
+
+Filters/sorteren
+---
+* Filters/sorteren. De gebruiker klikt op het sorteren icoon en kan kiezen uit: sorteren A-B en sorteren B - A
+?: Zijn er nog meer sorteerfuncties en/of filters?
+
+Logo's
+---
+* Logo's. De gebruiker klikt op het logo in de header/footer en gaat terug naar de homepage.
+
+Cards
+---
+* Card. De gebruiker hovered over een card. De gebruiker klikt op een card.
+Op een Card zit een hartje. Een leeg hartje is niet favoriet. Een vol hartje zit bij je favorieten.
+Favorieten functionaliteit niet actief als je niet bent ingelogd.
+1) Hartjes weghalen als niet ingelogd. Hartje in het header menu wel ten alle tijden zichtbaar.
+2) Hartjes op de cards laten zien als ingelogd.
+
+
+
+
+
+
+Social media
+* Social media icoon De gebruiker klikt op een social media icoon en er opent een nieuw scherm naar de betreffende website.
+
+
+Welke gegevens zijn alleen zichtbaar als je bent ingelogd?
+---
+* Favorieten pagina
+* Favorieten hartjes leeg en vol op de Cards zijn actief
+
+
+Effecten (Mouse-overs)
+---
+* Social media iconen lichten wit op tijdens hover.
+* Cards krijg je een zware transparante overlay te zien met daarin extra tekst. cursor: pointer;
+* Het zoekvlak krijgt een focus effect te zien.
+* Het vergrootglas in het zoekvlak krijgt een Marvel rode mouse-over effect. cursor: pointer;
+* X in het zoekvlak wordt iets lichter tijdens hover.
+* Items in het sub-menu krijgen een rood streepje als mouse-over effect en ... als Active effect.
+* Items in het hoofdmenu krijgen een text-decoration: underline; En ... als Active effect.
+* Logo's krijgten een scale 1.1 als effect en cursor: pointer; Moet heel subtiel.
+
+
+
+Functionaliteit
+---
+* Search
+* # of results
+* Sort A-B, B-A
+* Favorites, add, remove, bekijken
+* Infinite scroll of paginering
+* Registreren, , reset button, Verzenden button
+* Inloggen, authenticatie, , reset button, Verzenden button
+* Security
+* Datum automatisch
+* Contact form, reset button, Verzenden button
+* Loader feedback
+* Smooth scroll
+
+Error afhandeling
+---
+* 200, 201, 400, 404, 409, etc.
+https://nl.wikipedia.org/wiki/Lijst_van_HTTP-statuscodes 
+
+
+
+
+
+
+
+
+Nog verwerken
+---
+•	Als gebruiker kun je je registreren en inloggen;
+•	Een zoekmachine om het gewenste karakter of comic op te zoeken;
+•	Op de SERP (Search Engine Results Page) kun je de details van een specifiek karakter of comic opvragen;
+•	Andere filters om resultaten te filteren naar wens. Bijvoorbeeld is een karakter een boef of een held?;
+•	Je kunt karakters of comics toevoegen aan je favorieten.
+•	Actor: gebruiker, beheerder
+•	Wat gebeurt er als de gebruiker 3x het verkeerde password invoert? Blokkeren? Buitensluiten voor 60 seconden?
+•	Welke functionaliteit heeft een modal? Klik naast modal, ESC of sluiten met X.
+•	Inloggen routine. 
+•	Registreren routine. 
+•	Na inloggen komt de gebruiker op de profielpagina, waar de gebruiker gegevens te zien krijgt. 
+•	De gebruiker kan een profielfoto uploaden en toevoegen aan het profiel.
+•	De gebruiker krijgt een bericht status te zien dat de gebruiker is ingelogd.
+•	De gebruiker ziet een overzicht van de persoonlijke gegevens. Username, email, info, rol.
+•	De gebruiker ziet aan de hand van de rol (admin of user) welke gegevens zichtbaar zijn.
+•	De gebruiker ziet een optie om de persoonlijke gegevens aan te passen.
+•	De gebruiker ziet berichten wanneer er een foutmelding is ontstaan.
+•	De gebruiker voegt een film toe aan favorieten. 
+•	De gebruiker verwijdert een film uit de favorieten.
+•	De gebruiker verstuurt een ingevuld contactformulier.
+•	De gebruiker kan op elk gewenst moment uitloggen door op deze knop te klikken.
+•	De gebruiker maakt gebruik van diverse filters om de resultaten (of favorieten?) te filteren.
+•	De gebruiker klikt op Light/dark mode. (Hoort niet bij MVP)
+•	Rollen, gebruiker, admin.
+•	Kernfunctionaliteit: Informatie opzoeken.
+•	Zoekmachine. 
+•	Trigger: De gebruiker is aan het zoeken naar informatie op het internet en bezoekt deze pagina.
+•	De gebruiker klikt op het logo.
+•	De gebruiker wil contact met ons opnemen.
+
+
+Main success scenario
+•	De gebruiker opent de Marvel app
+•	De gebruiker typt een zoekwoord in het zoekveld. De app vraagt deze informatie op in de database en geeft deze weer op het scherm.
+
+
+Precondities
+•	Er is een vraag naar informatie
+•	Er is een computer met internet
+
+Postconditie
+•	De gebruiker heeft de gevraagde informatie en kan deze snel opvragen met de ingestelde favorieten.
+Alternatieve scenario’s (Wat fout kan gaan)
+•	Zoekmachine kan de gevraagde informatie niet vinden/leveren. Hoe kan de gebruiker ingelicht worden dat de informatie niet gevonden kan worden? En wat kan de gebruiker of app doen om dit op te lossen?
+•	De gebruiker vult de velden van het formulier niet juist in.
+•	Het formulier kan door technische redenen niet verstuurd worden. Alternatieven aanbieden.
+•	De gebruiker komt op een 404 pagina.
+•	De gebruiker krijgt wel zoekresultaten, maar als de gebruiker op Details klikt, komt er geen details pagina tevoorschijn.
+
+
+

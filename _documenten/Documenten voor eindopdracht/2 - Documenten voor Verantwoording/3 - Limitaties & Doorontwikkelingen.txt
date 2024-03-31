@@ -1,0 +1,126 @@
+--> Welke doorontwikkelingen zijn er mogelijk of misschien zelfs wenselijk, en waarom heb je deze zelf niet door kunnen voeren? 
+Heb je bijvoorbeeld iets achterwege gelaten omdat dit toch ingewikkelder bleek dan je had verwacht? 
+Leg dan uit wat je zeker nog zou implementeren als je meer tijd had gehad.
+---
+--> De student beschrijft minimaal vijf realistische limitaties van diens applicatie en beargumenteert 
+welke doorontwikkelingen mogelijk en/of wenselijk zijn (LU2 en LU3)
+---
+Inleiding
+---
+* Momenteel heeft de FOUNDFAVE app een beperkt aantal functies. Ik had graag meer functies in de app willen zien, maar ik mis nu bepaalde kennis om dit te kunnen realiseren. 
+Voor nu is dit project nog te ambitieus en zal na de opleiding de app verder uitbouwen met de juiste API en de gewenste functionaliteit.
+
+* Onderstaande tabel 1 geeft weer wat er al beschikbaar is in de huidige app en tabel 2 geeft de gewenste functionaliteit in de toekomstige versie van de app weer.
+
+## Tabel 1: Huidige functionaliteit
+---
+v Een zoekmachine met up-to-date informatie.
+v Paginering. Meer resultaten kunnen opgevraagd worden door middel van paginering.
+v Een karakter toevoegen aan favorieten.
+v Een karakter verwijderen van favorieten.
+v Favorieten bekijken.
+v Diverse filters om te sorteren. Alfabetisch. Sorteren A-B, B-A.
+v Dark/light mode.
+v Account registreren met het registratieformulier.
+v Contact opnemen met het contactformulier.
+v Inloggen met het loginformulier.
+v Weergave van het aantal zoekresultaten.
+v Beveiliging van de app met JWT, https, etc.
+v Systeemberichten richting de gebruiker.
+v Smooth scroll.
+v Copyright jaartal in de footer automatisch up-to-date.
+v Diverse tooltips om de gebruiker te informeren.
+v Als je op een Card klikt kun je naar de detailpagina. 
+
+
+## Tabel 2: Gewenste functionaliteit
+---
+x Favorieten categorie aanmaken, verwijderen en bewerken.
+x De mogelijk om favorieten opnieuw in te delen in de gewenste categorie.
+x De optie om films/series toe te voegen aan wishlist/want to see/to do.
+x Een e-mail krijgen wanneer de releasedatum is van een film of serie. 
+x Een to-dolijst. Welke films ik nog wil zien of al heb gezien.
+x De optie om de film of serie een rating te geven (1-5 sterren)
+x Eventuele notities, commentaar of andere informatie toevoegen aan een film of serie.
+x Na registratie van een account een e-mail sturen om te bevestigen. 
+x Een e-mail sturen als de gebruiker aanvraag heeft gedaan om het wachtwoord te resetten. 
+x Een share (Social media) functie
+x Specifieke details/informatie over een film of serie. 
+x Aria-label. Voor slechtzienden is de app nu beter begaanbaar met behulp van Aria-label.
+x WCAG. De app houdt rekening met de WCAG-contrast richtlijnen zodat bezoekers de app beter kunnen lezen.
+x Profiel bekijken en aanpassen.
+x Account verwijderen.
+x Een export maken van je lijstje in Excel formaat.
+
+## Toelichting op de limitaties
+1) Marvel API
+Ik had gehoopt dat de Marvel API meer informatie zou verstrekken over de Marvel films en series, zoals op de Marvel.com site zelf.
+In plaats daarvan kun je alleen beknopte informatie van de karakters uit de comics opvragen. Ook enkele resources werken niet, terwijl deze wel zijn op te vragen via de endpoints en geven een 404 error. 
+Ik kwam er later achter dat deze API te beperkt is voor mijn plannen. 
+
+Ik ben toch met deze API doorgegaan omdat de API al was doorgelicht door NOVI Hogeschool en ik had al toestemming om door te gaan met dit idee.
+ 
+Het zou een risico zijn geweest, zoals NOVI al aan gaf in het lesmateriaal, om een eigen API op te zoeken.
+
+Daarbij is deze API goed genoeg voor de 5 functies van de eindopdracht.
+
+2) Gebruikersaccount verwijderen. 
+Naar ik weet is er geen endpoint of optie aanwezig in de NOVI-backend om een gebruiker te verwijderen.
+Dit zal ik in de toekomst zelf ontwikkelen met bijvoorbeeld Firebase.
+
+3) Favorieten categorie aanmaken, verwijderen en bewerken. (Zoals op Bol.com)
+In de huidige app kun je alleen in een algemene lijst favorieten toevoegen en verwijderen.
+De toekomstige app zal de mogelijkheid hebben om een categorie aan te maken en favorieten opnieuw in te delen in de gewenste categorie.
+
+De huidige app maakt gebruik van localStorage om de favorieten in op te slaan. De toekomstige app zal gebruik maken van een database.
+
+4) De WCAG-contrast richtlijnen heb ik achterwege gelaten. Tijdens het ontwerpen heb ik er losjes rekening mee gehouden, maar heb niet alle achtergrond-en-lettercombinaties doorgemeten of de contrastratio voldoende is.
+Aangezien NOVI het grafische ontwerp niet het belangrijkst onderdeel vindt voor de eindopdracht, laat ik dat achterwege. 
+Hetzelfde geldt voor het Aria-label voor slechtzienden.
+
+In de toekomst wil ik ARIA gaan inbouwen in de formulieren. 
+ARIA is bedoeld om interface-elementen te kunnen voorzien van context en werking om toegankelijkheid te verbeteren.
+ARIA maakt, onder andere, de formulieren toegankelijker voor mensen met screenreaders.
+
+5) Omdat de huidige app helaas geen toegang heeft tot een database zijn er een aantal functies niet mogelijk.
+- Een review plaatsen.
+- Een rating geven.
+- Categorie aanmaken, verwijderen en bewerken.
+- Gebruikersdata opslaan.
+- E-mail alarm krijgen.
+- E-mail tijdens een wachtwoord reset.
+- E-mail sturen na registratie.
+- Een account verwijderen.
+- Profiel bekijken en aanpassen.
+
+
+
+
+
+
+
+
+
+
+Archive
+---
+* Ik heb het veilige pad gekozen: het gaat me al met al om het diploma en niet hoe uitgebreid de app wordt. 
+En ik heb me daarbij gehouden aan de criteria van de opleiding: 5 functionaliteiten. Dan vind ik het onzinnig om al deze extra's er bij te programmeren. Daarbij weet ik niet vantevoren of ik iets wel of niet kan programmeren.
+
+* Na de opleiding zal ik streven dit project alsnog te voltooien. Leuk en handig voor mezelf en misschien ook leuk en handig voor anderen mensen.
+En goed voor mijn portfolio.
+
+* Voor nu een MVP: Minimum Viable Product.
+
+* Na de opleiding wil ik me verder gaan specialiseren in JavaScript en met name de MERN stack. Zodat ik volledige fullstack apps kan bouwen met Javascript.
+Of ik door wil gaan met Java weet ik nog niet. Dat zal het komende half jaar wel gaan blijken. 
+
+* Functionaliteit die ik zou willen zien in de FoundFave app. Deze extra functionaliteit wil ik na de opleiding gaan implementeren om de app 
+compleet te maken volgens mijn wensen.
+
+* Het was aftasten wat ik met de API kon doen. 
+
+
+
+
+

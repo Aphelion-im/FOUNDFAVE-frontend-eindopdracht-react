@@ -1,0 +1,35 @@
+Privacy app
+---
+Een tool bouwen die ik zelf nodig heb. Scratch our own itch.
+Welke functionaliteit heb ik nodig?
+---
+* Password generator
+* Password strength
+* Pasfoto (AI API?)
+* Naam, achternaam, geslacht
+* Namen in bulk
+* E-mail (Alias?)
+* Telefoon
+* Username
+* Address, city, postcode
+* Credit card generator
+* Credit card validator
+* Adres
+* Diverse aliassen opslaan.
+
+
+
+* Sorteren
+* Copy-paste op de velden
+
+API's
+---
+* https://haveibeenpwned.com/API/v3
+* https://randommer.io
+
+
+Je beschrijft in maximaal 250 woorden:
+• Welk probleem je wil oplossen met deze applicatie;
+• Welke API je hiervoor gaat gebruiken (inclusief link naar de documentatie);
+• Wat de 4 belangrijkste functionaliteiten van jouw applicatie zullen zijn. Hierin is één functionaliteit al vergeven aan registreren en inloggen;
+• Of je de NOVI backend zult gebruiken voor registratie en inlog of, indien je een andere backend wil gebruiken, welke dit zal zijn.

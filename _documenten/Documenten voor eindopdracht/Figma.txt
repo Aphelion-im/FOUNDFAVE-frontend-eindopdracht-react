@@ -1,0 +1,13 @@
+Wireframes:
+https://www.figma.com/file/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?type=design&node-id=104%3A16&t=R5PGG8tu6Mwazezw-1
+
+Dark mode:
+https://www.figma.com/file/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?type=design&node-id=0%3A1&t=R5PGG8tu6Mwazezw-1
+
+Light mode:
+https://www.figma.com/file/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?type=design&node-id=161%3A621&t=R5PGG8tu6Mwazezw-1
+
+Thumbnail:
+https://www.figma.com/file/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?type=design&node-id=103%3A10&t=R5PGG8tu6Mwazezw-1
+
+

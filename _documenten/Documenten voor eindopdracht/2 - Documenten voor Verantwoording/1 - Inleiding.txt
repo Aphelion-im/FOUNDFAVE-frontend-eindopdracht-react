@@ -1,0 +1,100 @@
+- Een verantwoordingsdocument daarentegen onderbouwt en verantwoordt een bepaalde keuze die al gemaakt is, 
+bijvoorbeeld een training of plan dat geïmplementeerd wordt.
+- In een dergelijk verslag verantwoord je keuzes, oftewel je legt uit waarom je in een bepaalde situatie gehandeld hebt zoals je hebt gedaan.
+STRAK - https://docplayer.nl/64951796-verantwoordingsverslag.html
+
+Ik heb het document opgedeeld in:
+1) Inleiding
+2) Verantwoording keuzes
+3) Limitaties & doorontwikkelingen
+4) Reflectie leerpcoces
+
+---
+1) Inleiding:
+
+* Dit document bevat mijn persoonlijke reis door dit project en door deze opleiding.
+Het geeft weer welke __technische keuzes__ ik heb gemaakt tijdens dit project en waarom. 
+
+* Ik heb de tekst zo geschreven dat, als ik het later teruglees, me weer kan herinneren waarom ik iets had gedaan, 
+want ik heb veel van het NOVI-lesmateriaal verwerkt in de documenten. Notities van de lessen verborgen in deze teksten als het ware.
+
+* Tijdens het project liep ik vaak tegen limitaties aan. Hetzij __technische limitaties__ of persoonlijke limitaties. 
+Het is dan ook belangrijk, heb ik ontdekt, een mindset te hebben om problemen op te lossen en veel onderzoek te doen om de juiste antwoorden of oplossingen te vinden.  
+In sommige gevallen vergt dat veel doorzettingsvermogen.
+
+* Door gebrek aan kennis, gebrek aan tijd of door een niet te overwinnen obstakel kon ik sommige ideeën niet realiseren en heb ik alternatieven bedacht voor hetgeen ik van plan was.
+
+* Sommige van die ideeën en alternatieven zal ik na de opleiding, als ik meer tijd heb, in de app bouwen en __de app doorontwikkelen__ zoals ik die oorspronkelijk voor ogen had.
+
+* Frustratie en euforie kunnen elkaar snel afwisselen in dit beroep. Het ene moment voel je je heel dom en het andere moment heel slim.
+Zo heb ik dat ook ervaren tijdens dit project en tijdens de opleiding. 
+
+* Je begint de opleiding met frisse moed en goede motivatie, maar er komen gegarandeerd periodes dat het even wat minder gaat en daar moet je je dan doorheen zien te slaan.
+
+* Ik zal __reflecteren__ op wat er goed ging en wat er minder goed ging tijdens de studie.
+
+"With every mistake, we must surely be learning." - George Harrison
+
+André de Groot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Archief
+---
+
+* Als ik dit beroep niet leuk had gevonden, was ik allang afgehaakt. Dit beroep is niet voor iedereen.
+* In dit hoofdstuk ga ik in hoe ik het leerproces ervoer. 
+* Ik heb een aantal strategieën ontwikkeld om het project af te krijgen. In kleine stapjes werken. Onderdelen.
+* Deze bespreek ik in <hoofdstuk>
+* Dit huidige project is niet 100% wat ik voor ogen had. Ik had er graag meer functionaliteit in gezien
+en een andere API. Achteraf gezien heb ik de verkeerde API gekozen. Deze functionaliteit zal ik na de opleiding alsnog gaan implementeren.
+* En aan te geven wat ik eigenlijk graag had willen zien in deze app omdat het voor mij nu qua kennis onmogelijk is om bepaalde
+dingen in te programmeren. 
+* Ook geef ik aan wat ik na de opleiding zal gaan doen met de app. 
+* Hoe ik het leerproces ervoer, wat er wel en niet goed ging tijdens het leren. Dit leg ik uit in hoofdstuk <...>
+* Welke beslissingen ik heb gemaakt, waarom ik iets wel of niet heb toegepast of gemaakt.
+* Redenen waarom ik iets wel of niet heb gedaan. Zie lijst van redenen.
+* Graag had ik meer opties gezien in de app. Ik heb deze extra opties niet doorgevoerd omdat ik momenteel 
+a) te weinig kennis heb op dit moment 
+b) te weinig tijd en
+c) het niet nodig is vanuit de opleiding. Ik moet voldoen aan 5 criteria, waarom zou ik er dan 10 of 20 maken?
+* In dit hoofdstuk bespreek ik in het kort hoe ik NOVI kwam, hoe ik de opleiding heb ervaren, wat er goed ging tijdens de opleiding en
+waar ik tegenaan liep.
+* Hoe ik de te ontwikkelen app voor me zie en hoe ik deze zou willen zien als ik meer tijd en kennis zou hebben.
+* Daarbij probeer ik zoveel mogelijk in een conversationele toon iets duidelijk te maken.
+* Veel onderzoek doen hoort er bij in dit beroep. 
+* Je constant inlezen en bijscholen want de ontwikkelingen gaan razendsnel.
+* Sowieso zal ik een 'dumbed down' versie van de app maken en pas na de opleiding 
+* De app die je voor je ziet is een 'dumbed down' versie en is niet de app die ik oorspronkelijk voor ogen had.
+* Het geeft enorm veel voldoening als je iets aan de praat kunt krijgen.
+* En wil daarom met trots wil ik  mijn app presenteren waar ik hard aan gewerkt heb.
+* Tot slot bespreek ik hoe ik het leerproces ervoer en daarbij een stukje zelfreflectie.
+* Ook een stukje zelfreflectie en dat ik af en toe last had van demotivatie.
+* Na de opleiding, als ik meer tijd heb, zal ik de app uitbouwen 
+* Om diep te graven naar oplossingen.
+* Om toch je doel te halen (Je diploma, onder andere) is het handig als je een goed systeem hebt om de lesstof tot je te nemen.

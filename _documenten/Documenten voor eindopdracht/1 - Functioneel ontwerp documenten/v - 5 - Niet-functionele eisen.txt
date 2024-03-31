@@ -1,0 +1,5 @@
+Beschrijft wat de applicatie moet kunnen middels een sommering van tenminste 50 functionele- en niet-functionele eisen. 
+Dit hoeft niet evenredig verdeeld te zijn.
+
+Hierbij beschrijven functionele eisen wat het systeem doet, en niet-functionele eisen vooral hoe het systeem dit doet.
+---

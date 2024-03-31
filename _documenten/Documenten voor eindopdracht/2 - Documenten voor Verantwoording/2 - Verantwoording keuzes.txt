@@ -1,0 +1,137 @@
+STRAK-model: https://docplayer.nl/64951796-verantwoordingsverslag.html
+
+Zodra je begint met programmeren, ga je ook beginnen aan het verantwoordingsdocument. 
+Hierin leg je vast welke technische ontwerpbeslissingen je maakt en waarom je deze keuzes gemaakt hebt. 
+
+Het gaat hierbij alleen om de technische programmeerkeuzes betreffende JavaScript en React en dus niet om esthetische keuzes. 
+
+Je begint al tijdens het ontwikkelen van jouw product met het schrijven van het verantwoordingsdocument. 
+Hierin geef je antwoord op vragen als: 
+Waarom heb je ervoor gekozen om een component te bouwen voor deze HTML-elementen? 
+Was deze implementatie de enige optie, of heb je ook andere alternatieven overwogen? 
+Waarom heb je ervoor gekozen om sommige acties te implementeren als helperfuncties?
+---
+--> Minimaal 5 beargumenteerde technische programmeerkeuzes betreffende JavaScript en React, inclusief reflectie.
+---
+Inleiding
+---
+* In dit hoofdstuk bespreek ik een aantal technische ontwerpbeslissingen die ik had gemaakt tijdens het project.
+
+Of ik wel of niet doorga met een oplossing hangt mede van de kwaliteit van de documentatie en of deze goed bij me klikt.
+
+Als de documentatie van een oplossing wollig is uitgelegd, haak ik meestal snel af en ga ik op zoek naar alternatieven.
+
+Een aantal redenen waarom ik een andere keuze nam:
+1) Veelal omdat ik tegen een obstakel opliep die ik op dat moment niet kon oplossen en naar alternatieven zocht.
+2) Een library of script was lastig te implementeren. 
+3) Omdat het alternatief prettiger werkte. Of sneller werkte.
+4) Omdat ik te weinig kennis had op dat moment.
+5) Er een tekort aan tijd was.
+6) Omdat ik iets nieuws had bedacht op dat moment.
+7) Omdat ik nieuwe inzichten en kennis had vergaard. Voortschrijdend inzicht.
+
+Op de volgende bladzijdes beschrijf ik welke keuzes ik heb gemaakt en waarom.
+
+Algemene keuzes
+---
+Create React App versus ViteJS
+Op een aantal vlakken wijk ik af van de lesstof van NOVI Hogeschool. NOVI werkt met Create React App.
+Ik ontwikkel met ViteJS in plaats van met Create React App. Ik vind Create React App absoluut niet prettig werken.
+Create React App geeft vaak foutmeldingen na npm install en het heeft erg veel dependencies en bestanden. 
+Ook bij mijn medestudenten hoor ik vaak klachten en ik ben op zoek gegaan naar een alternatief en kwam uit op ViteJS.
+ViteJS is lichtgewicht, installeert snel en start snel op.
+
+
+React Hook Form
+Ik heb gekozen voor React Hook Form in plaats van met de useState hook te werken.
+De FOUNDFAVE app bevat een aantal formulieren: loginformulier, contactformulier, zoekformulier en het registratieformulier waarop ik React Hook Form kan toepassen.
+Ik heb gekozen voor React Hook Form omdat het werken met React Hook Form stukken prettiger werkt dan met de useState hook:
+•	Geen hele lijst aan useState declaraties;
+•	Validatie en validatieregels zijn simpel om in te stellen;
+•	Kant-en-klare methoden om foutmeldingen in te stellen die je aan gebruiker kunt laten zien;
+•	Compacte en lichtgewicht bibliotheek;
+•	Met NPM makkelijk te installeren en bij te werken;
+•	Over het algemeen minder code te schrijven.
+•	Vrij goede documentatie en voorbeelden;
+•	 React Hook Form minimaliseert het aantal renders van het formulier wat zorgt voor snellere laadtijden.
+Daarbij heb ik gelet op Clean Code en Best Practices zoals beschreven in de lesstof:
+•	Gebruikersfeedback errors;
+•	Gebruikersfeedback: laadtijden;
+•	Algemene gebruikersfeedback;
+•	Snelle laadtijden.
+Het resultaat zijn mooie goedwerkende formulieren met validatie en feedback aan de gebruiker.
+In de toekomst wil ik ARIA gaan inbouwen in de formulieren. 
+ARIA is bedoeld om interface-elementen te kunnen voorzien van context en werking om toegankelijkheid te verbeteren.
+ARIA maakt, onder andere, de formulieren toegankelijker voor mensen met screenreaders.
+
+
+
+2) Dark theme
+Dark theme: Gekozen voor CSS root variabelen in plaats van met useState of useContext.
+Er zijn meerdere manieren om een Dark theme te maken. 1) met useState 2) Met root variabelen. 
+
+Naast dat Dark theme nog een aantal voordelen heeft, waaronder minder stress voor je ogen.
+De manier die ik heb gebruikt is heel simpel. Het gebruikt puur JavaScript. Geen state, geen custom hooks, geen libraries.
+Deze methode was erg makkelijk om te implementeren.
+
+4.  Font Awesome - Oneindig schaalbare letters
+Tijdens het ontwerpen van de FOUNDFAVE app in Figma had ik gebruik gemaakt van de Font Awesome iconenbibliotheek. 
+Toen ik eenmaal het ontwerp ging omzetten naar code ging het niet zo makkelijk als dat ik dacht met de methode die staat beschreven in de documentatie van Font Awesome.
+Het lukte me niet Font Awesome solid en regular varianten weer te geven, aangezien Font Awesome een identieke shortcode geeft voor beide iconen. 
+Blijkt dat ik de Pro versie moest hebben voor Font Awesome 6.
+Ik kon ook de SVGs downloaden van FontAwesome.com om op de app te weergeven, maar ben op zoek gegaan naar alternatieven. Ik heb liever geen losse bestanden in verband met het aantal server requests.
+Het is inmiddels gelukt de Font awesome 5 iconen te implementeren in de app met behulp van het NPM-package “React-icons” en heb nu het gewenste resultaat.
+React-icons bevat ook nog vele andere verzamelingen met iconen die je kunt gebruiken en deze in een overzicht geplaatst. 
+Niet alleen Font Awesome, maar ook VS Code icons, Bootstrap icons, etc.
+Groot voordeel van Font Awesome is dat deze iconen oneindig schaalbaar zijn zonder kwaliteit te verliezen. 
+Daarom heb ik het logo van FOUNDFAVE ook als een SVG (Scalable Vector Graphics) geplaatst. Dat brengt me op punt 4.
+
+4) Logo: De 'technische' kant
+Ik kon kiezen tussen de formaten .png, .jpg, gif en SVG voor het logo. Met behulp van het softwarepakket Affinity Suite heb ik in Affinity Designer (Een vector tekenprogramma vergelijkbaar met Adobe Illustrator) het FOUNDFAVE logo ontworpen. 
+Dit om de reden dat ik het logo als SVG kan exporteren en oneindig kan schalen zonder kwaliteit te verliezen. De andere formats hebben wel verlies van
+kwaliteit als je de afmetingen vergroot. Dit is dan vaak duidelijk te zien op retina displays van bijvoorbeeld een iPad.
+Vaak zijn de jpg en png bestanden groter dan die van SVG-bestanden. Nog een reden om SVG te gebruiken in de app zodat de app sneller in kan laden.
+Standaard kun je in ViteJS niet met SVGs (= Font Awesome en het logo) werken en moet je eerst een plug-in installeren. 
+ 
+5) Helperfunctie: createDateAndTime()
+* Inzetten van de createDateAndTime() helperfunctie op de 404 pagina. Ik had een bepaalde 404 pagina als voorbeeld en ik heb getracht deze deels na te maken. 
+
+Ik heb de createDateAndTime() in het verleden een keer geschreven voor een andere website en zag nu de kans deze als helperfunctie te gebruiken in dit project. 
+Het concept van onderdelen hergebruiken kwam nu mooi van pas.
+Daarbij vond ik het onzinnig om deze functie binnen een 404 pagina te zetten. Door er een helperfunctie van te maken
+kon ik de code op de 404 pagina opschonen en deze ook (her)gebruiken op andere plekken binnen de app.
+
+6) Hergebruiken van componenten
+Formulier inputvelden herbruikbaar, daarom heb ik er een component van gemaakt.
+Of zal ik zeggen: als ik een onderdeel van de app/site meerdere keren ga gebruiken, maak ik er een component van.
+Meerdere formulier kunnen gebruik maken van het input-component die ik had gemaakt. Ook voor een textarea heb ik een component gemaakt.
+Tot zover heb ik al een aantal componenten gemaakt: Zoekvlak, Menu + logo, header en footer.
+
+Door componenten te maken kan ik pagina's razendsnel in elkaar zetten. Dit doet me denken aan tijden dat ik met PHP werkte en 
+bepaalde content of onderdelen dynamisch kon 'injecteren' in de site.
+
+7) Verkeerde API gekozen.
+Ik had oorspronkelijk de Marvel API gekozen en op een gegeven moment kwam ik erachter dat deze API niet de informatie geeft die ik zocht.
+Zoals ik al zei, had ik dat beter moeten testen voordat ik dit idee in ging leveren tijdens de ideefase.
+
+De API heeft wat kuren en heeft op sommige endpoints een 404 error. Blijkbaar is Marvel dit vergeten aan te passen.
+
+Ik ga toch door met de Marvel API omdat het presenteren van gegevens via een React frontend hetzelfde principe blijft, ongeacht welke API er is gebruikt.
+Het leerdoel blijft hetzelfde. Om een andere API te zoeken, de kwaliteit van de API te controleren en opnieuw mijn idee in te leveren zou me teveel tijd hebben gekost.
+De app kan ik na de opleiding alsnog perfectioneren. Voor nu gaat het me om het halen van de opleiding en heb pik perfectionisme even overboord gezet.
+
+8) NOVI backend.
+Ik had er voor gekozen om de Fullstack development opleiding in twee helften te verdelen.
+Het eerste half jaar doe ik frontend en het tweede half jaar doe ik backend. Normaliter doen de voltijders zowel front- als backend tegelijkertijd en bouwen ze een eigen backend.
+
+Aangezien ik, omdat ik de frontend leerlijn apart doe, geen backend heb, die ik eigenlijk zelf zou bouwen tijdens de fullstack opleiding, maak ik gebruik van de kant-en-klare NOVI backend.
+
+
+
+
+Archief
+---
+* Waarom gebruik je wel of niet bepaalde NPM packages? Wel of niet Axios?
+* Kwam er pas later achter tijdens het programmeren van het zoekvlak component dat ik de x (close query) conditioneel kan laten zien.
+* Ook later pas: Sign In link moet Sign Out knop worden.
+* Om te laten zien dat ik met npm kan omgaan en React libraries. In andere stukken van de app werk ik met useState.

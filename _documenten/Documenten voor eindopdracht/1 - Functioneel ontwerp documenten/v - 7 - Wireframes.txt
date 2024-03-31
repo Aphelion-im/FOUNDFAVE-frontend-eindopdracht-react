@@ -1,0 +1,3 @@
+Bevat de gescande (of gefotografeerde) wireframes, geschetst op papier, van tenminste vijf pagina’s. 
+Deze dienen goed leesbaar te zijn, inclusief begeleidende tekst waarin duidelijk wordt over welke pagina het gaat.
+---

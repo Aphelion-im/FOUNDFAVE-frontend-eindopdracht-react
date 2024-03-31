@@ -1,0 +1,14 @@
+Ingevoegde screenshots zijn voorzien van paginatitels en beschrijving. 
+
+Bevat screenshots van ten minste 5 schermontwerpen met titels en beschrijvingen. 
+Deze bevatten dusdanig veel uitgewerkte details zodat je tijdens het programmeren geen ontwerpbeslissingen meer hoeft te maken. 
+Aanvullend lever je ook de link naar (of bestanden van) het originele project in Figma/Adobe XD aan.
+
+
+Inleiding
+---
+Op de volgende pagina's de prototypes met beschrijving (hoge resolutie ontwerpen (1920 x 1080 pixels, landscape modus)) van de FOUNDFAVE App.
+
+In dit document staat slechts een beperkte selectie prototypes. 
+
+Wil je meer prototypes van hoge kwaliteit bekijken? Bekijk dan het Figma bestand online:

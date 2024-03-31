@@ -1,0 +1,68 @@
+Aantal van elk opleveren
+---
+Op te leveren producten:
+● Functioneel ontwerp met daarin o.a. de probleembeschrijving, functionele- en niet-functionele-eisen, use case tabellen, geschetste wireframes en schermontwerpen;
+● De broncode van een React webapplicatie;
+● Zelfgeschreven installatiehandleiding als README.md;
+● Verantwoordingsdocument.
+Deze producten worden ingeleverd als één ZIP-bestand.
+
+Op te leveren:
+● Het functioneel ontwerp van de webapplicatie in PDF (.pdf).
+● Link naar het openbare project (in Figma of Adobe XD) met jouw 5 schermontwerpen.
+
+Functioneel ontwerp
+---
+Uses case tabellen:
+v Beschrijf de belangrijkste gebruikershandelingen in minimaal vier use case tabellen: één voor authenticatie (registreren of inloggen)
+drie voor zelfbedachte functionaliteit.
+v Ieder main success scenario wordt gecomplementeerd met 1 tot 3 alternatieve scenario’s.
+
+Functionele en niet-functionele eisen:
+v tenminste 50 functionele- en niet-functionele eisen.
+
+Inspiratiebronnen:
+v Minimaal 3 verschillende inspiratiebronnen.
+
+
+Wireframes:
+v Bevat de gescande (of gefotografeerde) wireframes, geschetst op papier, van tenminste vijf pagina’s. (Zie ook Figma)
+
+Prototypes:
+v Bevat screenshots van ten minste 5 schermontwerpen met titels en beschrijvingen.
+
+Verantwoordingsdocument
+---
+* De student beargumenteert minimaal 5 gemaakte technische keuzes (JavaScript/React) en reflecteert op ieder punt. (LU2, LU3)
+
+* Doorontwikkeling. De student beschrijft minimaal vijf realistische limitaties van diens applicatie en beargumenteert welke doorontwikkelingen mogelijk en/of wenselijk zijn (LU2 en LU3)
+
+
+
+Beoordelingscriteria eindopdracht frontend v3.3
+---
+* De student schrijft een compleet functioneel ontwerp, inclusief: heldere omschrijving probleem én oplossing, minimaal 50 passende 
+functionele en niet-functionele eisen, minimaal 4 kwalitatieve use case tabellen en een verzameling van minimaal 3 verschillende inspiratiebronnen. (LU1)
+* De student tekent minimaal 5 unieke en duidelijke weergegeven wireframes die de basis vormen voor ten minste 5 schermontwerpen, 
+die voldoende details bevatten om tijdens het programmeren geen designkeuzes te hoeven maken. (LU1)
+* De student beargumenteert minimaal 5 gemaakte technische keuzes (JavaScript/React) en reflecteert op ieder punt. (LU2, LU3)
+* De student beschrijft minimaal vijf realistische limitaties van diens applicatie en beargumenteert welke doorontwikkelingen mogelijk en/of wenselijk zijn (LU2 en LU3)
+* Semantische HTML
+* Modulaire CSS styling
+* Volgens Clean code principes
+* Op een juiste manier werken met Asynchrone functies
+* Errors en laadtijden afhandelen en communiceren in de UI
+* 4 belangrijke kernfunctionaliteiten implementeren. 1 authenticatie process (registratie/inloggen) en 3 zelfbedachte complete use cases.
+* Minimaal 6 herbruikbare componenten.
+* State management.
+* Alle React life cycle hooks (useEffect in ieder geval. useState, useContext)
+* Git/Github: De student zorgt voor kleine commits, maakt pull requests en mergt regelmatig naar de main branch.
+* README.md. De student maakt een zelfgeschreven installatiehandleiding waarmee iemand zonder kennis van het project de gemaakte applicatie zelfstandig kan draaien. 
+
+Broncode React
+---
+* React Router DOM/routing.
+* CSS Globale en lokale opmaak
+* Flexbox
+* Eigen CSS (Geen Tailwind, etc.)
+* Font Awesome
