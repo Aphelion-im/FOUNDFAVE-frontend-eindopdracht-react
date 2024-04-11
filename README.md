@@ -1,8 +1,6 @@
-Datum laatste update: 8-3-2024
+Datum laatste update: 11-4-2024
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7b86c31-d394-4677-8e75-f6a7eac61048/deploy-status)](https://app.netlify.com/sites/foundfave/deploys)
-
-<a target="_blank" href="https://github.com/Aphelion-im/FOUNDFAVE-frontend-eindopdracht-react">Github Repository FOUNDFAVE App</a>
 
 # FOUNDFAVE React App - Eindopdracht Frontend NOVI Hogeschool
 
@@ -33,7 +31,7 @@ Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 
 Een live demo van deze app is te vinden op:
 
-<a target="_blank" href="https://foundfave.online">Live Demo FOUNDFAVE Online App</a>
+<a target="_blank" href="https://foundfave.netlify.app">Live Demo FOUNDFAVE Online App</a>
 
 ---
 
