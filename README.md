@@ -21,6 +21,7 @@ Daarom is de slogan: _"Found your fave with FOUNDFAVE!"_
 - [De applicatie installeren](#applicatie-installeren)
 - [De applicatie opstarten](#de-applicatie-opstarten)
 - [Overige commando's](#overige-commandos)
+- [Figma Designs](#figma-designs)
 - [Contact](#contact)
 
 ## Animatie: Hoe ziet de FOUNDFAVE App er uit?
@@ -166,6 +167,13 @@ http://localhost:4173/
 ```bash
 npm run preview
 ```
+## Figma Designs
+- [Figma Prototypes Darkmode](https://www.figma.com/design/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?node-id=0-1&p=f)
+- [Figma Prototypes Lightmode](https://www.figma.com/design/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?node-id=161-621&p=f)
+- [Figma Wireframes](https://www.figma.com/design/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?node-id=104-16&p=f)
+- [Figma Project Thumbnail](https://www.figma.com/design/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?node-id=103-10&p=f)
+- [Figma Project Components](https://www.figma.com/design/IsTIhSo9Aj8jNZUnEpl3sI/Novi-Eindopdracht-Frontend-Andr%C3%A9-de-Groot---FOUNDFAVE-App-v1.0.0?node-id=90-10&p=f)
+
 
 ## Contact
 
