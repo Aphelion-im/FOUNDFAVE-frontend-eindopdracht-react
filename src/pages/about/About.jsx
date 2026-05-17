@@ -30,7 +30,7 @@ export default function About() {
               </a>
             </p>
             <p>
-              <strong>Current app version</strong>: v1.0.0 (stable)
+              <strong>Current app version</strong>: v1.1.0 (stable)
             </p>
           </article>
 

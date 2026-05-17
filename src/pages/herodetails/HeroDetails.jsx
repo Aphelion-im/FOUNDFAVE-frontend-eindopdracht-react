@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Content from '../../components/content/Content';
 import { FaChevronLeft } from 'react-icons/fa';
-import { ReactComponent as Loader } from '../../assets/loaders/infinity-loader.svg';
+import Loader from '../../assets/loaders/infinity-loader.svg?react';
 import './HeroDetails.css';
 
 export default function HeroDetails() {

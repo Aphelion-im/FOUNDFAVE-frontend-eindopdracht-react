@@ -3,7 +3,7 @@ import { FaPinterestSquare } from 'react-icons/fa';
 import { FaFacebookSquare } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
-import { ReactComponent as LogoFooter } from '../../assets/logo/logo-footer.svg';
+import LogoFooter from '../../assets/logo/logo-footer.svg?react';
 import { showCurrentYear } from '../../helpers/createdatetime';
 import './Footer.css';
 

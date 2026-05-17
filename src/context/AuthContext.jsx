@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ReactComponent as Loader } from '../assets/loaders/infinity-loader.svg';
+import Loader from '../assets/loaders/infinity-loader.svg?react';
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
 import isTokenValid from '../helpers/isTokenValid';

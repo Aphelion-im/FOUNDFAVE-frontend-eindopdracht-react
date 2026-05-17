@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { FaveContext } from '../../context/FaveContext';
 import DarkLightMode from '../darklightmode/DarkLightMode';
-import { ReactComponent as LogoHeader } from '../../assets/logo/logo-header.svg';
+import LogoHeader from '../../assets/logo/logo-header.svg?react';
 import { FaRegHeart } from 'react-icons/fa';
 import './Header.css';
 

@@ -1,5 +1,5 @@
-import { ReactComponent as Sun } from './icons/sun.svg';
-import { ReactComponent as Moon } from './icons/moon.svg';
+import Sun from './icons/sun.svg?react';
+import Moon from './icons/moon.svg?react';
 import './DarkLightMode.css';
 
 export default function DarkLightMode() {
