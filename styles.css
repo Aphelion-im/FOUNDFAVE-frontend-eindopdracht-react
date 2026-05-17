@@ -1,8 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* 
+https://gwfh.mranftl.com/fonts # A Hassle-Free Way to Self-Host/embed Google Fonts
+*/
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./src/assets/fonts/roboto-v51-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./src/assets/fonts/roboto-v51-latin-700.woff2') format('woff2');
+}
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+    4. Miscellaneous
+    5. Media Queries
+////////////////////////*/
+
+/********** 1. Global styles **********/
+/* Light theme */
+:root {
+  --body-background-clr: whitesmoke;
+  --main-bg-clr: #1a1a1a;
+  --marvel-red-clr: hsl(358, 84%, 52%); /* #eb1e25 */
+  --marvel-sun-clr: hsl(50, 84%, 52%);
+  --marvel-sun-2-clr: hsl(40, 84%, 52%);
+  --marvel-complement-clr: hsl(136, 84%, 52%);
+  --base-dark-clr: #121212;
+  --l-10-dark-clr: #1a1a1a;
+  --l-15-dark-clr: #262626;
+  --l-20-dark-clr: #333;
+  --l-30-dark-clr: #4d4d4d;
+  --l-40-dark-clr: #666;
+  --l-50-dark-clr: #808080;
+  --l-60-dark-clr: #999;
+  --l-70-dark-clr: #b2b2b2;
+  --l-80-dark-clr: #ccc;
+  --l-85-dark-clr: #d9d9d9;
+  --l-90-dark-clr: #e6e6e6;
+  --l-100-white: #fff;
+  --input-text-clr: #1a1a1a;
+  --normal-text-clr: #1a1a1a;
+  --input-bg-clr: #fff;
+  --image-border: #262626;
+  --hyperlink: #1a1a1a;
+  --sorting-clr: #1a1a1a;
+  --close-query-clr: #1a1a1a;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --body-background-clr: #121212;
+  --main-bg-clr: #fff;
+  --input-text-clr: #fff;
+  --normal-text-clr: #fff;
+  --input-bg-clr: #1a1a1a;
+  --image-border: #fff;
+  --hyperlink: #fff;
+  --sorting-clr: #fff;
+  --close-query-clr: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--marvel-red-clr);
+}
 
 html {
-  background-color: #1a1a1a;
+  background-color: var(--body-background-clr);
   font-family: 'Roboto', Verdana, sans-serif;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  caret-color: var(--marvel-red-clr);
 }
 
 noscript {
@@ -19,6 +111,132 @@ noscript {
   text-align: center;
 }
 
+body {
+  color: #fff;
+  font-size: 16px;
+  background-color: var(--body-background-clr);
+  font-family: 'Roboto', Verdana, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  color: var(--main-bg-clr);
+  font-size: 1rem;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+/********** 2. Typography **********/
+h1 {
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/********** 3. Layout **********/
+/***** 3.1 Reusables  *****/
+.outer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Row = width */
+  justify-content: center;
+}
+
+.inner-container {
+  flex: 0 1 1280px;
+  display: flex;
+  flex-direction: column; /* Column = height */
+  align-items: center;
+  margin-inline: 20px;
+  justify-content: center;
+}
+
+.box-shadow {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.article-padding {
+  padding-block: 2rem;
+}
+
+.hyperlink {
+  color: var(--hyperlink);
+  text-decoration: underline;
+}
+
+.hyperlink:visited {
+  color: var(--hyperlink);
+  text-decoration: none;
+}
+
+.hyperlink:hover {
+  color: #666;
+}
+
+.message {
+  color: var(--marvel-complement-clr);
+  display: inline-block;
+}
+
+.message-big {
+  color: var(--marvel-complement-clr);
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+  font-size: 2rem;
+}
+
+.error {
+  color: var(--marvel-red-clr);
+}
+
+.pending {
+  color: var(--marvel-sun-clr);
+}
+
+/********** 4. Miscellaneous **********/
+.loading-authcontext {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+
 .blink {
   animation: blinker 1s linear infinite;
 }
@@ -26,5 +244,12 @@ noscript {
 @keyframes blinker {
   50% {
     opacity: 0;
+  }
+}
+
+/********** 5. Media Queries **********/
+@media screen and (min-width: 768px) {
+  .message-big {
+    font-size: 3rem;
   }
 }
