@@ -20,31 +20,51 @@ export default function FooterMenu() {
                 onClick={() => navigate('/')}
               />
               <span>
-                <a className="attribution" target="_blank" href="https://marvel.com">
-                  Data provided by Marvel. © {showCurrentYear()} MARVEL
+                <a
+                  className="attribution"
+                  target="_blank"
+                  href="https://marvel.com"
+                >
+                  Data provided by Marvel. &copy; {showCurrentYear()} MARVEL
                 </a>
               </span>
             </div>
             <p className="copyright">
-              © {showCurrentYear()} FOUNDFAVE. All Rights Reserved. NOVI
+              &copy; {showCurrentYear()} FOUNDFAVE. All Rights Reserved. NOVI
               Hogeschool
             </p>
             <div className="social-media">
               <p>FOUNDFAVE On Social Media</p>
               <a href="https://pinterest.com" target="_blank">
-                <FaPinterestSquare className="fa-pinterest-square icon" />
+                <FaPinterestSquare
+                  alt="Pinterest"
+                  title="Pinterest"
+                  className="fa-pinterest-square icon"
+                />
               </a>
 
               <a href="https://facebook.com" target="_blank">
-                <FaFacebookSquare className="fa-facebook-square icon" />
+                <FaFacebookSquare
+                  alt="Facebook"
+                  title="Facebook"
+                  className="fa-facebook-square icon"
+                />
               </a>
 
               <a href="https://linkedin.com" target="_blank">
-                <FaLinkedin className="fa-linkedin icon" />
+                <FaLinkedin
+                  alt="LinkedIn"
+                  title="LinkedIn"
+                  className="fa-linkedin icon"
+                />
               </a>
 
               <a href="https://twitter.com" target="_blank">
-                <FaTwitter className="fa-twitter icon" />
+                <FaTwitter
+                  alt="Twitter"
+                  title="Twitter"
+                  className="fa-twitter icon"
+                />
               </a>
             </div>
           </div>
