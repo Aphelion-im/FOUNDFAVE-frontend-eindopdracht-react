@@ -11,46 +11,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 
-function preloadCssPlugin() {
-  return {
-    name: 'preload-css',
-    transformIndexHtml(html, ctx) {
-      if (!ctx.bundle) return html;
-
-      const cssFiles = Object.keys(ctx.bundle).filter((f) =>
-        f.endsWith('.css'),
-      );
-      const jsFiles = Object.keys(ctx.bundle).filter((f) => f.endsWith('.js'));
-
-      const jsPreloads = jsFiles
-        .map((f) => `  <link rel="modulepreload" crossorigin href="/${f}">`)
-        .join('\n');
-
-      const cssPreloads = cssFiles
-        .map((f) => `  <link rel="preload" href="/${f}" as="style">`)
-        .join('\n');
-
-      // Invoegen vóór de eerste <script> tag
-      return html.replace(
-        /(\s*<script\s)/,
-        `\n${jsPreloads}\n${cssPreloads}\n  $1`,
-      );
-    },
-  };
-}
-
 export default defineConfig({
-  plugins: [react(), svgr(), preloadCssPlugin()],
-  build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: (assetInfo) => {
-          if (/\.(woff2?|ttf|eot)$/.test(assetInfo.name)) {
-            return 'assets/[name][extname]';
-          }
-          return 'assets/[name]-[hash][extname]';
-        },
-      },
-    },
-  },
+  plugins: [react(), svgr()],
 });
