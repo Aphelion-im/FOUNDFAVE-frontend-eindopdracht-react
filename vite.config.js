@@ -1,6 +1,7 @@
 // https://www.npmjs.com/package/vite-plugin-svgr
 // https://pagespeed.web.dev # Google Lighthouse
 // https://web.dev/preload-critical-assets/
+// https://www.npmjs.com/package/vite-plugin-preload
 // Voeg een kleine plugin toe die automatisch een preload-tag injecteert voor elk gegenereerd CSS-bestand, ongeacht de gehashe bestandsnaam:
 // Dit lost het Netwerkafhankelijkheidsstructuur op die wordt aangegeven in Google Lighthouse. Dit komt door
 //  The critical request chain, waar de browser eerst de HTML moet parsen, vervolgens de CSS-bestanden moet ontdekken

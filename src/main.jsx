@@ -7,10 +7,10 @@ import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router 
-      future={{ 
-        v7_startTransition: true, 
-        v7_relativeSplatPath: true 
+    <Router
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
       }}
     >
       <AuthContextProvider>
@@ -19,5 +19,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </FaveContextProvider>
       </AuthContextProvider>
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
